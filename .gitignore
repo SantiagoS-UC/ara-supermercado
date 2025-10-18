@@ -1,0 +1,49 @@
+# Archivos de usuario y configuración de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de compilación
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.exe
+*.dll
+*.pdb
+
+# Archivos de publicación
+publish/
+app.publish/
+
+# Paquetes de NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.snupkg
+
+# Archivos de configuración de compilación y caché
+*.cache
+*.log
+*.dbmdl
+*.dbproj.schemaview
+
+# Archivos de base de datos locales
+*.mdf
+*.ldf
+
+# Archivos de respaldo o temporales
+*.bak
+*.tmp
+*.temp
+*.old
+
+# Archivos de configuración del sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Configuración de Rider, VSCode u otros IDEs
+.idea/
+.vscode/
