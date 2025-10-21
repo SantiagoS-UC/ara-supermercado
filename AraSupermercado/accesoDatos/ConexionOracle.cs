@@ -84,6 +84,12 @@ namespace AraSupermercado.accesoDatos
 
             return dataSet;
         }
+
+        //  Paso 4: obtener la conexión (opcional)
+        public OracleConnection ObtenerConexion()
+        {
+            return new OracleConnection(cadenaConexion);
+        }
     }
 }
 
