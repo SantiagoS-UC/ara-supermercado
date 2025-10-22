@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblAsterisco1 = new System.Windows.Forms.Label();
             this.lblAterisco2 = new System.Windows.Forms.Label();
             this.lblNoTienesCuenta = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlIniciarSesion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,20 @@
             this.pnlIniciarSesion.Name = "pnlIniciarSesion";
             this.pnlIniciarSesion.Size = new System.Drawing.Size(661, 508);
             this.pnlIniciarSesion.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(544, 304);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(18, 12);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // lblAsterisco1
             // 
@@ -170,20 +184,6 @@
             this.lblCorreo.Size = new System.Drawing.Size(140, 20);
             this.lblCorreo.TabIndex = 1;
             this.lblCorreo.Text = "Correo Electrónico";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(537, 304);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(18, 12);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormLogin
             // 
