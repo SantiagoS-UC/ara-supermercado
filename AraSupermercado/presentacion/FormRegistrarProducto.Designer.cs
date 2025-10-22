@@ -180,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlRegistrarProducto);
             this.Name = "FormRegistrarProducto";
-            this.Text = "¿";
+            this.Text = "FormRegistrarProducto";
             this.Load += new System.EventHandler(this.FormRegistrarProducto_Load);
             this.pnlRegistrarProducto.ResumeLayout(false);
             this.pnlRegistrarProducto.PerformLayout();
