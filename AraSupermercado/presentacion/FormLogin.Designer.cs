@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
             this.btnOjoContrasena = new System.Windows.Forms.Button();
             this.lblAsterisco1 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.pnlIniciarSesion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,13 +57,12 @@
             this.pnlIniciarSesion.Controls.Add(this.txtCorreo);
             this.pnlIniciarSesion.Controls.Add(this.lblContrasena);
             this.pnlIniciarSesion.Controls.Add(this.lblCorreo);
+            this.pnlIniciarSesion.Controls.Add(this.lblIniciarSesion);
             this.pnlIniciarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlIniciarSesion.Location = new System.Drawing.Point(0, 0);
-            this.pnlIniciarSesion.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlIniciarSesion.MaximumSize = new System.Drawing.Size(661, 508);
-            this.pnlIniciarSesion.MinimumSize = new System.Drawing.Size(661, 508);
+            this.pnlIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlIniciarSesion.Name = "pnlIniciarSesion";
-            this.pnlIniciarSesion.Size = new System.Drawing.Size(661, 508);
+            this.pnlIniciarSesion.Size = new System.Drawing.Size(877, 430);
             this.pnlIniciarSesion.TabIndex = 0;
             // 
             // btnOjoContrasena
@@ -105,38 +104,30 @@
             // lblNoTienesCuenta
             // 
             this.lblNoTienesCuenta.AutoSize = true;
-            this.lblNoTienesCuenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNoTienesCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoTienesCuenta.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblNoTienesCuenta.Location = new System.Drawing.Point(170, 408);
-            this.lblNoTienesCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoTienesCuenta.Location = new System.Drawing.Point(373, 271);
             this.lblNoTienesCuenta.Name = "lblNoTienesCuenta";
-            this.lblNoTienesCuenta.Size = new System.Drawing.Size(304, 16);
+            this.lblNoTienesCuenta.Size = new System.Drawing.Size(121, 16);
             this.lblNoTienesCuenta.TabIndex = 7;
-            this.lblNoTienesCuenta.Text = "——————————¿No tienes cuenta? ——————————";
+            this.lblNoTienesCuenta.Text = "¿No tienes cuenta?";
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnRegistrarse.Location = new System.Drawing.Point(230, 435);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarse.Location = new System.Drawing.Point(367, 304);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(190, 32);
+            this.btnRegistrarse.Size = new System.Drawing.Size(127, 30);
             this.btnRegistrarse.TabIndex = 6;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(190, 355);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(367, 226);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(262, 37);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(127, 31);
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -144,20 +135,16 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(100, 301);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContrasena.MaximumSize = new System.Drawing.Size(466, 30);
-            this.txtContrasena.MinimumSize = new System.Drawing.Size(466, 30);
+            this.txtContrasena.Location = new System.Drawing.Point(328, 180);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(466, 20);
             this.txtContrasena.TabIndex = 4;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(100, 230);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorreo.MaximumSize = new System.Drawing.Size(466, 30);
-            this.txtCorreo.MinimumSize = new System.Drawing.Size(466, 30);
+            this.txtCorreo.Location = new System.Drawing.Point(328, 118);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(466, 20);
             this.txtCorreo.TabIndex = 3;
@@ -165,35 +152,37 @@
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasena.Location = new System.Drawing.Point(96, 270);
-            this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContrasena.Location = new System.Drawing.Point(325, 160);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(92, 20);
+            this.lblContrasena.Size = new System.Drawing.Size(76, 16);
             this.lblContrasena.TabIndex = 2;
             this.lblContrasena.Text = "Contraseña";
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(96, 208);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(325, 98);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(140, 20);
+            this.lblCorreo.Size = new System.Drawing.Size(118, 16);
             this.lblCorreo.TabIndex = 1;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
+            // lblIniciarSesion
+            // 
+            this.lblIniciarSesion.AutoSize = true;
+            this.lblIniciarSesion.Location = new System.Drawing.Point(407, 9);
+            this.lblIniciarSesion.Name = "lblIniciarSesion";
+            this.lblIniciarSesion.Size = new System.Drawing.Size(87, 16);
+            this.lblIniciarSesion.TabIndex = 0;
+            this.lblIniciarSesion.Text = "Iniciar Sesión";
+            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 508);
+            this.ClientSize = new System.Drawing.Size(877, 430);
             this.Controls.Add(this.pnlIniciarSesion);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             this.pnlIniciarSesion.ResumeLayout(false);
@@ -203,6 +192,9 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlIniciarSesion;
+        private System.Windows.Forms.Label lblIniciarSesion;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblContrasena;

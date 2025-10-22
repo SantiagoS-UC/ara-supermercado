@@ -1,4 +1,4 @@
-﻿using AraSupermercado.accesoDatos;
+﻿ using AraSupermercado.accesoDatos;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace AraSupermercado.logica
         // Método para validar credenciales
         public string ValidarUsuario(string correo, string contrasena)
         {
-            string tipoUsuario = "NO_EXISTE";
+            string tipoUsuario;
 
             try
             {

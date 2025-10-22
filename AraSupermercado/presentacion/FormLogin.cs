@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AraSupermercado.logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,15 @@ namespace AraSupermercado.presentacion
 {
     public partial class FormLogin : Form
     {
+        private Login login;
+
         public FormLogin()
         {
             InitializeComponent();
-            this.Load += FormLogin_Load;
+            login = new Login();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             this.Size = new Size(661,508); // tamaño más grande
             this.StartPosition = FormStartPosition.CenterScreen; // centrado
@@ -27,4 +30,3 @@ namespace AraSupermercado.presentacion
         }
     }
 }
-
