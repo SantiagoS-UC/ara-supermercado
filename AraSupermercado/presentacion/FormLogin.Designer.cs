@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.asterisco1 = new System.Windows.Forms.Label();
+            this.lblAsterisco1 = new System.Windows.Forms.Label();
+            this.lblAterisco2 = new System.Windows.Forms.Label();
             this.lblNoTienesCuenta = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
@@ -40,17 +39,17 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlIniciarSesion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlIniciarSesion
             // 
             this.pnlIniciarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIniciarSesion.BackgroundImage")));
             this.pnlIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlIniciarSesion.Controls.Add(this.pictureBox1);
-            this.pnlIniciarSesion.Controls.Add(this.label1);
-            this.pnlIniciarSesion.Controls.Add(this.asterisco1);
+            this.pnlIniciarSesion.Controls.Add(this.button1);
+            this.pnlIniciarSesion.Controls.Add(this.lblAsterisco1);
+            this.pnlIniciarSesion.Controls.Add(this.lblAterisco2);
             this.pnlIniciarSesion.Controls.Add(this.lblNoTienesCuenta);
             this.pnlIniciarSesion.Controls.Add(this.btnRegistrarse);
             this.pnlIniciarSesion.Controls.Add(this.btnIniciarSesion);
@@ -67,36 +66,27 @@
             this.pnlIniciarSesion.Size = new System.Drawing.Size(661, 508);
             this.pnlIniciarSesion.TabIndex = 0;
             // 
-            // pictureBox1
+            // lblAsterisco1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(531, 301);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 21);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.lblAsterisco1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAsterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterisco1.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterisco1.Location = new System.Drawing.Point(232, 208);
+            this.lblAsterisco1.Name = "lblAsterisco1";
+            this.lblAsterisco1.Size = new System.Drawing.Size(11, 13);
+            this.lblAsterisco1.TabIndex = 9;
+            this.lblAsterisco1.Text = "*";
             // 
-            // label1
+            // lblAterisco2
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(241, 208);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "*";
-            // 
-            // asterisco1
-            // 
-            this.asterisco1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.asterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.asterisco1.ForeColor = System.Drawing.Color.Red;
-            this.asterisco1.Location = new System.Drawing.Point(186, 267);
-            this.asterisco1.Name = "asterisco1";
-            this.asterisco1.Size = new System.Drawing.Size(11, 13);
-            this.asterisco1.TabIndex = 8;
-            this.asterisco1.Text = "*";
+            this.lblAterisco2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAterisco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAterisco2.ForeColor = System.Drawing.Color.Red;
+            this.lblAterisco2.Location = new System.Drawing.Point(184, 267);
+            this.lblAterisco2.Name = "lblAterisco2";
+            this.lblAterisco2.Size = new System.Drawing.Size(11, 13);
+            this.lblAterisco2.TabIndex = 8;
+            this.lblAterisco2.Text = "*";
             // 
             // lblNoTienesCuenta
             // 
@@ -144,7 +134,7 @@
             this.txtContrasena.MaximumSize = new System.Drawing.Size(466, 30);
             this.txtContrasena.MinimumSize = new System.Drawing.Size(466, 30);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(466, 30);
+            this.txtContrasena.Size = new System.Drawing.Size(466, 20);
             this.txtContrasena.TabIndex = 4;
             // 
             // txtCorreo
@@ -154,7 +144,7 @@
             this.txtCorreo.MaximumSize = new System.Drawing.Size(466, 30);
             this.txtCorreo.MinimumSize = new System.Drawing.Size(466, 30);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(466, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(466, 20);
             this.txtCorreo.TabIndex = 3;
             // 
             // lblContrasena
@@ -181,6 +171,20 @@
             this.lblCorreo.TabIndex = 1;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(537, 304);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(18, 12);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,7 +197,6 @@
             this.Text = "FormLogin";
             this.pnlIniciarSesion.ResumeLayout(false);
             this.pnlIniciarSesion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,9 +209,9 @@
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label lblNoTienesCuenta;
-        private System.Windows.Forms.Label asterisco1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAterisco2;
+        private System.Windows.Forms.Label lblAsterisco1;
         private System.Windows.Forms.Panel pnlIniciarSesion;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

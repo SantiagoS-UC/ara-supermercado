@@ -25,10 +25,6 @@ namespace AraSupermercado.presentacion
             this.FormBorderStyle = FormBorderStyle.FixedSingle; // evita redimensionar
             this.MaximizeBox = false; // desactiva botón maximizar
         }
-        // private void label2_Click(object sender, EventArgs e)
-        //{
-
-        // }
     }
 }
 
