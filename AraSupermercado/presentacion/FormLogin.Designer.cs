@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
-            this.btnOjoContrasena = new System.Windows.Forms.Button();
-            this.lblAsterisco1 = new System.Windows.Forms.Label();
-            this.lblAterisco2 = new System.Windows.Forms.Label();
             this.lblNoTienesCuenta = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
@@ -45,11 +42,6 @@
             // 
             // pnlIniciarSesion
             // 
-            this.pnlIniciarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIniciarSesion.BackgroundImage")));
-            this.pnlIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlIniciarSesion.Controls.Add(this.btnOjoContrasena);
-            this.pnlIniciarSesion.Controls.Add(this.lblAsterisco1);
-            this.pnlIniciarSesion.Controls.Add(this.lblAterisco2);
             this.pnlIniciarSesion.Controls.Add(this.lblNoTienesCuenta);
             this.pnlIniciarSesion.Controls.Add(this.btnRegistrarse);
             this.pnlIniciarSesion.Controls.Add(this.btnIniciarSesion);
@@ -64,42 +56,6 @@
             this.pnlIniciarSesion.Name = "pnlIniciarSesion";
             this.pnlIniciarSesion.Size = new System.Drawing.Size(877, 430);
             this.pnlIniciarSesion.TabIndex = 0;
-            // 
-            // btnOjoContrasena
-            // 
-            this.btnOjoContrasena.BackColor = System.Drawing.Color.White;
-            this.btnOjoContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOjoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOjoContrasena.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOjoContrasena.Image = ((System.Drawing.Image)(resources.GetObject("btnOjoContrasena.Image")));
-            this.btnOjoContrasena.Location = new System.Drawing.Point(544, 304);
-            this.btnOjoContrasena.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOjoContrasena.Name = "btnOjoContrasena";
-            this.btnOjoContrasena.Size = new System.Drawing.Size(18, 12);
-            this.btnOjoContrasena.TabIndex = 10;
-            this.btnOjoContrasena.UseVisualStyleBackColor = false;
-            // 
-            // lblAsterisco1
-            // 
-            this.lblAsterisco1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAsterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsterisco1.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterisco1.Location = new System.Drawing.Point(232, 208);
-            this.lblAsterisco1.Name = "lblAsterisco1";
-            this.lblAsterisco1.Size = new System.Drawing.Size(11, 13);
-            this.lblAsterisco1.TabIndex = 9;
-            this.lblAsterisco1.Text = "*";
-            // 
-            // lblAterisco2
-            // 
-            this.lblAterisco2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAterisco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAterisco2.ForeColor = System.Drawing.Color.Red;
-            this.lblAterisco2.Location = new System.Drawing.Point(184, 267);
-            this.lblAterisco2.Name = "lblAterisco2";
-            this.lblAterisco2.Size = new System.Drawing.Size(11, 13);
-            this.lblAterisco2.TabIndex = 8;
-            this.lblAterisco2.Text = "*";
             // 
             // lblNoTienesCuenta
             // 
@@ -138,7 +94,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(328, 180);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(466, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(239, 22);
             this.txtContrasena.TabIndex = 4;
             // 
             // txtCorreo
@@ -146,7 +102,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(328, 118);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(466, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(239, 22);
             this.txtCorreo.TabIndex = 3;
             // 
             // lblContrasena
@@ -202,9 +158,5 @@
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label lblNoTienesCuenta;
-        private System.Windows.Forms.Label lblAterisco2;
-        private System.Windows.Forms.Label lblAsterisco1;
-        private System.Windows.Forms.Panel pnlIniciarSesion;
-        private System.Windows.Forms.Button btnOjoContrasena;
     }
 }
