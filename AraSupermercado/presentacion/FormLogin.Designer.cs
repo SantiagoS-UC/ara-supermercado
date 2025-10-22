@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOjoContrasena = new System.Windows.Forms.Button();
             this.lblAsterisco1 = new System.Windows.Forms.Label();
             this.lblAterisco2 = new System.Windows.Forms.Label();
             this.lblNoTienesCuenta = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             // 
             this.pnlIniciarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIniciarSesion.BackgroundImage")));
             this.pnlIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlIniciarSesion.Controls.Add(this.button1);
+            this.pnlIniciarSesion.Controls.Add(this.btnOjoContrasena);
             this.pnlIniciarSesion.Controls.Add(this.lblAsterisco1);
             this.pnlIniciarSesion.Controls.Add(this.lblAterisco2);
             this.pnlIniciarSesion.Controls.Add(this.lblNoTienesCuenta);
@@ -66,19 +66,19 @@
             this.pnlIniciarSesion.Size = new System.Drawing.Size(661, 508);
             this.pnlIniciarSesion.TabIndex = 0;
             // 
-            // button1
+            // btnOjoContrasena
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(544, 304);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(18, 12);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnOjoContrasena.BackColor = System.Drawing.Color.White;
+            this.btnOjoContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOjoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOjoContrasena.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOjoContrasena.Image = ((System.Drawing.Image)(resources.GetObject("btnOjoContrasena.Image")));
+            this.btnOjoContrasena.Location = new System.Drawing.Point(544, 304);
+            this.btnOjoContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOjoContrasena.Name = "btnOjoContrasena";
+            this.btnOjoContrasena.Size = new System.Drawing.Size(18, 12);
+            this.btnOjoContrasena.TabIndex = 10;
+            this.btnOjoContrasena.UseVisualStyleBackColor = false;
             // 
             // lblAsterisco1
             // 
@@ -140,6 +140,7 @@
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // txtContrasena
             // 
@@ -212,6 +213,6 @@
         private System.Windows.Forms.Label lblAterisco2;
         private System.Windows.Forms.Label lblAsterisco1;
         private System.Windows.Forms.Panel pnlIniciarSesion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOjoContrasena;
     }
 }
