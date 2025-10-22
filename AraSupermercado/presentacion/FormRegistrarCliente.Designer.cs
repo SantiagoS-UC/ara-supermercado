@@ -29,8 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblYaTienesCuenta = new System.Windows.Forms.Label();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtSegundoApellido = new System.Windows.Forms.TextBox();
+            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
+            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
+            this.txtNumDocumento = new System.Windows.Forms.TextBox();
+            this.cbxTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.lblRegistrarUsuario = new System.Windows.Forms.Label();
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -40,23 +57,6 @@
             this.lblNumDocumento = new System.Windows.Forms.Label();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
-            this.lblRegistrarUsuario = new System.Windows.Forms.Label();
-            this.cbxTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.txtNumDocumento = new System.Windows.Forms.TextBox();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.lblFechaNac = new System.Windows.Forms.Label();
-            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
-            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
-            this.txtSegundoApellido = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.btnRegistrarse = new System.Windows.Forms.Button();
-            this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.lblYaTienesCuenta = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.cbxTipoDocumento);
             this.panel1.Controls.Add(this.lblRegistrarUsuario);
             this.panel1.Controls.Add(this.lblConfirmarContrasena);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblContrasena);
             this.panel1.Controls.Add(this.lblCorreo);
             this.panel1.Controls.Add(this.lblTelefono);
             this.panel1.Controls.Add(this.lblDireccion);
@@ -96,6 +96,140 @@
             this.panel1.Size = new System.Drawing.Size(800, 729);
             this.panel1.TabIndex = 0;
             // 
+            // lblYaTienesCuenta
+            // 
+            this.lblYaTienesCuenta.AutoSize = true;
+            this.lblYaTienesCuenta.Location = new System.Drawing.Point(264, 600);
+            this.lblYaTienesCuenta.Name = "lblYaTienesCuenta";
+            this.lblYaTienesCuenta.Size = new System.Drawing.Size(120, 16);
+            this.lblYaTienesCuenta.TabIndex = 27;
+            this.lblYaTienesCuenta.Text = "¿Ya tienes cuenta?";
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.Location = new System.Drawing.Point(390, 591);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(138, 35);
+            this.btnIniciarSesion.TabIndex = 26;
+            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.Location = new System.Drawing.Point(341, 561);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(104, 24);
+            this.btnRegistrarse.TabIndex = 25;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(184, 296);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 22);
+            this.dtpFechaNacimiento.TabIndex = 24;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(184, 347);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(100, 22);
+            this.txtDireccion.TabIndex = 23;
+            // 
+            // txtConfirmarContrasena
+            // 
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(455, 512);
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(100, 22);
+            this.txtConfirmarContrasena.TabIndex = 22;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(184, 512);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(100, 22);
+            this.txtContrasena.TabIndex = 21;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(183, 457);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(100, 22);
+            this.txtCorreo.TabIndex = 20;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(184, 399);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(100, 22);
+            this.txtTelefono.TabIndex = 19;
+            // 
+            // txtSegundoApellido
+            // 
+            this.txtSegundoApellido.Location = new System.Drawing.Point(456, 235);
+            this.txtSegundoApellido.Name = "txtSegundoApellido";
+            this.txtSegundoApellido.Size = new System.Drawing.Size(100, 22);
+            this.txtSegundoApellido.TabIndex = 18;
+            // 
+            // txtPrimerApellido
+            // 
+            this.txtPrimerApellido.Location = new System.Drawing.Point(184, 235);
+            this.txtPrimerApellido.Name = "txtPrimerApellido";
+            this.txtPrimerApellido.Size = new System.Drawing.Size(100, 22);
+            this.txtPrimerApellido.TabIndex = 17;
+            // 
+            // txtSegundoNombre
+            // 
+            this.txtSegundoNombre.Location = new System.Drawing.Point(456, 161);
+            this.txtSegundoNombre.Name = "txtSegundoNombre";
+            this.txtSegundoNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtSegundoNombre.TabIndex = 16;
+            // 
+            // lblFechaNac
+            // 
+            this.lblFechaNac.AutoSize = true;
+            this.lblFechaNac.Location = new System.Drawing.Point(181, 276);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(135, 16);
+            this.lblFechaNac.TabIndex = 15;
+            this.lblFechaNac.Text = "Fecha de Nacimiento";
+            // 
+            // txtPrimerNombre
+            // 
+            this.txtPrimerNombre.Location = new System.Drawing.Point(184, 161);
+            this.txtPrimerNombre.Name = "txtPrimerNombre";
+            this.txtPrimerNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtPrimerNombre.TabIndex = 14;
+            // 
+            // txtNumDocumento
+            // 
+            this.txtNumDocumento.Location = new System.Drawing.Point(456, 88);
+            this.txtNumDocumento.Name = "txtNumDocumento";
+            this.txtNumDocumento.Size = new System.Drawing.Size(100, 22);
+            this.txtNumDocumento.TabIndex = 13;
+            // 
+            // cbxTipoDocumento
+            // 
+            this.cbxTipoDocumento.FormattingEnabled = true;
+            this.cbxTipoDocumento.Items.AddRange(new object[] {
+            "C.C",
+            "C.E",
+            "PA"});
+            this.cbxTipoDocumento.Location = new System.Drawing.Point(184, 86);
+            this.cbxTipoDocumento.Name = "cbxTipoDocumento";
+            this.cbxTipoDocumento.Size = new System.Drawing.Size(121, 24);
+            this.cbxTipoDocumento.TabIndex = 12;
+            // 
+            // lblRegistrarUsuario
+            // 
+            this.lblRegistrarUsuario.AutoSize = true;
+            this.lblRegistrarUsuario.Location = new System.Drawing.Point(338, 9);
+            this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
+            this.lblRegistrarUsuario.Size = new System.Drawing.Size(112, 16);
+            this.lblRegistrarUsuario.TabIndex = 11;
+            this.lblRegistrarUsuario.Text = "Registrar Usuario";
+            // 
             // lblConfirmarContrasena
             // 
             this.lblConfirmarContrasena.AutoSize = true;
@@ -105,14 +239,14 @@
             this.lblConfirmarContrasena.TabIndex = 10;
             this.lblConfirmarContrasena.Text = "Confirmar Contraseña";
             // 
-            // label6
+            // lblContrasena
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 492);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Contraseña";
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Location = new System.Drawing.Point(180, 492);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(76, 16);
+            this.lblContrasena.TabIndex = 9;
+            this.lblContrasena.Text = "Contraseña";
             // 
             // lblCorreo
             // 
@@ -195,140 +329,6 @@
             this.lblTipoDocumento.TabIndex = 0;
             this.lblTipoDocumento.Text = "Tipo de Documento";
             // 
-            // lblRegistrarUsuario
-            // 
-            this.lblRegistrarUsuario.AutoSize = true;
-            this.lblRegistrarUsuario.Location = new System.Drawing.Point(338, 9);
-            this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
-            this.lblRegistrarUsuario.Size = new System.Drawing.Size(112, 16);
-            this.lblRegistrarUsuario.TabIndex = 11;
-            this.lblRegistrarUsuario.Text = "Registrar Usuario";
-            // 
-            // cbxTipoDocumento
-            // 
-            this.cbxTipoDocumento.FormattingEnabled = true;
-            this.cbxTipoDocumento.Items.AddRange(new object[] {
-            "C.C",
-            "C.E",
-            "PA"});
-            this.cbxTipoDocumento.Location = new System.Drawing.Point(184, 86);
-            this.cbxTipoDocumento.Name = "cbxTipoDocumento";
-            this.cbxTipoDocumento.Size = new System.Drawing.Size(121, 24);
-            this.cbxTipoDocumento.TabIndex = 12;
-            // 
-            // txtNumDocumento
-            // 
-            this.txtNumDocumento.Location = new System.Drawing.Point(456, 88);
-            this.txtNumDocumento.Name = "txtNumDocumento";
-            this.txtNumDocumento.Size = new System.Drawing.Size(100, 22);
-            this.txtNumDocumento.TabIndex = 13;
-            // 
-            // txtPrimerNombre
-            // 
-            this.txtPrimerNombre.Location = new System.Drawing.Point(184, 161);
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(100, 22);
-            this.txtPrimerNombre.TabIndex = 14;
-            // 
-            // lblFechaNac
-            // 
-            this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.Location = new System.Drawing.Point(181, 276);
-            this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(135, 16);
-            this.lblFechaNac.TabIndex = 15;
-            this.lblFechaNac.Text = "Fecha de Nacimiento";
-            // 
-            // txtSegundoNombre
-            // 
-            this.txtSegundoNombre.Location = new System.Drawing.Point(456, 161);
-            this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(100, 22);
-            this.txtSegundoNombre.TabIndex = 16;
-            // 
-            // txtPrimerApellido
-            // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(184, 235);
-            this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(100, 22);
-            this.txtPrimerApellido.TabIndex = 17;
-            // 
-            // txtSegundoApellido
-            // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(456, 235);
-            this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(100, 22);
-            this.txtSegundoApellido.TabIndex = 18;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(184, 399);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 22);
-            this.txtTelefono.TabIndex = 19;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(183, 457);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(100, 22);
-            this.txtCorreo.TabIndex = 20;
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(184, 512);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(100, 22);
-            this.txtContrasena.TabIndex = 21;
-            // 
-            // txtConfirmarContrasena
-            // 
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(455, 512);
-            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(100, 22);
-            this.txtConfirmarContrasena.TabIndex = 22;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(184, 347);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 22);
-            this.txtDireccion.TabIndex = 23;
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(184, 296);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 22);
-            this.dtpFechaNacimiento.TabIndex = 24;
-            // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(341, 561);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(104, 24);
-            this.btnRegistrarse.TabIndex = 25;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.UseVisualStyleBackColor = true;
-            // 
-            // btnIniciarSesion
-            // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(390, 591);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(138, 35);
-            this.btnIniciarSesion.TabIndex = 26;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
-            // 
-            // lblYaTienesCuenta
-            // 
-            this.lblYaTienesCuenta.AutoSize = true;
-            this.lblYaTienesCuenta.Location = new System.Drawing.Point(264, 600);
-            this.lblYaTienesCuenta.Name = "lblYaTienesCuenta";
-            this.lblYaTienesCuenta.Size = new System.Drawing.Size(120, 16);
-            this.lblYaTienesCuenta.TabIndex = 27;
-            this.lblYaTienesCuenta.Text = "¿Ya tienes cuenta?";
-            // 
             // FormRegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,7 +347,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblConfirmarContrasena;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblContrasena;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblDireccion;
