@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\ConexionOracle.cs" />
+    <Compile Include="logica\Producto.cs" />
     <Compile Include="presentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,22 +118,16 @@
     <Compile Include="presentacion\FormRegistrarCliente.Designer.cs">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\FormRegistrarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="presentacion\FormRegistrarProducto.Designer.cs">
-      <DependentUpon>FormRegistrarProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="presentacion\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormRegistrarCliente.resx">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="presentacion\FormRegistrarProducto.resx">
-      <DependentUpon>FormRegistrarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
