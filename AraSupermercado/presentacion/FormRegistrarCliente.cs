@@ -197,6 +197,7 @@ namespace AraSupermercado.presentacion
             txtConfirmarContrasena.UseSystemPasswordChar = !txtConfirmarContrasena.UseSystemPasswordChar;
             btnMostrarConfirmarContrasena.Text = txtConfirmarContrasena.UseSystemPasswordChar ? "👁" : "🙈";
         }
+
     }
 }
 
