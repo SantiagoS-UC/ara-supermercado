@@ -37,11 +37,13 @@
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
+            this.btnMostrarContrasena = new System.Windows.Forms.Button();
             this.pnlIniciarSesion.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlIniciarSesion
             // 
+            this.pnlIniciarSesion.Controls.Add(this.btnMostrarContrasena);
             this.pnlIniciarSesion.Controls.Add(this.lblNoTienesCuenta);
             this.pnlIniciarSesion.Controls.Add(this.btnRegistrarse);
             this.pnlIniciarSesion.Controls.Add(this.btnIniciarSesion);
@@ -75,6 +77,7 @@
             this.btnRegistrarse.TabIndex = 6;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // btnIniciarSesion
             // 
@@ -95,6 +98,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(239, 22);
             this.txtContrasena.TabIndex = 4;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
@@ -131,6 +135,16 @@
             this.lblIniciarSesion.TabIndex = 0;
             this.lblIniciarSesion.Text = "Iniciar Sesión";
             // 
+            // btnMostrarContrasena
+            // 
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(573, 180);
+            this.btnMostrarContrasena.Name = "btnMostrarContrasena";
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(41, 23);
+            this.btnMostrarContrasena.TabIndex = 8;
+            this.btnMostrarContrasena.Text = "👁";
+            this.btnMostrarContrasena.UseVisualStyleBackColor = true;
+            this.btnMostrarContrasena.Click += new System.EventHandler(this.btnMostrarContrasena_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -157,5 +171,6 @@
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label lblNoTienesCuenta;
+        private System.Windows.Forms.Button btnMostrarContrasena;
     }
 }

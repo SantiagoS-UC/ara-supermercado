@@ -17,7 +17,7 @@ namespace AraSupermercado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegistrarProducto());
+            Application.Run(new FormLogin());
         }
     }
 }
