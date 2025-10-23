@@ -86,11 +86,7 @@
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
-<<<<<<< Updated upstream
-//          this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-=======
          // this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
->>>>>>> Stashed changes
             // 
             // txtContrasena
             // 
