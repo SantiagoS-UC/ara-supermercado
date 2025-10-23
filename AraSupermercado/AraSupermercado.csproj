@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\ConexionOracle.cs" />
+    <Compile Include="logica\Cliente.cs" />
     <Compile Include="presentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

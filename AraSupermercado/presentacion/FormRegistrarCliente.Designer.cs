@@ -57,11 +57,15 @@
             this.lblNumDocumento = new System.Windows.Forms.Label();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
+            this.btnMostrarContrasena = new System.Windows.Forms.Button();
+            this.btnMostrarConfirmarContrasena = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnMostrarConfirmarContrasena);
+            this.panel1.Controls.Add(this.btnMostrarContrasena);
             this.panel1.Controls.Add(this.lblYaTienesCuenta);
             this.panel1.Controls.Add(this.btnIniciarSesion);
             this.panel1.Controls.Add(this.btnRegistrarse);
@@ -107,12 +111,13 @@
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(390, 591);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(400, 591);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(138, 35);
             this.btnIniciarSesion.TabIndex = 26;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnRegistrarse
             // 
@@ -122,6 +127,7 @@
             this.btnRegistrarse.TabIndex = 25;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // dtpFechaNacimiento
             // 
@@ -143,6 +149,7 @@
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(100, 22);
             this.txtConfirmarContrasena.TabIndex = 22;
+            this.txtConfirmarContrasena.UseSystemPasswordChar = true;
             // 
             // txtContrasena
             // 
@@ -150,6 +157,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(100, 22);
             this.txtContrasena.TabIndex = 21;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
@@ -213,8 +221,8 @@
             // 
             this.cbxTipoDocumento.FormattingEnabled = true;
             this.cbxTipoDocumento.Items.AddRange(new object[] {
-            "C.C",
-            "C.E",
+            "CC",
+            "CE",
             "PA"});
             this.cbxTipoDocumento.Location = new System.Drawing.Point(184, 86);
             this.cbxTipoDocumento.Name = "cbxTipoDocumento";
@@ -329,6 +337,26 @@
             this.lblTipoDocumento.TabIndex = 0;
             this.lblTipoDocumento.Text = "Tipo de Documento";
             // 
+            // btnMostrarContrasena
+            // 
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(290, 512);
+            this.btnMostrarContrasena.Name = "btnMostrarContrasena";
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(38, 23);
+            this.btnMostrarContrasena.TabIndex = 28;
+            this.btnMostrarContrasena.Text = "👁";
+            this.btnMostrarContrasena.UseVisualStyleBackColor = true;
+            this.btnMostrarContrasena.Click += new System.EventHandler(this.btnMostrarContrasena_Click);
+            // 
+            // btnMostrarConfirmarContrasena
+            // 
+            this.btnMostrarConfirmarContrasena.Location = new System.Drawing.Point(566, 512);
+            this.btnMostrarConfirmarContrasena.Name = "btnMostrarConfirmarContrasena";
+            this.btnMostrarConfirmarContrasena.Size = new System.Drawing.Size(33, 23);
+            this.btnMostrarConfirmarContrasena.TabIndex = 29;
+            this.btnMostrarConfirmarContrasena.Text = "👁";
+            this.btnMostrarConfirmarContrasena.UseVisualStyleBackColor = true;
+            this.btnMostrarConfirmarContrasena.Click += new System.EventHandler(this.btnMostrarConfirmarContrasena_Click);
+            // 
             // FormRegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,5 +402,7 @@
         private System.Windows.Forms.Label lblYaTienesCuenta;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Button btnMostrarConfirmarContrasena;
+        private System.Windows.Forms.Button btnMostrarContrasena;
     }
 }
