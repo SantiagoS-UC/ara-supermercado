@@ -1,4 +1,4 @@
-﻿ using AraSupermercado.accesoDatos;
+﻿using AraSupermercado.accesoDatos;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
@@ -51,7 +51,6 @@ namespace AraSupermercado.logica
             }
             catch (Exception ex)
             {
-                // Puedes manejar excepciones según el caso
                 throw new Exception("Error al validar usuario: " + ex.Message);
             }
 
