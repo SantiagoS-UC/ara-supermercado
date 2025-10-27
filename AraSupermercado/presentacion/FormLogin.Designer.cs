@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlIniciarSesion = new System.Windows.Forms.Panel();
+            this.asterisco1 = new System.Windows.Forms.Label();
+            this.Asterisco2 = new System.Windows.Forms.Label();
             this.btnMostrarContrasena = new System.Windows.Forms.Button();
             this.lblNoTienesCuenta = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
-            this.Asterisco2 = new System.Windows.Forms.Label();
-            this.asterisco1 = new System.Windows.Forms.Label();
             this.pnlIniciarSesion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,30 @@
             this.pnlIniciarSesion.Name = "pnlIniciarSesion";
             this.pnlIniciarSesion.Size = new System.Drawing.Size(661, 508);
             this.pnlIniciarSesion.TabIndex = 0;
+            // 
+            // asterisco1
+            // 
+            this.asterisco1.AutoSize = true;
+            this.asterisco1.BackColor = System.Drawing.Color.White;
+            this.asterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.asterisco1.ForeColor = System.Drawing.Color.Red;
+            this.asterisco1.Location = new System.Drawing.Point(262, 205);
+            this.asterisco1.Name = "asterisco1";
+            this.asterisco1.Size = new System.Drawing.Size(15, 20);
+            this.asterisco1.TabIndex = 10;
+            this.asterisco1.Text = "*";
+            // 
+            // Asterisco2
+            // 
+            this.Asterisco2.AutoSize = true;
+            this.Asterisco2.BackColor = System.Drawing.Color.White;
+            this.Asterisco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Asterisco2.ForeColor = System.Drawing.Color.Red;
+            this.Asterisco2.Location = new System.Drawing.Point(213, 277);
+            this.Asterisco2.Name = "Asterisco2";
+            this.Asterisco2.Size = new System.Drawing.Size(15, 20);
+            this.Asterisco2.TabIndex = 9;
+            this.Asterisco2.Text = "*";
             // 
             // btnMostrarContrasena
             // 
@@ -132,7 +156,7 @@
             this.txtContrasena.MaximumSize = new System.Drawing.Size(400, 30);
             this.txtContrasena.MinimumSize = new System.Drawing.Size(400, 30);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(400, 30);
+            this.txtContrasena.Size = new System.Drawing.Size(400, 20);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
@@ -181,30 +205,6 @@
             this.lblIniciarSesion.Name = "lblIniciarSesion";
             this.lblIniciarSesion.Size = new System.Drawing.Size(0, 13);
             this.lblIniciarSesion.TabIndex = 0;
-            // 
-            // Asterisco2
-            // 
-            this.Asterisco2.AutoSize = true;
-            this.Asterisco2.BackColor = System.Drawing.Color.White;
-            this.Asterisco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Asterisco2.ForeColor = System.Drawing.Color.Red;
-            this.Asterisco2.Location = new System.Drawing.Point(213, 277);
-            this.Asterisco2.Name = "Asterisco2";
-            this.Asterisco2.Size = new System.Drawing.Size(15, 20);
-            this.Asterisco2.TabIndex = 9;
-            this.Asterisco2.Text = "*";
-            // 
-            // asterisco1
-            // 
-            this.asterisco1.AutoSize = true;
-            this.asterisco1.BackColor = System.Drawing.Color.White;
-            this.asterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.asterisco1.ForeColor = System.Drawing.Color.Red;
-            this.asterisco1.Location = new System.Drawing.Point(262, 205);
-            this.asterisco1.Name = "asterisco1";
-            this.asterisco1.Size = new System.Drawing.Size(15, 20);
-            this.asterisco1.TabIndex = 10;
-            this.asterisco1.Text = "*";
             // 
             // FormLogin
             // 
