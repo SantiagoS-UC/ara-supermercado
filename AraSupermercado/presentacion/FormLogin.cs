@@ -1,12 +1,5 @@
 ﻿using AraSupermercado.logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AraSupermercado.presentacion
@@ -47,7 +40,7 @@ namespace AraSupermercado.presentacion
                 camposValidos = false;
             }
 
-            // Validación opcional: formato básico de correo
+            // Validación de formato básico de correo
             if (!string.IsNullOrWhiteSpace(correo) && (!correo.Contains("@") || !correo.Contains(".")))
             {
                 errorProvider.SetError(txtCorreo, "Formato inválido (ej. usuario@dominio.com).");
@@ -62,7 +55,9 @@ namespace AraSupermercado.presentacion
 
             try
             {
-                string tipoUsuario = login.ValidarUsuario(correo, contrasena);
+                var resultado = login.ValidarUsuario(correo, contrasena);
+                string tipoUsuario = resultado.tipoUsuario;
+                int clienteId = resultado.clienteId;
 
                 if (tipoUsuario == "ADMIN")
                 {
@@ -74,7 +69,12 @@ namespace AraSupermercado.presentacion
                 else if (tipoUsuario == "CLIENTE")
                 {
                     MessageBox.Show("Bienvenido", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormMenuCliente frmCliente = new FormMenuCliente();
+
+                    // Crear objeto Cliente con el ID contenido
+                    Cliente clienteLogueado = new Cliente { cliId = clienteId};
+
+                    // Abrir el menú cliente y pasar el objeto
+                    FormMenuCliente frmCliente = new FormMenuCliente(clienteLogueado);
                     frmCliente.Show();
                     this.Hide();
                 }
@@ -104,7 +104,5 @@ namespace AraSupermercado.presentacion
             txtContrasena.UseSystemPasswordChar = !txtContrasena.UseSystemPasswordChar;
             btnMostrarContrasena.Text = txtContrasena.UseSystemPasswordChar ? "👁" : "🙈";
         }
-
-
     }
 }
