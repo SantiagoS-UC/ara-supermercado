@@ -86,12 +86,6 @@
   <ItemGroup>
     <Compile Include="accesoDatos\ConexionOracle.cs" />
     <Compile Include="logica\Cliente.cs" />
-    <Compile Include="presentacion\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="presentacion\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="logica\Administrador.cs" />
     <Compile Include="logica\Login.cs" />
     <Compile Include="presentacion\FormLogin.cs">
@@ -112,28 +106,37 @@
     <Compile Include="presentacion\FormMenuCliente.Designer.cs">
       <DependentUpon>FormMenuCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\FormPanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormPanelUsuario.Designer.cs">
+      <DependentUpon>FormPanelUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormProductosFiltrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormProductosFiltrados.Designer.cs">
+      <DependentUpon>FormProductosFiltrados.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\FormRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\FormRegistrarCliente.Designer.cs">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\FormRegistrarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="presentacion\FormRegistrarProducto.Designer.cs">
-      <DependentUpon>FormRegistrarProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="presentacion\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\FormMenuCliente.resx">
+      <DependentUpon>FormMenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\FormPanelUsuario.resx">
+      <DependentUpon>FormPanelUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormRegistrarCliente.resx">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="presentacion\FormRegistrarProducto.resx">
-      <DependentUpon>FormRegistrarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
