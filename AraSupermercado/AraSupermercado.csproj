@@ -107,17 +107,23 @@
     <Compile Include="presentacion\\FormMenuCliente.Designer.cs">
       <DependentUpon>FormMenuCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\\FormPanelUsuario.cs">
+    <Compile Include="presentacion\\FormModificarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentacion\\FormPanelUsuario.Designer.cs">
-      <DependentUpon>FormPanelUsuario.cs</DependentUpon>
+    <Compile Include="presentacion\\FormModificarProducto.Designer.cs">
+      <DependentUpon>FormModificarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\\FormRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\\FormRegistrarCliente.Designer.cs">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\\FormPanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\\FormPanelUsuario.Designer.cs">
+      <DependentUpon>FormPanelUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\\AssemblyInfo.cs" />
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormMenuAdmin.resx">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\\FormModificarProducto.resx">
+      <DependentUpon>FormModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormRegistrarCliente.resx">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>

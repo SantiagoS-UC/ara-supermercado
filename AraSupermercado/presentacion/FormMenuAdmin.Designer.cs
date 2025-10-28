@@ -31,6 +31,10 @@
             this.tbcMenuAdmin = new System.Windows.Forms.TabControl();
             this.tbpProductos = new System.Windows.Forms.TabPage();
             this.pnlProductos = new System.Windows.Forms.Panel();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.flowPanelProductos = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.tbpRegistrarProducto = new System.Windows.Forms.TabPage();
             this.btnRegistrarProducto = new System.Windows.Forms.Button();
             this.lblSeleccionarImagen = new System.Windows.Forms.Label();
@@ -39,6 +43,8 @@
             this.lblInformacionProducto = new System.Windows.Forms.Label();
             this.lblRegistrarProducto = new System.Windows.Forms.Label();
             this.pnlRegistrarProducto = new System.Windows.Forms.Panel();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.lblCategoría = new System.Windows.Forms.Label();
             this.cbxEstadoProducto = new System.Windows.Forms.ComboBox();
             this.lblEstadoProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
@@ -53,12 +59,10 @@
             this.pnlPedidos = new System.Windows.Forms.Panel();
             this.tbpFacturas = new System.Windows.Forms.TabPage();
             this.pnlFacturas = new System.Windows.Forms.Panel();
-            this.flowPanelProductos = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblCategoría = new System.Windows.Forms.Label();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.tbcMenuAdmin.SuspendLayout();
             this.tbpProductos.SuspendLayout();
             this.pnlProductos.SuspendLayout();
+            this.flowPanelProductos.SuspendLayout();
             this.tbpRegistrarProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).BeginInit();
             this.pnlRegistrarProducto.SuspendLayout();
@@ -91,12 +95,54 @@
             // 
             // pnlProductos
             // 
+            this.pnlProductos.Controls.Add(this.btnBuscarProducto);
             this.pnlProductos.Controls.Add(this.flowPanelProductos);
+            this.pnlProductos.Controls.Add(this.txtBuscarProducto);
             this.pnlProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlProductos.Location = new System.Drawing.Point(3, 3);
             this.pnlProductos.Name = "pnlProductos";
             this.pnlProductos.Size = new System.Drawing.Size(762, 380);
             this.pnlProductos.TabIndex = 0;
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(371, 2);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarProducto.TabIndex = 2;
+            this.btnBuscarProducto.Text = "buscar";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
+            // flowPanelProductos
+            // 
+            this.flowPanelProductos.AutoScroll = true;
+            this.flowPanelProductos.BackColor = System.Drawing.Color.White;
+            this.flowPanelProductos.Controls.Add(this.lblMensaje);
+            this.flowPanelProductos.Location = new System.Drawing.Point(3, 29);
+            this.flowPanelProductos.Name = "flowPanelProductos";
+            this.flowPanelProductos.Size = new System.Drawing.Size(756, 348);
+            this.flowPanelProductos.TabIndex = 0;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.ForeColor = System.Drawing.Color.DimGray;
+            this.lblMensaje.Location = new System.Drawing.Point(3, 0);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(58, 13);
+            this.lblMensaje.TabIndex = 0;
+            this.lblMensaje.Text = "Productos:";
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtBuscarProducto.Location = new System.Drawing.Point(273, 4);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarProducto.TabIndex = 1;
+            this.txtBuscarProducto.Text = "Buscar";
             // 
             // tbpRegistrarProducto
             // 
@@ -195,6 +241,35 @@
             this.pnlRegistrarProducto.Name = "pnlRegistrarProducto";
             this.pnlRegistrarProducto.Size = new System.Drawing.Size(762, 380);
             this.pnlRegistrarProducto.TabIndex = 18;
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.AutoCompleteCustomSource.AddRange(new string[] {
+            "Frutas y Verduras",
+            "Carnes y Pescados",
+            "Lácteos y Huevos",
+            "Panadería y Pastelería",
+            "Abarrotes y Enlatados",
+            "Bebidas",
+            "Limpieza y Hogar",
+            "Cuidado Personal",
+            "Snacks y Dulces",
+            "Otros",
+            ""});
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(360, 270);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategoria.TabIndex = 24;
+            // 
+            // lblCategoría
+            // 
+            this.lblCategoría.AutoSize = true;
+            this.lblCategoría.Location = new System.Drawing.Point(356, 255);
+            this.lblCategoría.Name = "lblCategoría";
+            this.lblCategoría.Size = new System.Drawing.Size(61, 13);
+            this.lblCategoría.TabIndex = 23;
+            this.lblCategoría.Text = "Categoría *";
             // 
             // cbxEstadoProducto
             // 
@@ -316,45 +391,6 @@
             this.pnlFacturas.Size = new System.Drawing.Size(768, 386);
             this.pnlFacturas.TabIndex = 0;
             // 
-            // flowPanelProductos
-            // 
-            this.flowPanelProductos.AutoScroll = true;
-            this.flowPanelProductos.BackColor = System.Drawing.Color.LightGray;
-            this.flowPanelProductos.Location = new System.Drawing.Point(3, 3);
-            this.flowPanelProductos.Name = "flowPanelProductos";
-            this.flowPanelProductos.Size = new System.Drawing.Size(756, 374);
-            this.flowPanelProductos.TabIndex = 0;
-            this.flowPanelProductos.WrapContents = false;
-            // 
-            // lblCategoría
-            // 
-            this.lblCategoría.AutoSize = true;
-            this.lblCategoría.Location = new System.Drawing.Point(356, 255);
-            this.lblCategoría.Name = "lblCategoría";
-            this.lblCategoría.Size = new System.Drawing.Size(61, 13);
-            this.lblCategoría.TabIndex = 23;
-            this.lblCategoría.Text = "Categoría *";
-            // 
-            // cbxCategoria
-            // 
-            this.cbxCategoria.AutoCompleteCustomSource.AddRange(new string[] {
-            "Frutas y Verduras",
-            "Carnes y Pescados",
-            "Lácteos y Huevos",
-            "Panadería y Pastelería",
-            "Abarrotes y Enlatados",
-            "Bebidas",
-            "Limpieza y Hogar",
-            "Cuidado Personal",
-            "Snacks y Dulces",
-            "Otros",
-            ""});
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(360, 270);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbxCategoria.TabIndex = 24;
-            // 
             // FormMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +403,9 @@
             this.tbcMenuAdmin.ResumeLayout(false);
             this.tbpProductos.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
+            this.pnlProductos.PerformLayout();
+            this.flowPanelProductos.ResumeLayout(false);
+            this.flowPanelProductos.PerformLayout();
             this.tbpRegistrarProducto.ResumeLayout(false);
             this.tbpRegistrarProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProducto)).EndInit();
@@ -408,5 +447,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowPanelProductos;
         private System.Windows.Forms.Label lblCategoría;
         private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.TextBox txtBuscarProducto;
+        private System.Windows.Forms.Button btnBuscarProducto;
     }
 }

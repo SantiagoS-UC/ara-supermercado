@@ -1,4 +1,5 @@
 ﻿using AraSupermercado.accesoDatos;
+using AraSupermercado.logica;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections;
@@ -18,10 +19,143 @@ namespace AraSupermercado.presentacion
 {
     public partial class FormMenuAdmin : Form
     {
+        private Administrador admin;
         public FormMenuAdmin()
         {
 
             InitializeComponent();
+            admin = new Administrador();
+            // Configurar TabControl para carga automática
+            tbcMenuAdmin.SelectedIndexChanged += tbcMenuAdmin_SelectedIndexChanged;
+            this.Load += AdminDashboard_Load; // Evento Load para inicializar
+
+            // Evento para el botón de búsqueda
+            btnBuscarProducto.Click += btnBuscarProducto_Click;
+        }
+
+        // Carga automática de productos al iniciar el formulario
+        private async void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            if (tbcMenuAdmin.SelectedTab == tbpProductos)
+            {
+                await CargarProductosAsync();  // Carga automática al iniciar
+            }
+        }
+
+        private async void tbcMenuAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tbcMenuAdmin.SelectedTab == tbpProductos)
+            {
+                await CargarProductosAsync();  // Carga asíncrona para mejor rendimiento
+            }
+        }
+
+        // Método asíncrono para cargar productos
+        private async Task CargarProductosAsync(string filtroNombre = "")
+        {
+            flowPanelProductos.Controls.Clear();
+            flowPanelProductos.Refresh();
+            lblMensaje.Text = "Cargando productos...";
+
+            List<Producto> productos;
+            if (string.IsNullOrEmpty(filtroNombre))
+            {
+                productos = await Task.Run(() => admin.VerProductos());
+            }
+            else
+            {
+                productos = await Task.Run(() => admin.BuscarProductos(filtroNombre));
+            }
+            if (productos.Count == 0)
+            {
+                lblMensaje.Text = string.IsNullOrEmpty(filtroNombre) ? "No hay productos registrados." : "No se encontraron productos con ese nombre.";
+                return;
+            }
+            lblMensaje.Text = $"{productos.Count} producto(s) encontrado(s).";
+
+            txtBuscarProducto.Clear(); // Limpiar búsqueda después de cargar
+
+            foreach (var prod in productos)
+            {
+                // Crear panel estilizado para cada producto
+                Panel panelProducto = CrearPanelProducto(prod);
+                flowPanelProductos.Controls.Add(panelProducto);
+            }
+        }
+
+        // Método para crear un panel atractivo para cada producto
+        private Panel CrearPanelProducto(Producto prod)
+        {
+            // Verifica si ya existe un panel con este código
+            foreach (Control ctrl in flowPanelProductos.Controls)
+            {
+                if (ctrl is Panel panelProd && panelProd.Tag != null && (int)panelProd.Tag == prod.prod_Codigo)
+                {
+                    return panelProd;  // Ya existe, no crear nuevo
+                }
+            }
+
+            Panel panel = new Panel  // Asigna Tag para identificar
+            {
+                Size = new Size(280, 220),
+                BackColor = Color.White,
+                BorderStyle = BorderStyle.None,
+                Margin = new Padding(15),
+                Padding = new Padding(10),
+                Tag = prod.prod_Codigo
+            };
+
+            // PictureBox para imagen
+            PictureBox pbImagen = new PictureBox
+            {
+                Size = new Size(120, 120),
+                Location = new Point(10, 10),
+                SizeMode = PictureBoxSizeMode.Zoom,  // Mantiene proporción
+                BorderStyle = BorderStyle.None,
+                BackColor = Color.White
+            };
+            try
+            {
+                pbImagen.Image = Image.FromFile(prod.prod_Imagen_Ruta);
+            }
+            catch
+            {
+                //pbImagen.Image = Image.FromFile("Resources/no-image.png");  // Imagen por defecto en carpeta Resources
+            }
+            panel.Controls.Add(pbImagen);
+
+            // Labels con estilo
+
+            // Nombre del producto
+            Label lblNombre = new Label
+            {
+                Text = prod.prod_Nombre,
+                Location = new Point(10, 140),
+                AutoSize = true,
+                MaximumSize = new Size(120, 0),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                ForeColor = Color.Black
+            };
+            panel.Controls.Add(lblNombre);
+
+            // Precio del producto
+            Label lblPrecio = new Label
+            {
+                Text = $"${prod.prod_Precio:F2}",
+                Location = new Point(10, lblNombre.Bottom + 5),
+                AutoSize = true,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                ForeColor = Color.Black
+            };
+            panel.Controls.Add(lblPrecio);
+
+            // Evento opcional: Doble clic para editar (puedes expandir)
+            panel.DoubleClick += (s, e) =>
+            {
+                FormModificarProducto formModificar = new FormModificarProducto(prod);  // Pasa el producto
+                formModificar.ShowDialog();
+            };
+                return panel;
         }
 
         private void picProducto_Click(object sender, EventArgs e)
@@ -215,6 +349,18 @@ namespace AraSupermercado.presentacion
         {
             string[] categorias = {"Frutas y Verduras","Carnes y Pescados","Lácteos y Huevos","Panadería y Pastelería","Abarrotes y Enlatados","Bebidas","Limpieza y Hogar","Cuidado Personal","Snacks y Dulces","Otros"};
             cbxCategoria.Items.AddRange(categorias);
+        }
+
+        private async void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            string filtro = txtBuscarProducto.Text.Trim();
+            await CargarProductosAsync(filtro);  // Procede con la carga
+        }
+
+        private async void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBuscarProducto.Text.Trim();
+            await CargarProductosAsync(filtro);
         }
     }
 }

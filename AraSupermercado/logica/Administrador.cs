@@ -1,4 +1,5 @@
 ﻿using AraSupermercado.accesoDatos;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -76,5 +77,53 @@ namespace AraSupermercado.logica
             int filasAfectadas = conexion.EjecutarDML(consulta, parametros);
             return filasAfectadas >= 0;
         }
+        public List<Producto> BuscarProductos(string nombreBusqueda)
+    {
+        List<Producto> productos = new List<Producto>();
+        try
+        {
+            using (OracleConnection conn = new OracleConnection(conexion.ObtenerConexion().ConnectionString))  // Usa la cadena de conexión
+            using (OracleCommand cmd = new OracleCommand("pa_buscar_productos", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros
+                cmd.Parameters.Add(new OracleParameter("p_nombre_busqueda", OracleDbType.Varchar2, nombreBusqueda, ParameterDirection.Input));
+                cmd.Parameters.Add(new OracleParameter("p_cursor", OracleDbType.RefCursor, ParameterDirection.Output));
+
+                conn.Open();
+                using (OracleDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        try
+                        {
+                                Producto prod = new Producto(
+                                reader.GetInt32(reader.GetOrdinal("prod_codigo")),
+                                reader.GetInt32(reader.GetOrdinal("prov_nit")),
+                                reader.GetString(reader.GetOrdinal("prod_nombre")),
+                                reader.GetString(reader.GetOrdinal("prod_descripcion")),
+                                reader.GetString(reader.GetOrdinal("prod_estado")),
+                                reader.GetDecimal(reader.GetOrdinal("prod_precio")),
+                                reader.GetInt32(reader.GetOrdinal("prod_stock")),
+                                reader.GetString(reader.GetOrdinal("prod_imagen_ruta"))
+                            );
+                            productos.Add(prod);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Error procesando fila: {ex.Message}");
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error en BuscarProductos: {ex.Message}");
+        }
+        return productos;
+        }
+    
     }
 }
