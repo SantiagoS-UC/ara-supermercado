@@ -86,6 +86,13 @@
   <ItemGroup>
     <Compile Include="accesoDatos\ConexionOracle.cs" />
     <Compile Include="logica\Cliente.cs" />
+    <Compile Include="logica\Producto.cs" />
+    <Compile Include="presentacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="logica\Administrador.cs" />
     <Compile Include="logica\Login.cs" />
     <Compile Include="presentacion\FormLogin.cs">
@@ -134,6 +141,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormPanelUsuario.resx">
       <DependentUpon>FormPanelUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="presentacion\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormRegistrarCliente.resx">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>

@@ -95,15 +95,16 @@
             // 
             // btnMostrarContrasena
             // 
-            this.btnMostrarContrasena.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMostrarContrasena.BackgroundImage")));
+            this.btnMostrarContrasena.BackColor = System.Drawing.Color.Transparent;
             this.btnMostrarContrasena.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMostrarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarContrasena.Location = new System.Drawing.Point(675, 369);
-            this.btnMostrarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(493, 299);
+            this.btnMostrarContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarContrasena.Name = "btnMostrarContrasena";
-            this.btnMostrarContrasena.Size = new System.Drawing.Size(24, 20);
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(25, 30);
             this.btnMostrarContrasena.TabIndex = 8;
-            this.btnMostrarContrasena.UseVisualStyleBackColor = true;
+            this.btnMostrarContrasena.Text = "👁";
+            this.btnMostrarContrasena.UseVisualStyleBackColor = false;
             this.btnMostrarContrasena.Click += new System.EventHandler(this.btnMostrarContrasena_Click);
             // 
             // lblNoTienesCuenta
