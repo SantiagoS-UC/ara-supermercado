@@ -73,10 +73,9 @@
             this.asterisco1.BackColor = System.Drawing.Color.White;
             this.asterisco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco1.ForeColor = System.Drawing.Color.Red;
-            this.asterisco1.Location = new System.Drawing.Point(349, 252);
-            this.asterisco1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.asterisco1.Location = new System.Drawing.Point(262, 205);
             this.asterisco1.Name = "asterisco1";
-            this.asterisco1.Size = new System.Drawing.Size(20, 25);
+            this.asterisco1.Size = new System.Drawing.Size(15, 20);
             this.asterisco1.TabIndex = 10;
             this.asterisco1.Text = "*";
             // 
@@ -86,10 +85,9 @@
             this.Asterisco2.BackColor = System.Drawing.Color.White;
             this.Asterisco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Asterisco2.ForeColor = System.Drawing.Color.Red;
-            this.Asterisco2.Location = new System.Drawing.Point(284, 341);
-            this.Asterisco2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Asterisco2.Location = new System.Drawing.Point(213, 277);
             this.Asterisco2.Name = "Asterisco2";
-            this.Asterisco2.Size = new System.Drawing.Size(20, 25);
+            this.Asterisco2.Size = new System.Drawing.Size(15, 20);
             this.Asterisco2.TabIndex = 9;
             this.Asterisco2.Text = "*";
             // 
@@ -157,7 +155,7 @@
             this.txtContrasena.MaximumSize = new System.Drawing.Size(532, 30);
             this.txtContrasena.MinimumSize = new System.Drawing.Size(532, 30);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(532, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(400, 20);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
