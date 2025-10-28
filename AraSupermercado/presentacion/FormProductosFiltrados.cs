@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AraSupermercado
+namespace AraSupermercado.presentacion
 {
-    public partial class Form1 : Form
+    public partial class FormProductosFiltrados : Form
     {
-        public Form1()
+        public FormProductosFiltrados()
         {
             InitializeComponent();
         }
