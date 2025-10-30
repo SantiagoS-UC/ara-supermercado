@@ -118,9 +118,9 @@
             this.panel1.Controls.Add(this.lblTipoDocumento);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(496, 726);
+            this.panel1.Size = new System.Drawing.Size(661, 894);
             this.panel1.TabIndex = 0;
             // 
             // asterisco12
@@ -129,10 +129,9 @@
             this.asterisco12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco12.ForeColor = System.Drawing.Color.Red;
-            this.asterisco12.Location = new System.Drawing.Point(426, 546);
-            this.asterisco12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco12.Location = new System.Drawing.Point(568, 672);
             this.asterisco12.Name = "asterisco12";
-            this.asterisco12.Size = new System.Drawing.Size(15, 20);
+            this.asterisco12.Size = new System.Drawing.Size(20, 25);
             this.asterisco12.TabIndex = 39;
             this.asterisco12.Text = "*";
             // 
@@ -142,10 +141,9 @@
             this.asterisco11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco11.ForeColor = System.Drawing.Color.Red;
-            this.asterisco11.Location = new System.Drawing.Point(154, 545);
-            this.asterisco11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco11.Location = new System.Drawing.Point(205, 671);
             this.asterisco11.Name = "asterisco11";
-            this.asterisco11.Size = new System.Drawing.Size(15, 20);
+            this.asterisco11.Size = new System.Drawing.Size(20, 25);
             this.asterisco11.TabIndex = 38;
             this.asterisco11.Text = "*";
             // 
@@ -155,10 +153,9 @@
             this.asterisco10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco10.ForeColor = System.Drawing.Color.Red;
-            this.asterisco10.Location = new System.Drawing.Point(201, 487);
-            this.asterisco10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco10.Location = new System.Drawing.Point(268, 599);
             this.asterisco10.Name = "asterisco10";
-            this.asterisco10.Size = new System.Drawing.Size(15, 20);
+            this.asterisco10.Size = new System.Drawing.Size(20, 25);
             this.asterisco10.TabIndex = 37;
             this.asterisco10.Text = "*";
             // 
@@ -168,10 +165,9 @@
             this.asterisco9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco9.ForeColor = System.Drawing.Color.Red;
-            this.asterisco9.Location = new System.Drawing.Point(135, 433);
-            this.asterisco9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco9.Location = new System.Drawing.Point(180, 533);
             this.asterisco9.Name = "asterisco9";
-            this.asterisco9.Size = new System.Drawing.Size(15, 20);
+            this.asterisco9.Size = new System.Drawing.Size(20, 25);
             this.asterisco9.TabIndex = 36;
             this.asterisco9.Text = "*";
             // 
@@ -181,10 +177,9 @@
             this.asterisco8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco8.ForeColor = System.Drawing.Color.Red;
-            this.asterisco8.Location = new System.Drawing.Point(137, 380);
-            this.asterisco8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco8.Location = new System.Drawing.Point(183, 468);
             this.asterisco8.Name = "asterisco8";
-            this.asterisco8.Size = new System.Drawing.Size(15, 20);
+            this.asterisco8.Size = new System.Drawing.Size(20, 25);
             this.asterisco8.TabIndex = 35;
             this.asterisco8.Text = "*";
             // 
@@ -194,10 +189,9 @@
             this.asterisco7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco7.ForeColor = System.Drawing.Color.Red;
-            this.asterisco7.Location = new System.Drawing.Point(222, 324);
-            this.asterisco7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco7.Location = new System.Drawing.Point(296, 399);
             this.asterisco7.Name = "asterisco7";
-            this.asterisco7.Size = new System.Drawing.Size(15, 20);
+            this.asterisco7.Size = new System.Drawing.Size(20, 25);
             this.asterisco7.TabIndex = 34;
             this.asterisco7.Text = "*";
             // 
@@ -207,10 +201,9 @@
             this.asterisco6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco6.ForeColor = System.Drawing.Color.Red;
-            this.asterisco6.Location = new System.Drawing.Point(174, 250);
-            this.asterisco6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco6.Location = new System.Drawing.Point(232, 308);
             this.asterisco6.Name = "asterisco6";
-            this.asterisco6.Size = new System.Drawing.Size(15, 20);
+            this.asterisco6.Size = new System.Drawing.Size(20, 25);
             this.asterisco6.TabIndex = 33;
             this.asterisco6.Text = "*";
             // 
@@ -220,10 +213,9 @@
             this.asterisco5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco5.ForeColor = System.Drawing.Color.Red;
-            this.asterisco5.Location = new System.Drawing.Point(174, 192);
-            this.asterisco5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco5.Location = new System.Drawing.Point(232, 236);
             this.asterisco5.Name = "asterisco5";
-            this.asterisco5.Size = new System.Drawing.Size(15, 20);
+            this.asterisco5.Size = new System.Drawing.Size(20, 25);
             this.asterisco5.TabIndex = 32;
             this.asterisco5.Text = "*";
             // 
@@ -233,10 +225,9 @@
             this.asterisco4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco4.ForeColor = System.Drawing.Color.Red;
-            this.asterisco4.Location = new System.Drawing.Point(436, 134);
-            this.asterisco4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco4.Location = new System.Drawing.Point(581, 165);
             this.asterisco4.Name = "asterisco4";
-            this.asterisco4.Size = new System.Drawing.Size(15, 20);
+            this.asterisco4.Size = new System.Drawing.Size(20, 25);
             this.asterisco4.TabIndex = 31;
             this.asterisco4.Text = "*";
             // 
@@ -246,10 +237,9 @@
             this.asterisco3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.asterisco3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asterisco3.ForeColor = System.Drawing.Color.Red;
-            this.asterisco3.Location = new System.Drawing.Point(209, 134);
-            this.asterisco3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.asterisco3.Location = new System.Drawing.Point(279, 165);
             this.asterisco3.Name = "asterisco3";
-            this.asterisco3.Size = new System.Drawing.Size(15, 20);
+            this.asterisco3.Size = new System.Drawing.Size(20, 25);
             this.asterisco3.TabIndex = 30;
             this.asterisco3.Text = "*";
             // 
@@ -258,10 +248,10 @@
             this.btnMostrarConfirmarContrasena.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMostrarConfirmarContrasena.FlatAppearance.BorderSize = 0;
             this.btnMostrarConfirmarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarConfirmarContrasena.Location = new System.Drawing.Point(407, 568);
-            this.btnMostrarConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarConfirmarContrasena.Location = new System.Drawing.Point(540, 697);
+            this.btnMostrarConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMostrarConfirmarContrasena.Name = "btnMostrarConfirmarContrasena";
-            this.btnMostrarConfirmarContrasena.Size = new System.Drawing.Size(25, 19);
+            this.btnMostrarConfirmarContrasena.Size = new System.Drawing.Size(26, 23);
             this.btnMostrarConfirmarContrasena.TabIndex = 29;
             this.btnMostrarConfirmarContrasena.Text = "👁";
             this.btnMostrarConfirmarContrasena.UseVisualStyleBackColor = false;
@@ -272,10 +262,10 @@
             this.btnMostrarContrasena.BackColor = System.Drawing.Color.Transparent;
             this.btnMostrarContrasena.FlatAppearance.BorderSize = 0;
             this.btnMostrarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarContrasena.Location = new System.Drawing.Point(202, 565);
-            this.btnMostrarContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(277, 697);
+            this.btnMostrarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMostrarContrasena.Name = "btnMostrarContrasena";
-            this.btnMostrarContrasena.Size = new System.Drawing.Size(22, 19);
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(25, 23);
             this.btnMostrarContrasena.TabIndex = 28;
             this.btnMostrarContrasena.Text = "👁";
             this.btnMostrarContrasena.UseVisualStyleBackColor = false;
@@ -286,10 +276,9 @@
             this.lblYaTienesCuenta.AutoSize = true;
             this.lblYaTienesCuenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblYaTienesCuenta.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblYaTienesCuenta.Location = new System.Drawing.Point(154, 658);
-            this.lblYaTienesCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblYaTienesCuenta.Location = new System.Drawing.Point(205, 810);
             this.lblYaTienesCuenta.Name = "lblYaTienesCuenta";
-            this.lblYaTienesCuenta.Size = new System.Drawing.Size(99, 13);
+            this.lblYaTienesCuenta.Size = new System.Drawing.Size(120, 16);
             this.lblYaTienesCuenta.TabIndex = 27;
             this.lblYaTienesCuenta.Text = "¿Ya tienes cuenta?";
             // 
@@ -299,10 +288,10 @@
             this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(252, 650);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(336, 800);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(85, 28);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(113, 34);
             this.btnIniciarSesion.TabIndex = 26;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -318,10 +307,10 @@
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistrarse.Location = new System.Drawing.Point(159, 609);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarse.Location = new System.Drawing.Point(212, 750);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(183, 36);
+            this.btnRegistrarse.Size = new System.Drawing.Size(244, 44);
             this.btnRegistrarse.TabIndex = 25;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
@@ -329,76 +318,76 @@
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(69, 346);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(92, 426);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(363, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(483, 22);
             this.dtpFechaNacimiento.TabIndex = 24;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(69, 402);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion.Location = new System.Drawing.Point(92, 495);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(363, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(483, 22);
             this.txtDireccion.TabIndex = 23;
             // 
             // txtConfirmarContrasena
             // 
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(271, 567);
-            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(361, 698);
+            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(161, 20);
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(213, 22);
             this.txtConfirmarContrasena.TabIndex = 22;
             this.txtConfirmarContrasena.UseSystemPasswordChar = true;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(69, 567);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContrasena.Location = new System.Drawing.Point(92, 698);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(161, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(213, 22);
             this.txtContrasena.TabIndex = 21;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(69, 509);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Location = new System.Drawing.Point(92, 626);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(363, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(483, 22);
             this.txtCorreo.TabIndex = 20;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(69, 455);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono.Location = new System.Drawing.Point(92, 560);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(363, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(483, 22);
             this.txtTelefono.TabIndex = 19;
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(271, 282);
-            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(361, 347);
+            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(161, 20);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(213, 22);
             this.txtSegundoApellido.TabIndex = 18;
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(69, 282);
-            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(92, 347);
+            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(161, 20);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(213, 22);
             this.txtPrimerApellido.TabIndex = 17;
             // 
             // txtSegundoNombre
             // 
-            this.txtSegundoNombre.Location = new System.Drawing.Point(271, 219);
-            this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(361, 270);
+            this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(161, 20);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(213, 22);
             this.txtSegundoNombre.TabIndex = 16;
             // 
             // lblFechaNac
@@ -407,27 +396,26 @@
             this.lblFechaNac.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFechaNac.Location = new System.Drawing.Point(65, 324);
-            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaNac.Location = new System.Drawing.Point(87, 399);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(159, 20);
+            this.lblFechaNac.Size = new System.Drawing.Size(196, 25);
             this.lblFechaNac.TabIndex = 15;
             this.lblFechaNac.Text = "Fecha de Nacimiento";
             // 
             // txtPrimerNombre
             // 
-            this.txtPrimerNombre.Location = new System.Drawing.Point(69, 219);
-            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(92, 270);
+            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(161, 20);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(213, 22);
             this.txtPrimerNombre.TabIndex = 14;
             // 
             // txtNumDocumento
             // 
-            this.txtNumDocumento.Location = new System.Drawing.Point(271, 156);
-            this.txtNumDocumento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumDocumento.Location = new System.Drawing.Point(361, 192);
+            this.txtNumDocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumDocumento.Name = "txtNumDocumento";
-            this.txtNumDocumento.Size = new System.Drawing.Size(161, 20);
+            this.txtNumDocumento.Size = new System.Drawing.Size(213, 22);
             this.txtNumDocumento.TabIndex = 13;
             // 
             // cbxTipoDocumento
@@ -437,20 +425,19 @@
             "CC",
             "CE",
             "PA"});
-            this.cbxTipoDocumento.Location = new System.Drawing.Point(69, 156);
-            this.cbxTipoDocumento.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxTipoDocumento.Location = new System.Drawing.Point(92, 192);
+            this.cbxTipoDocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxTipoDocumento.Name = "cbxTipoDocumento";
-            this.cbxTipoDocumento.Size = new System.Drawing.Size(161, 21);
+            this.cbxTipoDocumento.Size = new System.Drawing.Size(213, 24);
             this.cbxTipoDocumento.TabIndex = 12;
             // 
             // lblRegistrarUsuario
             // 
             this.lblRegistrarUsuario.AutoSize = true;
             this.lblRegistrarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegistrarUsuario.Location = new System.Drawing.Point(2, 0);
-            this.lblRegistrarUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistrarUsuario.Location = new System.Drawing.Point(3, 0);
             this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
-            this.lblRegistrarUsuario.Size = new System.Drawing.Size(0, 13);
+            this.lblRegistrarUsuario.Size = new System.Drawing.Size(0, 16);
             this.lblRegistrarUsuario.TabIndex = 11;
             // 
             // lblConfirmarContrasena
@@ -459,10 +446,9 @@
             this.lblConfirmarContrasena.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblConfirmarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarContrasena.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(267, 545);
-            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(356, 671);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(165, 20);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(204, 25);
             this.lblConfirmarContrasena.TabIndex = 10;
             this.lblConfirmarContrasena.Text = "Confirmar Contraseña";
             // 
@@ -472,10 +458,9 @@
             this.lblContrasena.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblContrasena.Location = new System.Drawing.Point(65, 545);
-            this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContrasena.Location = new System.Drawing.Point(87, 671);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(92, 20);
+            this.lblContrasena.Size = new System.Drawing.Size(114, 25);
             this.lblContrasena.TabIndex = 9;
             this.lblContrasena.Text = "Contraseña";
             // 
@@ -485,10 +470,9 @@
             this.lblCorreo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCorreo.Location = new System.Drawing.Point(65, 487);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(87, 599);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(140, 20);
+            this.lblCorreo.Size = new System.Drawing.Size(173, 25);
             this.lblCorreo.TabIndex = 8;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
@@ -498,10 +482,9 @@
             this.lblTelefono.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTelefono.Location = new System.Drawing.Point(69, 433);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(92, 533);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
+            this.lblTelefono.Size = new System.Drawing.Size(89, 25);
             this.lblTelefono.TabIndex = 7;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -511,10 +494,9 @@
             this.lblDireccion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblDireccion.Location = new System.Drawing.Point(65, 380);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(87, 468);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(75, 20);
+            this.lblDireccion.Size = new System.Drawing.Size(93, 25);
             this.lblDireccion.TabIndex = 6;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -524,10 +506,9 @@
             this.lblSegundoApellido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSegundoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSegundoApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSegundoApellido.Location = new System.Drawing.Point(267, 250);
-            this.lblSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSegundoApellido.Location = new System.Drawing.Point(356, 308);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(134, 20);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(167, 25);
             this.lblSegundoApellido.TabIndex = 5;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
@@ -537,10 +518,9 @@
             this.lblPrimerApellido.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPrimerApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimerApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPrimerApellido.Location = new System.Drawing.Point(65, 250);
-            this.lblPrimerApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrimerApellido.Location = new System.Drawing.Point(87, 308);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(114, 20);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(143, 25);
             this.lblPrimerApellido.TabIndex = 4;
             this.lblPrimerApellido.Text = "Primer Apellido";
             // 
@@ -550,10 +530,9 @@
             this.lblSegundoNombre.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSegundoNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSegundoNombre.Location = new System.Drawing.Point(267, 192);
-            this.lblSegundoNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSegundoNombre.Location = new System.Drawing.Point(356, 236);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(134, 20);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(166, 25);
             this.lblSegundoNombre.TabIndex = 3;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -563,10 +542,9 @@
             this.lblNumDocumento.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblNumDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumDocumento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNumDocumento.Location = new System.Drawing.Point(267, 134);
-            this.lblNumDocumento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumDocumento.Location = new System.Drawing.Point(356, 165);
             this.lblNumDocumento.Name = "lblNumDocumento";
-            this.lblNumDocumento.Size = new System.Drawing.Size(174, 20);
+            this.lblNumDocumento.Size = new System.Drawing.Size(213, 25);
             this.lblNumDocumento.TabIndex = 2;
             this.lblNumDocumento.Text = "Número de Documento";
             // 
@@ -576,10 +554,9 @@
             this.lblPrimerNombre.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimerNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPrimerNombre.Location = new System.Drawing.Point(65, 192);
-            this.lblPrimerNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrimerNombre.Location = new System.Drawing.Point(87, 236);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(114, 20);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(142, 25);
             this.lblPrimerNombre.TabIndex = 1;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -589,20 +566,19 @@
             this.lblTipoDocumento.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDocumento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTipoDocumento.Location = new System.Drawing.Point(65, 134);
-            this.lblTipoDocumento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoDocumento.Location = new System.Drawing.Point(87, 165);
             this.lblTipoDocumento.Name = "lblTipoDocumento";
-            this.lblTipoDocumento.Size = new System.Drawing.Size(148, 20);
+            this.lblTipoDocumento.Size = new System.Drawing.Size(183, 25);
             this.lblTipoDocumento.TabIndex = 0;
             this.lblTipoDocumento.Text = "Tipo de Documento";
             // 
             // FormRegistrarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 726);
+            this.ClientSize = new System.Drawing.Size(661, 894);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRegistrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistrarCliente";
