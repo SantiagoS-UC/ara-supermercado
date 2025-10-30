@@ -72,9 +72,10 @@
             this.subMenuVerPedidos = new System.Windows.Forms.ToolStripMenuItem();
             this.subMenuCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripCarrito = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblAra = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.pbxAra = new System.Windows.Forms.PictureBox();
             this.menuCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAra)).BeginInit();
             this.SuspendLayout();
             // 
             // contenidoToolStripMenuItem
@@ -249,7 +250,7 @@
             // menuCliente
             // 
             this.menuCliente.AutoSize = false;
-            this.menuCliente.BackColor = System.Drawing.Color.DarkOrange;
+            this.menuCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
             this.menuCliente.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuCliente.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripPaginaPrincipal,
@@ -258,19 +259,30 @@
             this.toolStripCarrito});
             this.menuCliente.Location = new System.Drawing.Point(0, 0);
             this.menuCliente.Name = "menuCliente";
+            this.menuCliente.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuCliente.Size = new System.Drawing.Size(1182, 81);
+            this.menuCliente.Size = new System.Drawing.Size(1182, 124);
             this.menuCliente.TabIndex = 0;
-            this.menuCliente.Text = "menuStrip1";
             // 
             // toolStripPaginaPrincipal
             // 
+            this.toolStripPaginaPrincipal.AutoSize = false;
+            this.toolStripPaginaPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripPaginaPrincipal.BackgroundImage")));
+            this.toolStripPaginaPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.toolStripPaginaPrincipal.ForeColor = System.Drawing.Color.Black;
+            this.toolStripPaginaPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripPaginaPrincipal.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.toolStripPaginaPrincipal.Name = "toolStripPaginaPrincipal";
-            this.toolStripPaginaPrincipal.Size = new System.Drawing.Size(128, 77);
-            this.toolStripPaginaPrincipal.Text = "Página Principal";
+            this.toolStripPaginaPrincipal.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.toolStripPaginaPrincipal.Size = new System.Drawing.Size(180, 90);
+            this.toolStripPaginaPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripPaginaPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripCategorias
             // 
+            this.toolStripCategorias.AutoSize = false;
+            this.toolStripCategorias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripCategorias.BackgroundImage")));
+            this.toolStripCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.toolStripCategorias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuFrutasVerduras,
             this.subMenuCarnesPescados,
@@ -282,9 +294,11 @@
             this.subMenuHigiene,
             this.subMenuSnacks,
             this.subMenuOtros});
+            this.toolStripCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.toolStripCategorias.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.toolStripCategorias.Name = "toolStripCategorias";
-            this.toolStripCategorias.Size = new System.Drawing.Size(94, 77);
-            this.toolStripCategorias.Text = "Categorías";
+            this.toolStripCategorias.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.toolStripCategorias.Size = new System.Drawing.Size(180, 90);
             // 
             // subMenuFrutasVerduras
             // 
@@ -349,66 +363,78 @@
             // toolStripUsuario
             // 
             this.toolStripUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripUsuario.AutoSize = false;
+            this.toolStripUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripUsuario.BackgroundImage")));
+            this.toolStripUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.toolStripUsuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuAdminCuenta,
             this.subMenuVerPedidos,
             this.subMenuCerrarSesion});
+            this.toolStripUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.toolStripUsuario.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.toolStripUsuario.Name = "toolStripUsuario";
-            this.toolStripUsuario.Size = new System.Drawing.Size(73, 77);
-            this.toolStripUsuario.Text = "Usuario";
+            this.toolStripUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.toolStripUsuario.Size = new System.Drawing.Size(180, 90);
             // 
             // subMenuAdminCuenta
             // 
             this.subMenuAdminCuenta.Name = "subMenuAdminCuenta";
-            this.subMenuAdminCuenta.Size = new System.Drawing.Size(224, 26);
+            this.subMenuAdminCuenta.Size = new System.Drawing.Size(219, 26);
             this.subMenuAdminCuenta.Text = "Administrar Cuenta";
             this.subMenuAdminCuenta.Click += new System.EventHandler(this.subMenuAdminCuenta_Click);
             // 
             // subMenuVerPedidos
             // 
             this.subMenuVerPedidos.Name = "subMenuVerPedidos";
-            this.subMenuVerPedidos.Size = new System.Drawing.Size(224, 26);
+            this.subMenuVerPedidos.Size = new System.Drawing.Size(219, 26);
             this.subMenuVerPedidos.Text = "Ver Pedidos";
             this.subMenuVerPedidos.Click += new System.EventHandler(this.subMenuVerPedidos_Click);
             // 
             // subMenuCerrarSesion
             // 
             this.subMenuCerrarSesion.Name = "subMenuCerrarSesion";
-            this.subMenuCerrarSesion.Size = new System.Drawing.Size(224, 26);
+            this.subMenuCerrarSesion.Size = new System.Drawing.Size(219, 26);
             this.subMenuCerrarSesion.Text = "Cerrar Sesión";
+            this.subMenuCerrarSesion.Click += new System.EventHandler(this.subMenuCerrarSesion_Click);
             // 
             // toolStripCarrito
             // 
             this.toolStripCarrito.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripCarrito.AutoSize = false;
+            this.toolStripCarrito.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripCarrito.BackgroundImage")));
+            this.toolStripCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.toolStripCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.toolStripCarrito.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.toolStripCarrito.Name = "toolStripCarrito";
-            this.toolStripCarrito.Size = new System.Drawing.Size(68, 77);
-            this.toolStripCarrito.Text = "Carrito";
-            // 
-            // lblAra
-            // 
-            this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(620, 13);
-            this.lblAra.Name = "lblAra";
-            this.lblAra.Size = new System.Drawing.Size(27, 16);
-            this.lblAra.TabIndex = 1;
-            this.lblAra.Text = "ara";
+            this.toolStripCarrito.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.toolStripCarrito.Size = new System.Drawing.Size(180, 90);
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 81);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 124);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1182, 572);
+            this.pnlContenedor.Size = new System.Drawing.Size(1182, 529);
             this.pnlContenedor.TabIndex = 2;
+            // 
+            // pbxAra
+            // 
+            this.pbxAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbxAra.Image = ((System.Drawing.Image)(resources.GetObject("pbxAra.Image")));
+            this.pbxAra.Location = new System.Drawing.Point(516, 15);
+            this.pbxAra.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.pbxAra.Name = "pbxAra";
+            this.pbxAra.Size = new System.Drawing.Size(150, 98);
+            this.pbxAra.TabIndex = 0;
+            this.pbxAra.TabStop = false;
             // 
             // FormMenuCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.pbxAra);
             this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.lblAra);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
             this.Name = "FormMenuCliente";
@@ -416,8 +442,8 @@
             this.Text = "FormMenuCliente";
             this.menuCliente.ResumeLayout(false);
             this.menuCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAra)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -448,7 +474,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuCliente;
-        private System.Windows.Forms.Label lblAra;
         private System.Windows.Forms.ToolStripMenuItem toolStripPaginaPrincipal;
         private System.Windows.Forms.ToolStripMenuItem toolStripCategorias;
         private System.Windows.Forms.ToolStripMenuItem toolStripUsuario;
@@ -467,5 +492,6 @@
         private System.Windows.Forms.ToolStripMenuItem subMenuVerPedidos;
         private System.Windows.Forms.ToolStripMenuItem subMenuCerrarSesion;
         private System.Windows.Forms.Panel pnlContenedor;
+        private System.Windows.Forms.PictureBox pbxAra;
     }
 }

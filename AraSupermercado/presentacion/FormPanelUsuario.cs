@@ -324,5 +324,7 @@ namespace AraSupermercado.presentacion
                 errorProvider.SetError(cbxEditTipoDoc, "");
             }
         }
+
+
     }
 }

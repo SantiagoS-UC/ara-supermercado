@@ -189,13 +189,11 @@ namespace AraSupermercado.presentacion
                 esValido = false;
             }
 
-            // Validar mayor de edad
-            DateTime fechaNacimiento = dtpFechaNacimiento.Value;
-            int edad = DateTime.Now.Year - fechaNacimiento.Year;
-            if (fechaNacimiento > DateTime.Now.AddYears(-edad)) edad--;
-            if (edad < 18)
+            // Validar fecha de nacimiento (usando el método de Cliente)
+            string mensajeFecha;
+            if (!Cliente.ValidarFechaNacimiento(dtpFechaNacimiento.Value, out mensajeFecha))
             {
-                errorProvider.SetError(dtpFechaNacimiento, "Debe ser mayor de edad.");
+                errorProvider.SetError(dtpFechaNacimiento, mensajeFecha);
                 esValido = false;
             }
 
