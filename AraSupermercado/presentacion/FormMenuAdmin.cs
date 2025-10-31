@@ -93,7 +93,7 @@ namespace AraSupermercado.presentacion
             // Verifica si ya existe un panel con este código
             foreach (Control ctrl in flowPanelProductos.Controls)
             {
-                if (ctrl is Panel panelProd && panelProd.Tag != null && (int)panelProd.Tag == prod.prod_Codigo)
+                if (ctrl is Panel panelProd && panelProd.Tag != null && (int)panelProd.Tag == prod.prodCodigo)
                 {
                     return panelProd;  // Ya existe, no crear nuevo
                 }
@@ -106,7 +106,7 @@ namespace AraSupermercado.presentacion
                 BorderStyle = BorderStyle.None,
                 Margin = new Padding(15),
                 Padding = new Padding(10),
-                Tag = prod.prod_Codigo
+                Tag = prod.prodCodigo
             };
 
             // PictureBox para imagen
@@ -120,7 +120,7 @@ namespace AraSupermercado.presentacion
             };
             try
             {
-                pbImagen.Image = Image.FromFile(prod.prod_Imagen_Ruta);
+                pbImagen.Image = Image.FromFile(prod.prodImagenRuta);
             }
             catch
             {
@@ -133,7 +133,7 @@ namespace AraSupermercado.presentacion
             // Nombre del producto
             Label lblNombre = new Label
             {
-                Text = prod.prod_Nombre,
+                Text = prod.prodNombre,
                 Location = new Point(10, 140),
                 AutoSize = true,
                 MaximumSize = new Size(120, 0),
@@ -145,7 +145,7 @@ namespace AraSupermercado.presentacion
             // Precio del producto
             Label lblPrecio = new Label
             {
-                Text = $"${prod.prod_Precio:F2}",
+                Text = $"${prod.prodPrecio:F2}",
                 Location = new Point(10, lblNombre.Bottom + 5),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold),

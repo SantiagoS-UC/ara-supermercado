@@ -85,10 +85,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accesoDatos\\ConexionOracle.cs" />
+    <Compile Include="logica\Carrito.cs" />
     <Compile Include="logica\\Cliente.cs" />
     <Compile Include="logica\\Producto.cs" />
     <Compile Include="logica\\Administrador.cs" />
     <Compile Include="logica\\Login.cs" />
+    <Compile Include="presentacion\UcCarrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcCarrito.Designer.cs">
+      <DependentUpon>UcCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcPaginaPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcPaginaPrincipal.Designer.cs">
+      <DependentUpon>UcPaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcProductoDetalle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcProductoDetalle.Designer.cs">
+      <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     <Compile Include="presentacion\FormMenuAdmin2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +155,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentacion\UcCarrito.resx">
+      <DependentUpon>UcCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\UcPaginaPrincipal.resx">
+      <DependentUpon>UcPaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\UcProductoDetalle.resx">
+      <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     <EmbeddedResource Include="presentacion\FormMenuAdmin2.resx">
       <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +195,7 @@
     <Compile Include="Properties\\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
