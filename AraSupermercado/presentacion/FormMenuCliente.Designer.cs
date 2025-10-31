@@ -258,15 +258,16 @@
             this.toolStripCarrito});
             this.menuCliente.Location = new System.Drawing.Point(0, 0);
             this.menuCliente.Name = "menuCliente";
+            this.menuCliente.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuCliente.Size = new System.Drawing.Size(1182, 81);
+            this.menuCliente.Size = new System.Drawing.Size(886, 66);
             this.menuCliente.TabIndex = 0;
             this.menuCliente.Text = "menuStrip1";
             // 
             // toolStripPaginaPrincipal
             // 
             this.toolStripPaginaPrincipal.Name = "toolStripPaginaPrincipal";
-            this.toolStripPaginaPrincipal.Size = new System.Drawing.Size(128, 77);
+            this.toolStripPaginaPrincipal.Size = new System.Drawing.Size(104, 62);
             this.toolStripPaginaPrincipal.Text = "Página Principal";
             // 
             // toolStripCategorias
@@ -283,67 +284,67 @@
             this.subMenuSnacks,
             this.subMenuOtros});
             this.toolStripCategorias.Name = "toolStripCategorias";
-            this.toolStripCategorias.Size = new System.Drawing.Size(94, 77);
+            this.toolStripCategorias.Size = new System.Drawing.Size(75, 62);
             this.toolStripCategorias.Text = "Categorías";
             // 
             // subMenuFrutasVerduras
             // 
             this.subMenuFrutasVerduras.Name = "subMenuFrutasVerduras";
-            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(275, 26);
+            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(220, 22);
             this.subMenuFrutasVerduras.Text = "Frutas y Verduras";
             // 
             // subMenuCarnesPescados
             // 
             this.subMenuCarnesPescados.Name = "subMenuCarnesPescados";
-            this.subMenuCarnesPescados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuCarnesPescados.Size = new System.Drawing.Size(220, 22);
             this.subMenuCarnesPescados.Text = "Carnes y Pescados";
             // 
             // subMenuLacteosHuevos
             // 
             this.subMenuLacteosHuevos.Name = "subMenuLacteosHuevos";
-            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(220, 22);
             this.subMenuLacteosHuevos.Text = "Lácteos y Huevos";
             // 
             // subMenuPanaderiaPasteleria
             // 
             this.subMenuPanaderiaPasteleria.Name = "subMenuPanaderiaPasteleria";
-            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(275, 26);
+            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(220, 22);
             this.subMenuPanaderiaPasteleria.Text = "Panadería y Pastelería";
             // 
             // subMenuAbarrotesEnlatados
             // 
             this.subMenuAbarrotesEnlatados.Name = "subMenuAbarrotesEnlatados";
-            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(220, 22);
             this.subMenuAbarrotesEnlatados.Text = "Abarrotes y Enlatados";
             // 
             // subMenuBebidas
             // 
             this.subMenuBebidas.Name = "subMenuBebidas";
-            this.subMenuBebidas.Size = new System.Drawing.Size(275, 26);
+            this.subMenuBebidas.Size = new System.Drawing.Size(220, 22);
             this.subMenuBebidas.Text = "Bebidas";
             // 
             // subMenuLimpiezaHogar
             // 
             this.subMenuLimpiezaHogar.Name = "subMenuLimpiezaHogar";
-            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(220, 22);
             this.subMenuLimpiezaHogar.Text = "Limpieza y Hogar";
             // 
             // subMenuHigiene
             // 
             this.subMenuHigiene.Name = "subMenuHigiene";
-            this.subMenuHigiene.Size = new System.Drawing.Size(275, 26);
+            this.subMenuHigiene.Size = new System.Drawing.Size(220, 22);
             this.subMenuHigiene.Text = "Cuidado Personal e Higiene";
             // 
             // subMenuSnacks
             // 
             this.subMenuSnacks.Name = "subMenuSnacks";
-            this.subMenuSnacks.Size = new System.Drawing.Size(275, 26);
+            this.subMenuSnacks.Size = new System.Drawing.Size(220, 22);
             this.subMenuSnacks.Text = "Snacks y Dulces";
             // 
             // subMenuOtros
             // 
             this.subMenuOtros.Name = "subMenuOtros";
-            this.subMenuOtros.Size = new System.Drawing.Size(275, 26);
+            this.subMenuOtros.Size = new System.Drawing.Size(220, 22);
             this.subMenuOtros.Text = "Otros";
             // 
             // toolStripUsuario
@@ -354,63 +355,66 @@
             this.subMenuVerPedidos,
             this.subMenuCerrarSesion});
             this.toolStripUsuario.Name = "toolStripUsuario";
-            this.toolStripUsuario.Size = new System.Drawing.Size(73, 77);
+            this.toolStripUsuario.Size = new System.Drawing.Size(59, 62);
             this.toolStripUsuario.Text = "Usuario";
             // 
             // subMenuAdminCuenta
             // 
             this.subMenuAdminCuenta.Name = "subMenuAdminCuenta";
-            this.subMenuAdminCuenta.Size = new System.Drawing.Size(224, 26);
+            this.subMenuAdminCuenta.Size = new System.Drawing.Size(177, 22);
             this.subMenuAdminCuenta.Text = "Administrar Cuenta";
             this.subMenuAdminCuenta.Click += new System.EventHandler(this.subMenuAdminCuenta_Click);
             // 
             // subMenuVerPedidos
             // 
             this.subMenuVerPedidos.Name = "subMenuVerPedidos";
-            this.subMenuVerPedidos.Size = new System.Drawing.Size(224, 26);
+            this.subMenuVerPedidos.Size = new System.Drawing.Size(177, 22);
             this.subMenuVerPedidos.Text = "Ver Pedidos";
             this.subMenuVerPedidos.Click += new System.EventHandler(this.subMenuVerPedidos_Click);
             // 
             // subMenuCerrarSesion
             // 
             this.subMenuCerrarSesion.Name = "subMenuCerrarSesion";
-            this.subMenuCerrarSesion.Size = new System.Drawing.Size(224, 26);
+            this.subMenuCerrarSesion.Size = new System.Drawing.Size(177, 22);
             this.subMenuCerrarSesion.Text = "Cerrar Sesión";
             // 
             // toolStripCarrito
             // 
             this.toolStripCarrito.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripCarrito.Name = "toolStripCarrito";
-            this.toolStripCarrito.Size = new System.Drawing.Size(68, 77);
+            this.toolStripCarrito.Size = new System.Drawing.Size(55, 62);
             this.toolStripCarrito.Text = "Carrito";
             // 
             // lblAra
             // 
             this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(620, 13);
+            this.lblAra.Location = new System.Drawing.Point(465, 11);
+            this.lblAra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAra.Name = "lblAra";
-            this.lblAra.Size = new System.Drawing.Size(27, 16);
+            this.lblAra.Size = new System.Drawing.Size(22, 13);
             this.lblAra.TabIndex = 1;
             this.lblAra.Text = "ara";
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 81);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 66);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1182, 572);
+            this.pnlContenedor.Size = new System.Drawing.Size(886, 465);
             this.pnlContenedor.TabIndex = 2;
             // 
             // FormMenuCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.ClientSize = new System.Drawing.Size(886, 531);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.lblAra);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuCliente";

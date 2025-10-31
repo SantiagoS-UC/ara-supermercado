@@ -1,4 +1,5 @@
-﻿using AraSupermercado.accesoDatos;
+﻿/*
+using AraSupermercado.accesoDatos;
 using AraSupermercado.logica;
 using Oracle.ManagedDataAccess.Client;
 using System;
@@ -11,6 +12,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -21,8 +23,7 @@ namespace AraSupermercado.presentacion
     {
         private Administrador admin;
         public FormMenuAdmin()
-        {
-
+        { 
             InitializeComponent();
             admin = new Administrador();
             // Configurar TabControl para carga automática
@@ -31,6 +32,9 @@ namespace AraSupermercado.presentacion
 
             // Evento para el botón de búsqueda
             btnBuscarProducto.Click += btnBuscarProducto_Click;
+
+            // Evento para limpiar búsqueda
+            btnLimpiarBusqueda.Click += BtnLimpiarBusqueda_Click;
         }
 
         // Carga automática de productos al iniciar el formulario
@@ -60,7 +64,7 @@ namespace AraSupermercado.presentacion
             List<Producto> productos;
             if (string.IsNullOrEmpty(filtroNombre))
             {
-                productos = await Task.Run(() => admin.VerProductos());
+                productos = await Task.Run(() => admin.VerProductosAdmin());
             }
             else
             {
@@ -97,7 +101,7 @@ namespace AraSupermercado.presentacion
 
             Panel panel = new Panel  // Asigna Tag para identificar
             {
-                Size = new Size(280, 220),
+                Size = new Size(280, 280),
                 BackColor = Color.White,
                 BorderStyle = BorderStyle.None,
                 Margin = new Padding(15),
@@ -149,13 +153,24 @@ namespace AraSupermercado.presentacion
             };
             panel.Controls.Add(lblPrecio);
 
-            // Evento opcional: Doble clic para editar (puedes expandir)
-            panel.DoubleClick += (s, e) =>
-            {
-                FormModificarProducto formModificar = new FormModificarProducto(prod);  // Pasa el producto
-                formModificar.ShowDialog();
-            };
-                return panel;
+            //Doble click a el panel para modificar
+            panel.DoubleClick += (s, e) => AbrirFormModificar(prod);
+
+            // Doble click a los controles internos para modificar
+            pbImagen.DoubleClick += (s, e) => AbrirFormModificar(prod);
+            lblNombre.DoubleClick += (s, e) => AbrirFormModificar(prod);
+            lblPrecio.DoubleClick += (s, e) => AbrirFormModificar(prod);
+
+            return panel;
+        }
+
+        // Método separado para abrir el formulario (para reutilización)
+        private void AbrirFormModificar(Producto prod)
+        {
+            FormModificarProducto formModificar = new FormModificarProducto(prod);
+            formModificar.ShowDialog();
+            // Opcional: Recargar productos después
+            // await CargarProductosAsync();
         }
 
         private void picProducto_Click(object sender, EventArgs e)
@@ -244,29 +259,117 @@ namespace AraSupermercado.presentacion
             }
         }
 
+
         private void btnRegistrarProducto_Click(object sender, EventArgs e)
         {
+            // Limpiar errores previos
+            errorProvider1.Clear();
+
+            bool hayErrores = false;
+
+            // Validación: Código
+            if (string.IsNullOrWhiteSpace(txtCodigoProducto.Text))
+            {
+                errorProvider1.SetError(txtCodigoProducto, "El código es obligatorio.");
+                hayErrores = true;
+            }
+            else if (!int.TryParse(txtCodigoProducto.Text, out int codigo))
+            {
+                errorProvider1.SetError(txtCodigoProducto, "El código debe ser un número entero.");
+                hayErrores = true;
+            }
+            else if (codigo <= 0)
+            {
+                errorProvider1.SetError(txtCodigoProducto, "El código debe ser mayor a 0.");
+                hayErrores = true;
+            }
+            else if (txtCodigoProducto.Text.Length > 10)
+            {
+                errorProvider1.SetError(txtCodigoProducto, "El código no debe exceder 10 dígitos.");
+                hayErrores = true;
+            }
+
+            // Validación: Nombre
+            if (string.IsNullOrWhiteSpace(txtNombreProducto.Text))
+            {
+                errorProvider1.SetError(txtNombreProducto, "El nombre es obligatorio.");
+                hayErrores = true;
+            }
+            else if (!Regex.IsMatch(txtNombreProducto.Text, @"^[a-zA-Z\s]+$"))
+            {
+                errorProvider1.SetError(txtNombreProducto, "El nombre debe contener solo letras y espacios.");
+                hayErrores = true;
+            }
+            else if (txtNombreProducto.Text.Length > 50)
+            {
+                errorProvider1.SetError(txtNombreProducto, "El nombre no debe exceder 50 caracteres.");
+                hayErrores = true;
+            }
+
+            // Validación: Precio
+            if (string.IsNullOrWhiteSpace(txtPrecioProducto.Text))
+            {
+                errorProvider1.SetError(txtPrecioProducto, "El precio es obligatorio.");
+                hayErrores = true;
+            }
+            else if (!decimal.TryParse(txtPrecioProducto.Text, out decimal precio))
+            {
+                errorProvider1.SetError(txtPrecioProducto, "El precio debe ser un número.");
+                hayErrores = true;
+            }
+            else if (precio < 100m)
+            {
+                errorProvider1.SetError(txtPrecioProducto, "El precio debe ser al menos 100.");
+                hayErrores = true;
+            }
+            else if (precio > 200000m)
+            {
+                errorProvider1.SetError(txtPrecioProducto, "El precio no debe exceder 200000.");
+                hayErrores = true;
+            }
+
+            // Validación: Descripción
+            if (string.IsNullOrWhiteSpace(txtDescripcionProducto.Text))
+            {
+                errorProvider1.SetError(txtDescripcionProducto, "La descripción es obligatoria.");
+                hayErrores = true;
+            }
+            else if (txtDescripcionProducto.Text.Length > 200)
+            {
+                errorProvider1.SetError(txtDescripcionProducto, "La descripción no debe exceder 200 caracteres.");
+                hayErrores = true;
+            }
+
+            // Validación: Estado
+            if (cbxEstadoProducto.SelectedItem == null)
+            {
+                errorProvider1.SetError(cbxEstadoProducto, "Debes seleccionar un estado para el producto.");
+                hayErrores = true;
+            }
+
+            // Validación: Categoría
+            if (cbxCategoria.SelectedItem == null)
+            {
+                errorProvider1.SetError(cbxCategoria, "Debes seleccionar una categoría para el producto.");
+                hayErrores = true;
+            }
+
+            // Validación: Imagen
+            if (picProducto.Tag == null)
+            {
+                errorProvider1.SetError(picProducto, "Debes seleccionar una imagen para el producto.");
+                hayErrores = true;
+            }
+
+            // Si hay errores, mostrar mensaje y no continuar
+            if (hayErrores)
+            {
+                MessageBox.Show("Por favor corregir los campos señalados.", "Errores de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                // Validar campos obligatorios
-                if (string.IsNullOrWhiteSpace(txtCodigoProducto.Text) ||
-                    string.IsNullOrWhiteSpace(txtNombreProducto.Text) ||
-                    string.IsNullOrWhiteSpace(txtDescripcionProducto.Text) ||
-                    string.IsNullOrWhiteSpace(txtPrecioProducto.Text) ||
-                    string.IsNullOrWhiteSpace(cbxCategoria.Text) ||
-                    cbxEstadoProducto.SelectedItem == null)
-                {
-                    MessageBox.Show("Por favor, completa todos los campos obligatorios.", "Campos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // Validar imagen
-                if (picProducto.Tag == null)
-                {
-                    MessageBox.Show("Debes seleccionar una imagen para el producto.", "Falta imagen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 // Copiar imagen al directorio del proyecto
                 string carpetaDestino = Path.Combine(Application.StartupPath, "ImagenesProductos");
                 if (!Directory.Exists(carpetaDestino))
@@ -279,7 +382,7 @@ namespace AraSupermercado.presentacion
                 if (!File.Exists(rutaDestino))
                     File.Copy(picProducto.Tag.ToString(), rutaDestino, false);
 
-                //Ruta relativa para almacenar en la base de datos
+                // Ruta relativa para almacenar en la base de datos
                 string rutaRelativa = Path.Combine("ImagenesProductos", nombreArchivo);
 
                 // Preparar los parámetros para el procedimiento almacenado
@@ -290,14 +393,14 @@ namespace AraSupermercado.presentacion
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 using (OracleCommand cmd = new OracleCommand(procedimiento, conn))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add("p_codigo", OracleDbType.Int32).Value = Convert.ToInt32(txtCodigoProducto.Text);
                     cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txtNombreProducto.Text;
                     cmd.Parameters.Add("p_descripcion", OracleDbType.Varchar2).Value = txtDescripcionProducto.Text;
                     cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = cbxEstadoProducto.SelectedItem.ToString();
                     cmd.Parameters.Add("p_precio", OracleDbType.Decimal).Value = Convert.ToDecimal(txtPrecioProducto.Text);
-                    cmd.Parameters.Add("p_imagen_ruta", OracleDbType.Varchar2).Value = rutaDestino;
+                    cmd.Parameters.Add("p_imagen_ruta", OracleDbType.Varchar2).Value = rutaDestino;  // Usa rutaDestino o rutaRelativa según tu SP
                     cmd.Parameters.Add("p_categoria", OracleDbType.Varchar2).Value = cbxCategoria.SelectedItem.ToString();
 
                     conn.Open();
@@ -305,7 +408,7 @@ namespace AraSupermercado.presentacion
                     conn.Close();
                 }
 
-                MessageBox.Show(" Producto registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Producto registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Limpiar campos
                 LimpiarCampos();
@@ -362,5 +465,12 @@ namespace AraSupermercado.presentacion
             string filtro = txtBuscarProducto.Text.Trim();
             await CargarProductosAsync(filtro);
         }
+
+        private async void BtnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            txtBuscarProducto.Text = "";  // Limpiar el TextBox de búsqueda
+            await CargarProductosAsync();  // Cargar todos los productos sin filtro
+        }
     }
 }
+*/
