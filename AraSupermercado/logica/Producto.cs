@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AraSupermercado.accesoDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +9,55 @@ namespace AraSupermercado.logica
 {
     public class Producto
     {
-        public int prod_Codigo { get; set; }
-        public int prov_Nit { get; set; }
-        public string prod_Nombre { get; set; }
-        public string prod_Descripcion { get; set; }
-        public string prod_Estado { get; set; }
-        public decimal prod_Precio { get; set; }
-        public int prod_Stock { get; set; }
-        public string prod_Imagen_Ruta { get; set; }
+        public int prodCodigo { get; set; }
+        public int provNit { get; set; }
+        public string prodNombre { get; set; }
+        public string prodDescripcion { get; set; }
+        public string prodCategoria { get; set; }
+        public string prodEstado { get; set; }
+        public decimal prodPrecio { get; set; }
+        public int prodStock { get; set; }
+        public string prodImagenRuta { get; set; }
         // Constructor vacío
         public Producto() { }
         // Constructor con parámetros
-        public Producto(int codigo, int nit, string nombre, string descripcion, string estado, decimal precio, int stock, string imagen_Ruta)
+        public Producto(int codigo, int nit, string nombre, string descripcion, string categoria, string estado, decimal precio, int stock, string imagen_Ruta)
         {
-            prod_Codigo = codigo;
-            prov_Nit = nit;
-            prod_Nombre = nombre;
-            prod_Descripcion = descripcion;
-            prod_Estado = estado;
-            prod_Precio = precio;
-            prod_Stock = stock;
-            prod_Imagen_Ruta = imagen_Ruta;
+            prodCodigo = codigo;
+            provNit = nit;
+            prodNombre = nombre;
+            prodDescripcion = descripcion;
+            prodCategoria = categoria;
+            prodEstado = estado;
+            prodPrecio = precio;
+            prodStock = stock;
+            prodImagenRuta = imagen_Ruta;
         }
+
+        // Método para actualizar el producto
+        public bool ActualizarProducto(ConexionOracle conexion, string categoria = null)
+        {
+            try
+            {
+                string consulta = "BEGIN pa_actualizar_producto(:codigo, :nombre, :descripcion, :precio, :estado, :imagen, :categoria); END;";
+                var parametros = new Dictionary<string, object>
+            {
+                { ":codigo", prodCodigo },
+                { ":nombre", prodNombre },
+                { ":descripcion", prodDescripcion },
+                { ":precio", prodPrecio },
+                { ":estado", prodEstado },
+                { ":imagen", prodImagenRuta },
+                { ":categoria", prodCategoria}
+            };
+                int filasAfectadas = conexion.EjecutarDML(consulta, parametros);
+                return filasAfectadas >= 0;  // True si se ejecutó sin error
+            }
+            catch
+            {
+                return false;  // False si hay error
+            }
+        }
+
     }
 }

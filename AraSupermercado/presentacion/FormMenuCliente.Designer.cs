@@ -303,61 +303,61 @@
             // subMenuFrutasVerduras
             // 
             this.subMenuFrutasVerduras.Name = "subMenuFrutasVerduras";
-            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(275, 26);
+            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(220, 22);
             this.subMenuFrutasVerduras.Text = "Frutas y Verduras";
             // 
             // subMenuCarnesPescados
             // 
             this.subMenuCarnesPescados.Name = "subMenuCarnesPescados";
-            this.subMenuCarnesPescados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuCarnesPescados.Size = new System.Drawing.Size(220, 22);
             this.subMenuCarnesPescados.Text = "Carnes y Pescados";
             // 
             // subMenuLacteosHuevos
             // 
             this.subMenuLacteosHuevos.Name = "subMenuLacteosHuevos";
-            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(220, 22);
             this.subMenuLacteosHuevos.Text = "Lácteos y Huevos";
             // 
             // subMenuPanaderiaPasteleria
             // 
             this.subMenuPanaderiaPasteleria.Name = "subMenuPanaderiaPasteleria";
-            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(275, 26);
+            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(220, 22);
             this.subMenuPanaderiaPasteleria.Text = "Panadería y Pastelería";
             // 
             // subMenuAbarrotesEnlatados
             // 
             this.subMenuAbarrotesEnlatados.Name = "subMenuAbarrotesEnlatados";
-            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(220, 22);
             this.subMenuAbarrotesEnlatados.Text = "Abarrotes y Enlatados";
             // 
             // subMenuBebidas
             // 
             this.subMenuBebidas.Name = "subMenuBebidas";
-            this.subMenuBebidas.Size = new System.Drawing.Size(275, 26);
+            this.subMenuBebidas.Size = new System.Drawing.Size(220, 22);
             this.subMenuBebidas.Text = "Bebidas";
             // 
             // subMenuLimpiezaHogar
             // 
             this.subMenuLimpiezaHogar.Name = "subMenuLimpiezaHogar";
-            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(220, 22);
             this.subMenuLimpiezaHogar.Text = "Limpieza y Hogar";
             // 
             // subMenuHigiene
             // 
             this.subMenuHigiene.Name = "subMenuHigiene";
-            this.subMenuHigiene.Size = new System.Drawing.Size(275, 26);
+            this.subMenuHigiene.Size = new System.Drawing.Size(220, 22);
             this.subMenuHigiene.Text = "Cuidado Personal e Higiene";
             // 
             // subMenuSnacks
             // 
             this.subMenuSnacks.Name = "subMenuSnacks";
-            this.subMenuSnacks.Size = new System.Drawing.Size(275, 26);
+            this.subMenuSnacks.Size = new System.Drawing.Size(220, 22);
             this.subMenuSnacks.Text = "Snacks y Dulces";
             // 
             // subMenuOtros
             // 
             this.subMenuOtros.Name = "subMenuOtros";
-            this.subMenuOtros.Size = new System.Drawing.Size(275, 26);
+            this.subMenuOtros.Size = new System.Drawing.Size(220, 22);
             this.subMenuOtros.Text = "Otros";
             // 
             // toolStripUsuario
@@ -437,6 +437,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuCliente";
