@@ -157,5 +157,31 @@ namespace AraSupermercado.logica
                 throw new Exception("Error al consultar producto: " + ex.Message);
             }
         }
+
+        // Método para actualizar el producto
+        public bool ActualizarProducto(ConexionOracle conexion, string categoria = null)
+        {
+            try
+            {
+                string consulta = "BEGIN pa_actualizar_producto(:codigo, :nombre, :descripcion, :precio, :estado, :imagen, :categoria); END;";
+                var parametros = new Dictionary<string, object>
+            {
+                { ":codigo", prodCodigo },
+                { ":nombre", prodNombre },
+                { ":descripcion", prodDescripcion },
+                { ":precio", prodPrecio },
+                { ":estado", prodEstado },
+                { ":imagen", prodImagenRuta },
+                { ":categoria", prodCategoria}
+            };
+                int filasAfectadas = conexion.EjecutarDML(consulta, parametros);
+                return filasAfectadas >= 0;  // True si se ejecutó sin error
+            }
+            catch
+            {
+                return false;  // False si hay error
+            }
+        }
+
     }
 }

@@ -233,70 +233,70 @@
             // subMenuFrutasVerduras
             // 
             this.subMenuFrutasVerduras.Name = "subMenuFrutasVerduras";
-            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(275, 26);
+            this.subMenuFrutasVerduras.Size = new System.Drawing.Size(220, 22);
             this.subMenuFrutasVerduras.Text = "Frutas y Verduras";
             this.subMenuFrutasVerduras.Click += new System.EventHandler(this.subMenuFrutasVerduras_Click);
             // 
             // subMenuCarnesPescados
             // 
             this.subMenuCarnesPescados.Name = "subMenuCarnesPescados";
-            this.subMenuCarnesPescados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuCarnesPescados.Size = new System.Drawing.Size(220, 22);
             this.subMenuCarnesPescados.Text = "Carnes y Pescados";
             this.subMenuCarnesPescados.Click += new System.EventHandler(this.subMenuCarnesPescados_Click);
             // 
             // subMenuLacteosHuevos
             // 
             this.subMenuLacteosHuevos.Name = "subMenuLacteosHuevos";
-            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLacteosHuevos.Size = new System.Drawing.Size(220, 22);
             this.subMenuLacteosHuevos.Text = "Lácteos y Huevos";
             this.subMenuLacteosHuevos.Click += new System.EventHandler(this.subMenuLacteosHuevos_Click);
             // 
             // subMenuPanaderiaPasteleria
             // 
             this.subMenuPanaderiaPasteleria.Name = "subMenuPanaderiaPasteleria";
-            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(275, 26);
+            this.subMenuPanaderiaPasteleria.Size = new System.Drawing.Size(220, 22);
             this.subMenuPanaderiaPasteleria.Text = "Panadería y Pastelería";
             this.subMenuPanaderiaPasteleria.Click += new System.EventHandler(this.subMenuPanaderiaPasteleria_Click);
             // 
             // subMenuAbarrotesEnlatados
             // 
             this.subMenuAbarrotesEnlatados.Name = "subMenuAbarrotesEnlatados";
-            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(275, 26);
+            this.subMenuAbarrotesEnlatados.Size = new System.Drawing.Size(220, 22);
             this.subMenuAbarrotesEnlatados.Text = "Abarrotes y Enlatados";
             this.subMenuAbarrotesEnlatados.Click += new System.EventHandler(this.subMenuAbarrotesEnlatados_Click);
             // 
             // subMenuBebidas
             // 
             this.subMenuBebidas.Name = "subMenuBebidas";
-            this.subMenuBebidas.Size = new System.Drawing.Size(275, 26);
+            this.subMenuBebidas.Size = new System.Drawing.Size(220, 22);
             this.subMenuBebidas.Text = "Bebidas";
             this.subMenuBebidas.Click += new System.EventHandler(this.subMenuBebidas_Click);
             // 
             // subMenuLimpiezaHogar
             // 
             this.subMenuLimpiezaHogar.Name = "subMenuLimpiezaHogar";
-            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(275, 26);
+            this.subMenuLimpiezaHogar.Size = new System.Drawing.Size(220, 22);
             this.subMenuLimpiezaHogar.Text = "Limpieza y Hogar";
             this.subMenuLimpiezaHogar.Click += new System.EventHandler(this.subMenuLimpiezaHogar_Click);
             // 
             // subMenuHigiene
             // 
             this.subMenuHigiene.Name = "subMenuHigiene";
-            this.subMenuHigiene.Size = new System.Drawing.Size(275, 26);
+            this.subMenuHigiene.Size = new System.Drawing.Size(220, 22);
             this.subMenuHigiene.Text = "Cuidado Personal e Higiene";
             this.subMenuHigiene.Click += new System.EventHandler(this.subMenuHigiene_Click);
             // 
             // subMenuSnacks
             // 
             this.subMenuSnacks.Name = "subMenuSnacks";
-            this.subMenuSnacks.Size = new System.Drawing.Size(275, 26);
+            this.subMenuSnacks.Size = new System.Drawing.Size(220, 22);
             this.subMenuSnacks.Text = "Snacks y Dulces";
             this.subMenuSnacks.Click += new System.EventHandler(this.subMenuSnacks_Click);
             // 
             // subMenuOtros
             // 
             this.subMenuOtros.Name = "subMenuOtros";
-            this.subMenuOtros.Size = new System.Drawing.Size(275, 26);
+            this.subMenuOtros.Size = new System.Drawing.Size(220, 22);
             this.subMenuOtros.Text = "Otros";
             this.subMenuOtros.Click += new System.EventHandler(this.subMenuOtros_Click);
             // 
@@ -449,6 +449,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuCliente";

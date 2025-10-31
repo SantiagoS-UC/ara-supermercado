@@ -62,7 +62,7 @@ namespace AraSupermercado.presentacion
                 if (tipoUsuario == "ADMIN")
                 {
                     MessageBox.Show("Bienvenido Administrador", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormMenuAdmin frmAdmin = new FormMenuAdmin();
+                    FormMenuAdmin2 frmAdmin = new FormMenuAdmin2();
                     frmAdmin.Show();
                     this.Hide();
                 }
