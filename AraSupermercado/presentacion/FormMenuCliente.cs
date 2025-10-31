@@ -1,5 +1,6 @@
 ﻿using AraSupermercado.logica;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AraSupermercado.presentacion
@@ -38,6 +39,13 @@ namespace AraSupermercado.presentacion
         private void subMenuVerPedidos_Click(object sender, EventArgs e)
         {
             AbrirSubMenu(new FormPanelUsuario("VerPedidos", clienteActual));
+        }
+
+        private void subMenuCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
         }
     }
 }
