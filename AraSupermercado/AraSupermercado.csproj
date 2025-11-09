@@ -163,6 +163,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\UcProductoDetalle.resx">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormMenuAdmin2.resx">
       <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
     </EmbeddedResource>
