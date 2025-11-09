@@ -107,6 +107,7 @@
     </Compile>
     <Compile Include="presentacion\UcProductoDetalle.Designer.cs">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\FormMenuAdmin2.cs">
       <SubType>Form</SubType>
     </Compile>
