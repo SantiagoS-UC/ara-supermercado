@@ -116,9 +116,9 @@
             this.pnlAdminCuenta.Controls.Add(this.lblAdminCuenta);
             this.pnlAdminCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAdminCuenta.Location = new System.Drawing.Point(0, 0);
-            this.pnlAdminCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAdminCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAdminCuenta.Name = "pnlAdminCuenta";
-            this.pnlAdminCuenta.Size = new System.Drawing.Size(872, 490);
+            this.pnlAdminCuenta.Size = new System.Drawing.Size(1162, 603);
             this.pnlAdminCuenta.TabIndex = 1;
             // 
             // label10
@@ -237,7 +237,7 @@
             // 
             this.btnVerConfirmarContrasena.Location = new System.Drawing.Point(797, 469);
             this.btnVerConfirmarContrasena.Name = "btnVerConfirmarContrasena";
-            this.btnVerConfirmarContrasena.Size = new System.Drawing.Size(28, 19);
+            this.btnVerConfirmarContrasena.Size = new System.Drawing.Size(38, 25);
             this.btnVerConfirmarContrasena.TabIndex = 48;
             this.btnVerConfirmarContrasena.Text = "👁";
             this.btnVerConfirmarContrasena.UseVisualStyleBackColor = true;
@@ -247,7 +247,7 @@
             // 
             this.btnVerContrasena.Location = new System.Drawing.Point(537, 470);
             this.btnVerContrasena.Name = "btnVerContrasena";
-            this.btnVerContrasena.Size = new System.Drawing.Size(26, 19);
+            this.btnVerContrasena.Size = new System.Drawing.Size(35, 24);
             this.btnVerContrasena.TabIndex = 47;
             this.btnVerContrasena.Text = "👁";
             this.btnVerContrasena.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@
             this.lblConfiContrasena.AutoSize = true;
             this.lblConfiContrasena.Location = new System.Drawing.Point(595, 451);
             this.lblConfiContrasena.Name = "lblConfiContrasena";
-            this.lblConfiContrasena.Size = new System.Drawing.Size(108, 13);
+            this.lblConfiContrasena.Size = new System.Drawing.Size(136, 16);
             this.lblConfiContrasena.TabIndex = 42;
             this.lblConfiContrasena.Text = "Confirmar Contraseña";
             // 
@@ -303,7 +303,7 @@
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Location = new System.Drawing.Point(340, 452);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(61, 13);
+            this.lblContrasena.Size = new System.Drawing.Size(76, 16);
             this.lblContrasena.TabIndex = 41;
             this.lblContrasena.Text = "Contraseña";
             // 
@@ -368,7 +368,7 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(337, 394);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(94, 13);
+            this.lblCorreo.Size = new System.Drawing.Size(118, 16);
             this.lblCorreo.TabIndex = 30;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
@@ -377,7 +377,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(337, 329);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
             this.lblTelefono.TabIndex = 29;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -386,7 +386,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Location = new System.Drawing.Point(337, 272);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.Size = new System.Drawing.Size(64, 16);
             this.lblDireccion.TabIndex = 28;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -395,7 +395,7 @@
             this.lblFehcaNac.AutoSize = true;
             this.lblFehcaNac.Location = new System.Drawing.Point(337, 218);
             this.lblFehcaNac.Name = "lblFehcaNac";
-            this.lblFehcaNac.Size = new System.Drawing.Size(108, 13);
+            this.lblFehcaNac.Size = new System.Drawing.Size(135, 16);
             this.lblFehcaNac.TabIndex = 27;
             this.lblFehcaNac.Text = "Fecha de Nacimiento";
             // 
@@ -404,7 +404,7 @@
             this.lblSegundoApellido.AutoSize = true;
             this.lblSegundoApellido.Location = new System.Drawing.Point(594, 157);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(90, 13);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(115, 16);
             this.lblSegundoApellido.TabIndex = 26;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
@@ -413,7 +413,7 @@
             this.lblPrimerApellido.AutoSize = true;
             this.lblPrimerApellido.Location = new System.Drawing.Point(337, 157);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(76, 13);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(99, 16);
             this.lblPrimerApellido.TabIndex = 25;
             this.lblPrimerApellido.Text = "Primer Apellido";
             // 
@@ -422,7 +422,7 @@
             this.lblSegundoNombre.AutoSize = true;
             this.lblSegundoNombre.Location = new System.Drawing.Point(595, 105);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(90, 13);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(114, 16);
             this.lblSegundoNombre.TabIndex = 24;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -431,7 +431,7 @@
             this.lblPrimerNombre.AutoSize = true;
             this.lblPrimerNombre.Location = new System.Drawing.Point(337, 105);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(76, 13);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(98, 16);
             this.lblPrimerNombre.TabIndex = 23;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -440,7 +440,7 @@
             this.lblNumDoc.AutoSize = true;
             this.lblNumDoc.Location = new System.Drawing.Point(595, 45);
             this.lblNumDoc.Name = "lblNumDoc";
-            this.lblNumDoc.Size = new System.Drawing.Size(117, 13);
+            this.lblNumDoc.Size = new System.Drawing.Size(146, 16);
             this.lblNumDoc.TabIndex = 22;
             this.lblNumDoc.Text = "Número de Documento";
             // 
@@ -449,7 +449,7 @@
             this.lblTipoDoc.AutoSize = true;
             this.lblTipoDoc.Location = new System.Drawing.Point(337, 45);
             this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(101, 13);
+            this.lblTipoDoc.Size = new System.Drawing.Size(126, 16);
             this.lblTipoDoc.TabIndex = 21;
             this.lblTipoDoc.Text = "Tipo de Documento";
             // 
@@ -469,9 +469,9 @@
             this.pnlVerPedidos.Controls.Add(this.lblVerPedidos);
             this.pnlVerPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlVerPedidos.Location = new System.Drawing.Point(0, 0);
-            this.pnlVerPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlVerPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.pnlVerPedidos.Name = "pnlVerPedidos";
-            this.pnlVerPedidos.Size = new System.Drawing.Size(872, 490);
+            this.pnlVerPedidos.Size = new System.Drawing.Size(1162, 603);
             this.pnlVerPedidos.TabIndex = 1;
             // 
             // lblVerPedidos
@@ -480,7 +480,7 @@
             this.lblVerPedidos.Location = new System.Drawing.Point(46, 32);
             this.lblVerPedidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVerPedidos.Name = "lblVerPedidos";
-            this.lblVerPedidos.Size = new System.Drawing.Size(133, 13);
+            this.lblVerPedidos.Size = new System.Drawing.Size(171, 16);
             this.lblVerPedidos.TabIndex = 0;
             this.lblVerPedidos.Text = "Ver Pedidos Proximamente";
             // 
@@ -490,7 +490,7 @@
             this.ClientSize = new System.Drawing.Size(1162, 603);
             this.Controls.Add(this.pnlAdminCuenta);
             this.Controls.Add(this.pnlVerPedidos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPanelUsuario";
             this.Text = "FormPanelUsuario";
             this.pnlAdminCuenta.ResumeLayout(false);

@@ -12,19 +12,15 @@ namespace AraSupermercado.presentacion
         {
             InitializeComponent();
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-
-            // Configurar enmascaramiento de contraseñas por defecto
             txtContrasena.UseSystemPasswordChar = true;
             txtConfirmarContrasena.UseSystemPasswordChar = true;
         }
 
-        // Modificar btnRegistrarse_Click para usar ValidarCampos()
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             // Limpiar errores previos
             errorProvider.Clear();
 
-            // Llamar a ValidarCampos() (nuevo)
             if (!ValidarCampos())
             {
                 MessageBox.Show("Por favor, corrija los errores marcados.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);

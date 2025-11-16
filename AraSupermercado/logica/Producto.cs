@@ -1,9 +1,8 @@
 ﻿using AraSupermercado.accesoDatos;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 
 namespace AraSupermercado.logica
 {
@@ -18,10 +17,12 @@ namespace AraSupermercado.logica
         public decimal prodPrecio { get; set; }
         public int prodStock { get; set; }
         public string prodImagenRuta { get; set; }
-        // Constructor vacío
+
+        private ConexionOracle conexion = new ConexionOracle();
+
         public Producto() { }
-        // Constructor con parámetros
-        public Producto(int codigo, int nit, string nombre, string descripcion, string categoria, string estado, decimal precio, int stock, string imagen_Ruta)
+
+        public Producto(int codigo, int nit, string nombre, string descripcion, string categoria, string estado, decimal precio, int stock, string imagenRuta)
         {
             prodCodigo = codigo;
             provNit = nit;
@@ -31,33 +32,98 @@ namespace AraSupermercado.logica
             prodEstado = estado;
             prodPrecio = precio;
             prodStock = stock;
-            prodImagenRuta = imagen_Ruta;
+            prodImagenRuta = imagenRuta;
         }
 
-        // Método para actualizar el producto
-        public bool ActualizarProducto(ConexionOracle conexion, string categoria = null)
+        // Método para obtener todos los productos activos
+        public List<Producto> ObtenerTodosProductos()
         {
+            List<Producto> productos = new List<Producto>();
             try
             {
-                string consulta = "BEGIN pa_actualizar_producto(:codigo, :nombre, :descripcion, :precio, :estado, :imagen, :categoria); END;";
-                var parametros = new Dictionary<string, object>
-            {
-                { ":codigo", prodCodigo },
-                { ":nombre", prodNombre },
-                { ":descripcion", prodDescripcion },
-                { ":precio", prodPrecio },
-                { ":estado", prodEstado },
-                { ":imagen", prodImagenRuta },
-                { ":categoria", prodCategoria}
-            };
-                int filasAfectadas = conexion.EjecutarDML(consulta, parametros);
-                return filasAfectadas >= 0;  // True si se ejecutó sin error
+                using (OracleConnection conn = conexion.ObtenerConexion())
+                {
+                    conn.Open();
+                    using (OracleCommand cmd = new OracleCommand("pkg_producto.pa_obtener_productos", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Parámetro de entrada 
+                        cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = "ACTIVO";
+
+                        // Parámetro de salida (cursor)
+                        cmd.Parameters.Add("p_cursor", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Producto producto = new Producto
+                                {
+                                    prodCodigo = reader.GetInt32(reader.GetOrdinal("prod_codigo")),
+                                    provNit = reader.GetInt32(reader.GetOrdinal("prov_nit")),
+                                    prodNombre = reader.GetString(reader.GetOrdinal("prod_nombre")),
+                                    prodDescripcion = reader.GetString(reader.GetOrdinal("prod_descripcion")),
+                                    prodEstado = reader.GetString(reader.GetOrdinal("prod_estado")),
+                                    prodPrecio = reader.GetDecimal(reader.GetOrdinal("prod_precio")),
+                                    prodStock = reader.GetInt32(reader.GetOrdinal("prod_stock")),
+                                    prodImagenRuta = reader.GetString(reader.GetOrdinal("prod_imagen_ruta"))
+                                };
+                                productos.Add(producto);
+                            }
+                        }
+                    }
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                return false;  // False si hay error
+                throw new Exception("Error al obtener productos: " + ex.Message);
             }
+            return productos;
         }
 
+        // Obtener productos por categoría
+        public List<Producto> ObtenerProductosPorCategoria(string categoria)
+        {
+            List<Producto> productos = new List<Producto>();
+            try
+            {
+                using (OracleConnection conn = conexion.ObtenerConexion())
+                {
+                    conn.Open();
+                    using (OracleCommand cmd = new OracleCommand("pkg_producto.pa_obtener_productos_por_categoria", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("p_categoria", OracleDbType.Varchar2).Value = categoria;
+                        cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = "ACTIVO";
+                        cmd.Parameters.Add("p_cursor", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Producto producto = new Producto
+                                {
+                                    prodCodigo = reader.GetInt32(reader.GetOrdinal("prod_codigo")),
+                                    provNit = reader.GetInt32(reader.GetOrdinal("prov_nit")),
+                                    prodNombre = reader.GetString(reader.GetOrdinal("prod_nombre")),
+                                    prodDescripcion = reader.GetString(reader.GetOrdinal("prod_descripcion")),
+                                    prodEstado = reader.GetString(reader.GetOrdinal("prod_estado")),
+                                    prodPrecio = reader.GetDecimal(reader.GetOrdinal("prod_precio")),
+                                    prodStock = reader.GetInt32(reader.GetOrdinal("prod_stock")),
+                                    prodImagenRuta = reader.GetString(reader.GetOrdinal("prod_imagen_ruta"))
+                                };
+                                productos.Add(producto);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener productos por categoría: " + ex.Message);
+            }
+            return productos;
+        }
     }
 }
