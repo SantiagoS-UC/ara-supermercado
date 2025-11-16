@@ -29,7 +29,7 @@ namespace AraSupermercado.logica
                 using (var conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (var cmd = new OracleCommand("pa_registrar_cliente", conn))
+                    using (var cmd = new OracleCommand("pkg_cliente.pa_registrar_cliente", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -41,7 +41,7 @@ namespace AraSupermercado.logica
                         cmd.Parameters.Add("p_cli_segundo_apellido", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(this.cliSegundoApellido) ? (object)DBNull.Value : this.cliSegundoApellido;
                         cmd.Parameters.Add("p_cli_fecha_nacimiento", OracleDbType.Date).Value = this.cliFechaNacimiento;
                         cmd.Parameters.Add("p_cli_correo", OracleDbType.Varchar2).Value = this.cliCorreo;
-                        cmd.Parameters.Add("p_cli_contraseña", OracleDbType.Varchar2).Value = this.cliContrasena;
+                        cmd.Parameters.Add("p_cli_contrasena", OracleDbType.Varchar2).Value = this.cliContrasena;
                         cmd.Parameters.Add("p_tel_numero", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(this.cliTelefono) ? (object)DBNull.Value : this.cliTelefono;
                         cmd.Parameters.Add("p_dir_cliente", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(this.cliDireccion) ? (object)DBNull.Value : this.cliDireccion;
                         cmd.Parameters.Add("p_dir_descripcion", OracleDbType.Varchar2).Value = (object)DBNull.Value;
@@ -66,7 +66,7 @@ namespace AraSupermercado.logica
                 {
                     conn.Open();
 
-                    using (OracleCommand cmd = new OracleCommand("pa_consultar_cliente", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_cliente.pa_consultar_cliente", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -131,7 +131,7 @@ namespace AraSupermercado.logica
                 using (var conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (var cmd = new OracleCommand("pa_actualizar_cliente", conn))
+                    using (var cmd = new OracleCommand("pkg_cliente.pa_actualizar_cliente", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = this.cliId;

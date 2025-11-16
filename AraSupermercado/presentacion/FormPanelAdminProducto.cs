@@ -1,9 +1,6 @@
-﻿using AraSupermercado.accesoDatos;
-using AraSupermercado.logica;
-using Oracle.ManagedDataAccess.Client;
+﻿using AraSupermercado.logica;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -19,7 +16,7 @@ namespace AraSupermercado.presentacion
         private string opcionActual;
         private ErrorProvider errorProvider = new ErrorProvider();
 
-        public FormPanelAdminProducto(string modo, Administrador admin)  // "Catalogo" o "Registro"
+        public FormPanelAdminProducto(string modo, Administrador admin) 
         {
             InitializeComponent();
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
@@ -41,22 +38,21 @@ namespace AraSupermercado.presentacion
                 case "Catalogo":
                     pnlProductos.Visible = true;
                     // Carga catálogo automáticamente
-                    _ = CargarProductosAsync();  // Llama asíncrona sin await
+                    _ = CargarProductosAsync();  
                     break;
                 case "Registro":
                     pnlRegistrarProducto.Visible = true;
-                    // No carga datos adicionales para registro
                     break;
             }
         }
 
-        public void ActualizarVista(string nuevaOpcion)
+        /*public void ActualizarVista(string nuevaOpcion)
         {
             this.opcionActual = nuevaOpcion;
             CargarVista();
-        }
+        }*/
 
-        // Método para cargar productos (filtrado opcional)
+        // Método para cargar productos 
         private async Task CargarProductosAsync(string filtroNombre = "")
         {
             flowPanelProductos.Controls.Clear();
@@ -100,7 +96,7 @@ namespace AraSupermercado.presentacion
                 }
             }
 
-            Panel panel = new Panel  // Asigna Tag para identificar
+            Panel panel = new Panel  
             {
                 Size = new Size(280, 280),
                 BackColor = Color.White,
@@ -115,7 +111,7 @@ namespace AraSupermercado.presentacion
             {
                 Size = new Size(120, 120),
                 Location = new Point(10, 10),
-                SizeMode = PictureBoxSizeMode.Zoom,  // Mantiene proporción
+                SizeMode = PictureBoxSizeMode.Zoom,  
                 BorderStyle = BorderStyle.None,
                 BackColor = Color.White
             };
@@ -175,7 +171,6 @@ namespace AraSupermercado.presentacion
             await CargarProductosAsync();
         }
 
-        // Eventos para búsqueda en pnlProductos
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
             string filtro = txtBuscarProducto.Text.Trim();
@@ -299,7 +294,7 @@ namespace AraSupermercado.presentacion
             return esValido;
         }
 
-        // Evento para registrar producto (asume btnRegistrarProducto)
+        // Evento para registrar producto
         private void btnRegistrarProducto_Click(object sender, EventArgs e)
         {
             if (!ValidarCamposRegistro())
@@ -387,7 +382,7 @@ namespace AraSupermercado.presentacion
                         using (var tmp = Image.FromStream(ms))
                         {
                             picProducto.Image?.Dispose();
-                            picProducto.Image = new Bitmap(tmp); // copia independiente
+                            picProducto.Image = new Bitmap(tmp); 
                         }
                     }
 
@@ -430,7 +425,7 @@ namespace AraSupermercado.presentacion
                         using (var tmp = Image.FromStream(ms))
                         {
                             picProducto.Image?.Dispose();
-                            picProducto.Image = new Bitmap(tmp); // copia independiente
+                            picProducto.Image = new Bitmap(tmp); 
                         }
                     }
 

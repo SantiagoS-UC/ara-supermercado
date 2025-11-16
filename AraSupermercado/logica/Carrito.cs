@@ -11,7 +11,7 @@ namespace AraSupermercado.logica
     {
         private static ConexionOracle conexion = new ConexionOracle();
         private static int cliIdActual;  // ID del cliente actual
-        private static List<ItemCarrito> items = new List<ItemCarrito>();  // Memoria para UI
+        private static List<ItemCarrito> items = new List<ItemCarrito>();  
 
         // Establecer cliente y cargar carrito desde BD
         public static void EstablecerCliente(int cliId)
@@ -28,7 +28,7 @@ namespace AraSupermercado.logica
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_agregar_a_carrito", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_carrito.pa_agregar_a_carrito", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
@@ -54,7 +54,7 @@ namespace AraSupermercado.logica
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_quitar_de_carrito", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_carrito.pa_quitar_de_carrito", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
@@ -81,7 +81,7 @@ namespace AraSupermercado.logica
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_obtener_carrito", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_carrito.pa_obtener_carrito", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;

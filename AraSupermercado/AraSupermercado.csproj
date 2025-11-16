@@ -108,11 +108,11 @@
     <Compile Include="presentacion\UcProductoDetalle.Designer.cs">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\FormMenuAdmin2.cs">
+    <Compile Include="presentacion\FormMenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentacion\FormMenuAdmin2.Designer.cs">
-      <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
+    <Compile Include="presentacion\FormMenuAdmin.Designer.cs">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\FormModificarProducto.cs">
       <SubType>Form</SubType>
@@ -131,10 +131,6 @@
     </Compile>
     <Compile Include="presentacion\\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="presentacion\\FormMenuAdmin.cs" />
-    <Compile Include="presentacion\\FormMenuAdmin.Designer.cs">
-      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\\FormMenuCliente.cs">
       <SubType>Form</SubType>
@@ -165,8 +161,8 @@
     <EmbeddedResource Include="presentacion\UcProductoDetalle.resx">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presentacion\FormMenuAdmin2.resx">
-      <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
+    <EmbeddedResource Include="presentacion\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormModificarProducto.resx">
       <DependentUpon>FormModificarProducto.cs</DependentUpon>
@@ -182,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormPanelUsuario.resx">
       <DependentUpon>FormPanelUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="presentacion\\FormMenuAdmin.resx">
-      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormRegistrarCliente.resx">
       <DependentUpon>FormRegistrarCliente.cs</DependentUpon>

@@ -96,10 +96,10 @@
             this.btnMostrarContrasena.BackColor = System.Drawing.Color.Transparent;
             this.btnMostrarContrasena.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMostrarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarContrasena.Location = new System.Drawing.Point(708, 364);
+            this.btnMostrarContrasena.Location = new System.Drawing.Point(662, 364);
             this.btnMostrarContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarContrasena.Name = "btnMostrarContrasena";
-            this.btnMostrarContrasena.Size = new System.Drawing.Size(25, 30);
+            this.btnMostrarContrasena.Size = new System.Drawing.Size(41, 30);
             this.btnMostrarContrasena.TabIndex = 8;
             this.btnMostrarContrasena.Text = "👁";
             this.btnMostrarContrasena.UseVisualStyleBackColor = false;

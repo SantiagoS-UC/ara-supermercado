@@ -70,7 +70,6 @@ namespace AraSupermercado.presentacion
             pnlContenedor.Controls.Add(carrito);
         }
 
-        // Método auxiliar para mostrar página principal con categoría
         public void MostrarPaginaPrincipal(string categoria = "Todas")
         {
             pnlContenedor.Controls.Clear();
@@ -92,7 +91,7 @@ namespace AraSupermercado.presentacion
 
         private void subMenuLacteosHuevos_Click(object sender, EventArgs e)
         {
-            MostrarPaginaPrincipal("Lacteos y Huevos");
+            MostrarPaginaPrincipal("Lácteos y Huevos");
         }
 
         private void subMenuPanaderiaPasteleria_Click(object sender, EventArgs e)
