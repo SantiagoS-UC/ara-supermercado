@@ -19,10 +19,9 @@ namespace AraSupermercado.presentacion
             CargarCarrito();
         }
 
-        // Cargar carrito en FlowLayoutPanel (cards horizontales)
         private void CargarCarrito()
         {
-            flpCarrito.Controls.Clear();  // Limpia productos previos
+            flpCarrito.Controls.Clear();  
 
             var items = Carrito.ObtenerItems();
             if (items.Count == 0)
@@ -43,7 +42,7 @@ namespace AraSupermercado.presentacion
                 // Crear card horizontal para cada item
                 Panel card = new Panel
                 {
-                    Size = new Size(400, 100),  // Tamaño horizontal
+                    Size = new Size(400, 100),  
                     BorderStyle = BorderStyle.FixedSingle,
                     Margin = new Padding(10)
                 };
@@ -134,8 +133,7 @@ namespace AraSupermercado.presentacion
             }
         }
 
-        // Confirmar pedido
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)  
         {
             if (Carrito.ObtenerItems().Count == 0)
             {
@@ -143,19 +141,53 @@ namespace AraSupermercado.presentacion
                 return;
             }
 
-            DialogResult result = MessageBox.Show("¿Confirmar pedido?", "Confirmación", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            // Muestra UC en modal
+            using (Form modal = new Form { Text = "Datos de Envío y Pago", Size = new Size(450, 400), StartPosition = FormStartPosition.CenterParent })
             {
-                try
+                UcDatosEnvioPago ucDatos = new UcDatosEnvioPago(clienteActual);
+                ucDatos.DatosConfirmados += (s, args) =>  
                 {
-                    Carrito.ConfirmarPedido();
-                    MessageBox.Show("Pedido confirmado. ¡Gracias por tu compra!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    menuCliente.MostrarPaginaPrincipal();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al confirmar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    try
+                    {
+                        int pedCodigo = Carrito.ConfirmarPedido(ucDatos.DireccionSeleccionada, ucDatos.MetodoPagoSeleccionado);
+
+                        if (pedCodigo <= 0)
+                        {
+                            MessageBox.Show("Error: No se pudo generar el código del pedido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        using (Form modalFactura = new Form { Text = "Factura del Pedido", Size = new Size(600, 500), StartPosition = FormStartPosition.CenterParent })
+                        {
+                            UcFacturaPedido ucFactura = new UcFacturaPedido(pedCodigo, clienteActual, ucDatos.DireccionSeleccionada, ucDatos.MetodoPagoSeleccionado, menuCliente);
+
+                            ucFactura.AceptarSolicitado += (send, evt) =>  
+                            {
+                                modalFactura.Close();
+                                menuCliente.MostrarPaginaPrincipal();
+                            };
+
+                            ucFactura.VerPedidosSolicitado += (send, evt) =>  
+                            {
+                                modalFactura.Close();  
+                                menuCliente.AbrirSubMenu(new UcVerPedidos(clienteActual, menuCliente));  
+                            };
+
+                            modalFactura.Controls.Add(ucFactura);
+                            modalFactura.ShowDialog();
+                        }
+                        modal.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al confirmar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    modal.Close();  
+                };
+
+                modal.Controls.Add(ucDatos);
+                modal.ShowDialog();
             }
         }
 

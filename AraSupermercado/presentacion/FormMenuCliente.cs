@@ -32,6 +32,14 @@ namespace AraSupermercado.presentacion
             subMenu.Show();
         }
 
+        public void AbrirSubMenu(UserControl subMenu)
+        {
+            pnlContenedor.Controls.Clear();
+            subMenu.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(subMenu);
+            pnlContenedor.Tag = subMenu;
+        }
+
         private void subMenuAdminCuenta_Click(object sender, EventArgs e)
         {
             AbrirSubMenu(new FormPanelUsuario("AdministrarCuenta", clienteActual));
@@ -39,7 +47,8 @@ namespace AraSupermercado.presentacion
 
         private void subMenuVerPedidos_Click(object sender, EventArgs e)
         {
-            AbrirSubMenu(new FormPanelUsuario("VerPedidos", clienteActual));
+            //AbrirSubMenu(new FormPanelUsuario("VerPedidos", clienteActual));
+            AbrirSubMenu(new UcVerPedidos(clienteActual, this));
         }
 
         private void subMenuCerrarSesion_Click(object sender, EventArgs e)
