@@ -319,21 +319,21 @@
             // subMenuAdminCuenta
             // 
             this.subMenuAdminCuenta.Name = "subMenuAdminCuenta";
-            this.subMenuAdminCuenta.Size = new System.Drawing.Size(219, 26);
+            this.subMenuAdminCuenta.Size = new System.Drawing.Size(177, 22);
             this.subMenuAdminCuenta.Text = "Administrar Cuenta";
             this.subMenuAdminCuenta.Click += new System.EventHandler(this.subMenuAdminCuenta_Click);
             // 
             // subMenuVerPedidos
             // 
             this.subMenuVerPedidos.Name = "subMenuVerPedidos";
-            this.subMenuVerPedidos.Size = new System.Drawing.Size(219, 26);
+            this.subMenuVerPedidos.Size = new System.Drawing.Size(177, 22);
             this.subMenuVerPedidos.Text = "Ver Pedidos";
             this.subMenuVerPedidos.Click += new System.EventHandler(this.subMenuVerPedidos_Click);
             // 
             // subMenuCerrarSesion
             // 
             this.subMenuCerrarSesion.Name = "subMenuCerrarSesion";
-            this.subMenuCerrarSesion.Size = new System.Drawing.Size(219, 26);
+            this.subMenuCerrarSesion.Size = new System.Drawing.Size(177, 22);
             this.subMenuCerrarSesion.Text = "Cerrar Sesión";
             this.subMenuCerrarSesion.Click += new System.EventHandler(this.subMenuCerrarSesion_Click);
             // 
@@ -449,7 +449,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuCliente";

@@ -90,23 +90,24 @@
             this.pnlModificarProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlModificarProducto.Location = new System.Drawing.Point(0, 0);
             this.pnlModificarProducto.Name = "pnlModificarProducto";
-            this.pnlModificarProducto.Size = new System.Drawing.Size(800, 450);
+            this.pnlModificarProducto.Size = new System.Drawing.Size(1182, 653);
             this.pnlModificarProducto.TabIndex = 0;
             // 
             // btnGuardarModificar
             // 
-            this.btnGuardarModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarModificar.Location = new System.Drawing.Point(484, 362);
+            this.btnGuardarModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(111)))), ((int)(((byte)(33)))));
+            this.btnGuardarModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarModificar.Location = new System.Drawing.Point(590, 462);
             this.btnGuardarModificar.Name = "btnGuardarModificar";
-            this.btnGuardarModificar.Size = new System.Drawing.Size(105, 23);
+            this.btnGuardarModificar.Size = new System.Drawing.Size(118, 37);
             this.btnGuardarModificar.TabIndex = 50;
             this.btnGuardarModificar.Text = "Guardar Cambios";
-            this.btnGuardarModificar.UseVisualStyleBackColor = true;
+            this.btnGuardarModificar.UseVisualStyleBackColor = false;
             this.btnGuardarModificar.Click += new System.EventHandler(this.btnGuardarModificar_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(700, 24);
+            this.btnVolver.Location = new System.Drawing.Point(1030, 26);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 49;
@@ -119,18 +120,18 @@
             this.lblValidarDecrip.AutoSize = true;
             this.lblValidarDecrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValidarDecrip.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblValidarDecrip.Location = new System.Drawing.Point(618, 296);
+            this.lblValidarDecrip.Location = new System.Drawing.Point(802, 370);
             this.lblValidarDecrip.Name = "lblValidarDecrip";
-            this.lblValidarDecrip.Size = new System.Drawing.Size(106, 12);
+            this.lblValidarDecrip.Size = new System.Drawing.Size(115, 12);
             this.lblValidarDecrip.TabIndex = 48;
-            this.lblValidarDecrip.Text = "No mayor a 200 palabras";
+            this.lblValidarDecrip.Text = "No mayor a 200 caracteres";
             // 
             // lblValidarCat
             // 
             this.lblValidarCat.AutoSize = true;
             this.lblValidarCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValidarCat.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblValidarCat.Location = new System.Drawing.Point(617, 211);
+            this.lblValidarCat.Location = new System.Drawing.Point(802, 211);
             this.lblValidarCat.Name = "lblValidarCat";
             this.lblValidarCat.Size = new System.Drawing.Size(99, 12);
             this.lblValidarCat.TabIndex = 47;
@@ -152,7 +153,7 @@
             this.lblValidarNombre.AutoSize = true;
             this.lblValidarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValidarNombre.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblValidarNombre.Location = new System.Drawing.Point(614, 137);
+            this.lblValidarNombre.Location = new System.Drawing.Point(799, 137);
             this.lblValidarNombre.Name = "lblValidarNombre";
             this.lblValidarNombre.Size = new System.Drawing.Size(94, 12);
             this.lblValidarNombre.TabIndex = 45;
@@ -195,16 +196,16 @@
             "Otros",
             ""});
             this.cbxCategoriaMod.FormattingEnabled = true;
-            this.cbxCategoriaMod.Location = new System.Drawing.Point(617, 189);
+            this.cbxCategoriaMod.Location = new System.Drawing.Point(802, 189);
             this.cbxCategoriaMod.Name = "cbxCategoriaMod";
-            this.cbxCategoriaMod.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategoriaMod.Size = new System.Drawing.Size(146, 21);
             this.cbxCategoriaMod.TabIndex = 42;
             // 
             // lblCategoríaMod
             // 
             this.lblCategoríaMod.AutoSize = true;
             this.lblCategoríaMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoríaMod.Location = new System.Drawing.Point(613, 174);
+            this.lblCategoríaMod.Location = new System.Drawing.Point(798, 174);
             this.lblCategoríaMod.Name = "lblCategoríaMod";
             this.lblCategoríaMod.Size = new System.Drawing.Size(68, 15);
             this.lblCategoríaMod.TabIndex = 41;
@@ -235,6 +236,7 @@
             // 
             this.txtCodigoProductoMod.Location = new System.Drawing.Point(357, 115);
             this.txtCodigoProductoMod.Name = "txtCodigoProductoMod";
+            this.txtCodigoProductoMod.ReadOnly = true;
             this.txtCodigoProductoMod.Size = new System.Drawing.Size(104, 20);
             this.txtCodigoProductoMod.TabIndex = 38;
             // 
@@ -244,15 +246,15 @@
             this.lblCodigoProductoMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoProductoMod.Location = new System.Drawing.Point(354, 98);
             this.lblCodigoProductoMod.Name = "lblCodigoProductoMod";
-            this.lblCodigoProductoMod.Size = new System.Drawing.Size(125, 15);
+            this.lblCodigoProductoMod.Size = new System.Drawing.Size(117, 15);
             this.lblCodigoProductoMod.TabIndex = 37;
-            this.lblCodigoProductoMod.Text = "Código del producto *";
+            this.lblCodigoProductoMod.Text = "Código del producto";
             // 
             // lblNombreProductoMod
             // 
             this.lblNombreProductoMod.AutoSize = true;
             this.lblNombreProductoMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProductoMod.Location = new System.Drawing.Point(610, 98);
+            this.lblNombreProductoMod.Location = new System.Drawing.Point(795, 98);
             this.lblNombreProductoMod.Name = "lblNombreProductoMod";
             this.lblNombreProductoMod.Size = new System.Drawing.Size(131, 15);
             this.lblNombreProductoMod.TabIndex = 31;
@@ -260,23 +262,25 @@
             // 
             // txtDescripcionProductoMod
             // 
-            this.txtDescripcionProductoMod.Location = new System.Drawing.Point(619, 275);
+            this.txtDescripcionProductoMod.Location = new System.Drawing.Point(801, 276);
+            this.txtDescripcionProductoMod.MaxLength = 210;
+            this.txtDescripcionProductoMod.Multiline = true;
             this.txtDescripcionProductoMod.Name = "txtDescripcionProductoMod";
-            this.txtDescripcionProductoMod.Size = new System.Drawing.Size(110, 20);
+            this.txtDescripcionProductoMod.Size = new System.Drawing.Size(147, 80);
             this.txtDescripcionProductoMod.TabIndex = 36;
             // 
             // txtNombreProductoMod
             // 
-            this.txtNombreProductoMod.Location = new System.Drawing.Point(614, 115);
+            this.txtNombreProductoMod.Location = new System.Drawing.Point(799, 115);
             this.txtNombreProductoMod.Name = "txtNombreProductoMod";
-            this.txtNombreProductoMod.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreProductoMod.Size = new System.Drawing.Size(149, 20);
             this.txtNombreProductoMod.TabIndex = 32;
             // 
             // lblDescripcionProductoMod
             // 
             this.lblDescripcionProductoMod.AutoSize = true;
             this.lblDescripcionProductoMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionProductoMod.Location = new System.Drawing.Point(616, 258);
+            this.lblDescripcionProductoMod.Location = new System.Drawing.Point(801, 258);
             this.lblDescripcionProductoMod.Name = "lblDescripcionProductoMod";
             this.lblDescripcionProductoMod.Size = new System.Drawing.Size(80, 15);
             this.lblDescripcionProductoMod.TabIndex = 35;
@@ -323,7 +327,7 @@
             // 
             this.lblInformacionProductoMod.AutoSize = true;
             this.lblInformacionProductoMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacionProductoMod.Location = new System.Drawing.Point(448, 47);
+            this.lblInformacionProductoMod.Location = new System.Drawing.Point(541, 43);
             this.lblInformacionProductoMod.Name = "lblInformacionProductoMod";
             this.lblInformacionProductoMod.Size = new System.Drawing.Size(178, 16);
             this.lblInformacionProductoMod.TabIndex = 5;
@@ -334,7 +338,7 @@
             this.lblModificarProducto.AutoSize = true;
             this.lblModificarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(111)))), ((int)(((byte)(33)))));
             this.lblModificarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModificarProducto.Location = new System.Drawing.Point(12, 9);
+            this.lblModificarProducto.Location = new System.Drawing.Point(12, 21);
             this.lblModificarProducto.Name = "lblModificarProducto";
             this.lblModificarProducto.Size = new System.Drawing.Size(159, 20);
             this.lblModificarProducto.TabIndex = 0;
@@ -349,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.pnlModificarProducto);
             this.Name = "FormModificarProducto";
             this.Text = "FormModificarProducto";

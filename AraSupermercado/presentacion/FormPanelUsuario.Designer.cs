@@ -127,7 +127,7 @@
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(726, 451);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 16);
+            this.label10.Size = new System.Drawing.Size(11, 13);
             this.label10.TabIndex = 59;
             this.label10.Text = "*";
             // 
@@ -137,7 +137,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(414, 451);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 16);
+            this.label9.Size = new System.Drawing.Size(11, 13);
             this.label9.TabIndex = 58;
             this.label9.Text = "*";
             // 
@@ -147,7 +147,7 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(454, 394);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 16);
+            this.label8.Size = new System.Drawing.Size(11, 13);
             this.label8.TabIndex = 57;
             this.label8.Text = "*";
             // 
@@ -157,7 +157,7 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(394, 329);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 16);
+            this.label7.Size = new System.Drawing.Size(11, 13);
             this.label7.TabIndex = 56;
             this.label7.Text = "*";
             // 
@@ -167,7 +167,7 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(397, 272);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 16);
+            this.label6.Size = new System.Drawing.Size(11, 13);
             this.label6.TabIndex = 55;
             this.label6.Text = "*";
             // 
@@ -177,7 +177,7 @@
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(469, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 16);
+            this.label5.Size = new System.Drawing.Size(11, 13);
             this.label5.TabIndex = 54;
             this.label5.Text = "*";
             // 
@@ -187,7 +187,7 @@
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(432, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(12, 16);
+            this.label4.Size = new System.Drawing.Size(11, 13);
             this.label4.TabIndex = 53;
             this.label4.Text = "*";
             // 
@@ -197,7 +197,7 @@
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(432, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(12, 16);
+            this.label3.Size = new System.Drawing.Size(11, 13);
             this.label3.TabIndex = 52;
             this.label3.Text = "*";
             // 
@@ -207,7 +207,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(739, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 16);
+            this.label2.Size = new System.Drawing.Size(11, 13);
             this.label2.TabIndex = 51;
             this.label2.Text = "*";
             // 
@@ -217,7 +217,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(460, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 16);
+            this.label1.Size = new System.Drawing.Size(11, 13);
             this.label1.TabIndex = 50;
             this.label1.Text = "*";
             // 
@@ -230,7 +230,7 @@
             "PA"});
             this.cbxEditTipoDoc.Location = new System.Drawing.Point(340, 64);
             this.cbxEditTipoDoc.Name = "cbxEditTipoDoc";
-            this.cbxEditTipoDoc.Size = new System.Drawing.Size(232, 24);
+            this.cbxEditTipoDoc.Size = new System.Drawing.Size(232, 21);
             this.cbxEditTipoDoc.TabIndex = 49;
             // 
             // btnVerConfirmarContrasena
@@ -258,7 +258,7 @@
             this.dtpEditFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEditFechaNac.Location = new System.Drawing.Point(343, 238);
             this.dtpEditFechaNac.Name = "dtpEditFechaNac";
-            this.dtpEditFechaNac.Size = new System.Drawing.Size(492, 22);
+            this.dtpEditFechaNac.Size = new System.Drawing.Size(492, 20);
             this.dtpEditFechaNac.TabIndex = 46;
             // 
             // btnGuardarCambios
@@ -277,7 +277,7 @@
             // 
             this.txtEditConfirmarContrasena.Location = new System.Drawing.Point(597, 470);
             this.txtEditConfirmarContrasena.Name = "txtEditConfirmarContrasena";
-            this.txtEditConfirmarContrasena.Size = new System.Drawing.Size(238, 22);
+            this.txtEditConfirmarContrasena.Size = new System.Drawing.Size(238, 20);
             this.txtEditConfirmarContrasena.TabIndex = 44;
             this.txtEditConfirmarContrasena.UseSystemPasswordChar = true;
             // 
@@ -285,7 +285,7 @@
             // 
             this.txtEditContrasena.Location = new System.Drawing.Point(343, 472);
             this.txtEditContrasena.Name = "txtEditContrasena";
-            this.txtEditContrasena.Size = new System.Drawing.Size(229, 22);
+            this.txtEditContrasena.Size = new System.Drawing.Size(229, 20);
             this.txtEditContrasena.TabIndex = 43;
             this.txtEditContrasena.UseSystemPasswordChar = true;
             // 
@@ -294,7 +294,7 @@
             this.lblConfiContrasena.AutoSize = true;
             this.lblConfiContrasena.Location = new System.Drawing.Point(595, 451);
             this.lblConfiContrasena.Name = "lblConfiContrasena";
-            this.lblConfiContrasena.Size = new System.Drawing.Size(136, 16);
+            this.lblConfiContrasena.Size = new System.Drawing.Size(108, 13);
             this.lblConfiContrasena.TabIndex = 42;
             this.lblConfiContrasena.Text = "Confirmar Contraseña";
             // 
@@ -303,7 +303,7 @@
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Location = new System.Drawing.Point(340, 452);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(76, 16);
+            this.lblContrasena.Size = new System.Drawing.Size(61, 13);
             this.lblContrasena.TabIndex = 41;
             this.lblContrasena.Text = "Contraseña";
             // 
@@ -311,56 +311,56 @@
             // 
             this.txtEditCorreo.Location = new System.Drawing.Point(340, 413);
             this.txtEditCorreo.Name = "txtEditCorreo";
-            this.txtEditCorreo.Size = new System.Drawing.Size(495, 22);
+            this.txtEditCorreo.Size = new System.Drawing.Size(495, 20);
             this.txtEditCorreo.TabIndex = 40;
             // 
             // txtEditTelefono
             // 
             this.txtEditTelefono.Location = new System.Drawing.Point(340, 348);
             this.txtEditTelefono.Name = "txtEditTelefono";
-            this.txtEditTelefono.Size = new System.Drawing.Size(495, 22);
+            this.txtEditTelefono.Size = new System.Drawing.Size(495, 20);
             this.txtEditTelefono.TabIndex = 39;
             // 
             // txtEditDireccion
             // 
             this.txtEditDireccion.Location = new System.Drawing.Point(340, 291);
             this.txtEditDireccion.Name = "txtEditDireccion";
-            this.txtEditDireccion.Size = new System.Drawing.Size(495, 22);
+            this.txtEditDireccion.Size = new System.Drawing.Size(495, 20);
             this.txtEditDireccion.TabIndex = 38;
             // 
             // txtEditSegundoApellido
             // 
             this.txtEditSegundoApellido.Location = new System.Drawing.Point(597, 176);
             this.txtEditSegundoApellido.Name = "txtEditSegundoApellido";
-            this.txtEditSegundoApellido.Size = new System.Drawing.Size(238, 22);
+            this.txtEditSegundoApellido.Size = new System.Drawing.Size(238, 20);
             this.txtEditSegundoApellido.TabIndex = 36;
             // 
             // txtEditPrimerApellido
             // 
             this.txtEditPrimerApellido.Location = new System.Drawing.Point(340, 176);
             this.txtEditPrimerApellido.Name = "txtEditPrimerApellido";
-            this.txtEditPrimerApellido.Size = new System.Drawing.Size(232, 22);
+            this.txtEditPrimerApellido.Size = new System.Drawing.Size(232, 20);
             this.txtEditPrimerApellido.TabIndex = 35;
             // 
             // txtEditSegundoNombre
             // 
             this.txtEditSegundoNombre.Location = new System.Drawing.Point(597, 124);
             this.txtEditSegundoNombre.Name = "txtEditSegundoNombre";
-            this.txtEditSegundoNombre.Size = new System.Drawing.Size(238, 22);
+            this.txtEditSegundoNombre.Size = new System.Drawing.Size(238, 20);
             this.txtEditSegundoNombre.TabIndex = 34;
             // 
             // txtEditPrimerNombre
             // 
             this.txtEditPrimerNombre.Location = new System.Drawing.Point(340, 124);
             this.txtEditPrimerNombre.Name = "txtEditPrimerNombre";
-            this.txtEditPrimerNombre.Size = new System.Drawing.Size(232, 22);
+            this.txtEditPrimerNombre.Size = new System.Drawing.Size(232, 20);
             this.txtEditPrimerNombre.TabIndex = 33;
             // 
             // txtEditNumDoc
             // 
             this.txtEditNumDoc.Location = new System.Drawing.Point(597, 66);
             this.txtEditNumDoc.Name = "txtEditNumDoc";
-            this.txtEditNumDoc.Size = new System.Drawing.Size(238, 22);
+            this.txtEditNumDoc.Size = new System.Drawing.Size(238, 20);
             this.txtEditNumDoc.TabIndex = 32;
             // 
             // lblCorreo
@@ -368,7 +368,7 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(337, 394);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(118, 16);
+            this.lblCorreo.Size = new System.Drawing.Size(94, 13);
             this.lblCorreo.TabIndex = 30;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
@@ -377,7 +377,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(337, 329);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 29;
             this.lblTelefono.Text = "Teléfono";
             // 
@@ -386,7 +386,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Location = new System.Drawing.Point(337, 272);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(64, 16);
+            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 28;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -395,7 +395,7 @@
             this.lblFehcaNac.AutoSize = true;
             this.lblFehcaNac.Location = new System.Drawing.Point(337, 218);
             this.lblFehcaNac.Name = "lblFehcaNac";
-            this.lblFehcaNac.Size = new System.Drawing.Size(135, 16);
+            this.lblFehcaNac.Size = new System.Drawing.Size(108, 13);
             this.lblFehcaNac.TabIndex = 27;
             this.lblFehcaNac.Text = "Fecha de Nacimiento";
             // 
@@ -404,7 +404,7 @@
             this.lblSegundoApellido.AutoSize = true;
             this.lblSegundoApellido.Location = new System.Drawing.Point(594, 157);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(115, 16);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(90, 13);
             this.lblSegundoApellido.TabIndex = 26;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
@@ -413,7 +413,7 @@
             this.lblPrimerApellido.AutoSize = true;
             this.lblPrimerApellido.Location = new System.Drawing.Point(337, 157);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(99, 16);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(76, 13);
             this.lblPrimerApellido.TabIndex = 25;
             this.lblPrimerApellido.Text = "Primer Apellido";
             // 
@@ -422,7 +422,7 @@
             this.lblSegundoNombre.AutoSize = true;
             this.lblSegundoNombre.Location = new System.Drawing.Point(595, 105);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(114, 16);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(90, 13);
             this.lblSegundoNombre.TabIndex = 24;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -431,7 +431,7 @@
             this.lblPrimerNombre.AutoSize = true;
             this.lblPrimerNombre.Location = new System.Drawing.Point(337, 105);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(98, 16);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(76, 13);
             this.lblPrimerNombre.TabIndex = 23;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -440,7 +440,7 @@
             this.lblNumDoc.AutoSize = true;
             this.lblNumDoc.Location = new System.Drawing.Point(595, 45);
             this.lblNumDoc.Name = "lblNumDoc";
-            this.lblNumDoc.Size = new System.Drawing.Size(146, 16);
+            this.lblNumDoc.Size = new System.Drawing.Size(117, 13);
             this.lblNumDoc.TabIndex = 22;
             this.lblNumDoc.Text = "Número de Documento";
             // 
@@ -449,7 +449,7 @@
             this.lblTipoDoc.AutoSize = true;
             this.lblTipoDoc.Location = new System.Drawing.Point(337, 45);
             this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(126, 16);
+            this.lblTipoDoc.Size = new System.Drawing.Size(101, 13);
             this.lblTipoDoc.TabIndex = 21;
             this.lblTipoDoc.Text = "Tipo de Documento";
             // 
@@ -460,7 +460,7 @@
             this.lblAdminCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
             this.lblAdminCuenta.Location = new System.Drawing.Point(336, 9);
             this.lblAdminCuenta.Name = "lblAdminCuenta";
-            this.lblAdminCuenta.Size = new System.Drawing.Size(199, 26);
+            this.lblAdminCuenta.Size = new System.Drawing.Size(163, 22);
             this.lblAdminCuenta.TabIndex = 0;
             this.lblAdminCuenta.Text = "Administrar Cuenta";
             // 
@@ -480,7 +480,7 @@
             this.lblVerPedidos.Location = new System.Drawing.Point(46, 32);
             this.lblVerPedidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVerPedidos.Name = "lblVerPedidos";
-            this.lblVerPedidos.Size = new System.Drawing.Size(171, 16);
+            this.lblVerPedidos.Size = new System.Drawing.Size(133, 13);
             this.lblVerPedidos.TabIndex = 0;
             this.lblVerPedidos.Text = "Ver Pedidos Proximamente";
             // 
@@ -488,8 +488,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1162, 603);
-            this.Controls.Add(this.pnlAdminCuenta);
             this.Controls.Add(this.pnlVerPedidos);
+            this.Controls.Add(this.pnlAdminCuenta);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPanelUsuario";
             this.Text = "FormPanelUsuario";

@@ -11,15 +11,19 @@ namespace AraSupermercado.presentacion
 {
     public partial class FormPanelAdminProducto : Form
     {
+        private FormMenuAdmin formMenuAdmin;
+        private Action<Form> AbrirSubMenu;
         private Administrador administrador;
         private Producto prod = new Producto();
         private string opcionActual;
         private ErrorProvider errorProvider = new ErrorProvider();
 
-        public FormPanelAdminProducto(string modo, Administrador admin) 
+        public FormPanelAdminProducto(string modo, Administrador admin, FormMenuAdmin parent, Action<Form> abrirSubMenu) 
         {
             InitializeComponent();
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            this.formMenuAdmin = parent;
+            this.AbrirSubMenu = abrirSubMenu;
             this.opcionActual = modo;
             this.administrador = admin ?? throw new ArgumentNullException(nameof(admin));
 
@@ -45,12 +49,6 @@ namespace AraSupermercado.presentacion
                     break;
             }
         }
-
-        /*public void ActualizarVista(string nuevaOpcion)
-        {
-            this.opcionActual = nuevaOpcion;
-            CargarVista();
-        }*/
 
         // Método para cargar productos 
         private async Task CargarProductosAsync(string filtroNombre = "")
@@ -98,10 +96,10 @@ namespace AraSupermercado.presentacion
 
             Panel panel = new Panel  
             {
-                Size = new Size(280, 280),
+                Size = new Size(365,100),
                 BackColor = Color.White,
-                BorderStyle = BorderStyle.None,
-                Margin = new Padding(15),
+                BorderStyle = BorderStyle.FixedSingle,
+                Margin = new Padding(10),
                 Padding = new Padding(10),
                 Tag = prod.prodCodigo
             };
@@ -109,9 +107,9 @@ namespace AraSupermercado.presentacion
             // PictureBox para imagen
             PictureBox pbImagen = new PictureBox
             {
-                Size = new Size(120, 120),
+                Size = new Size(80, 80),
                 Location = new Point(10, 10),
-                SizeMode = PictureBoxSizeMode.Zoom,  
+                SizeMode = PictureBoxSizeMode.StretchImage,  
                 BorderStyle = BorderStyle.None,
                 BackColor = Color.White
             };
@@ -131,9 +129,9 @@ namespace AraSupermercado.presentacion
             Label lblNombre = new Label
             {
                 Text = prod.prodNombre,
-                Location = new Point(10, 140),
+                Location = new Point(100, 15),
                 AutoSize = true,
-                MaximumSize = new Size(120, 0),
+                //MaximumSize = new Size(120, 0),
                 Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 ForeColor = Color.Black
             };
@@ -143,7 +141,7 @@ namespace AraSupermercado.presentacion
             Label lblPrecio = new Label
             {
                 Text = $"${prod.prodPrecio:F2}",
-                Location = new Point(10, lblNombre.Bottom + 5),
+                Location = new Point(100, 55),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold),
                 ForeColor = Color.Black
@@ -161,14 +159,11 @@ namespace AraSupermercado.presentacion
             return panel;
         }
 
-
         // Método para abrir FormModificarProducto
-        private async void AbrirFormModificar(Producto prod)
+        private void AbrirFormModificar(Producto prod)
         {
-            FormModificarProducto formModificar = new FormModificarProducto(prod);
-            formModificar.ShowDialog();
-            // Recargar catálogo después de modificar
-            await CargarProductosAsync();
+            AbrirSubMenu(new FormModificarProducto(prod, this.administrador, this.formMenuAdmin, this.AbrirSubMenu));
+
         }
 
         private async void btnBuscar_Click(object sender, EventArgs e)
@@ -224,9 +219,9 @@ namespace AraSupermercado.presentacion
                 errorProvider.SetError(txtNombreProducto, "El nombre debe contener solo letras y espacios.");
                 esValido = false;
             }
-            else if (txtNombreProducto.Text.Length > 50)
+            else if (txtNombreProducto.Text.Length > 80)
             {
-                errorProvider.SetError(txtNombreProducto, "El nombre no debe exceder 50 caracteres.");
+                errorProvider.SetError(txtNombreProducto, "El nombre no debe exceder 80 caracteres.");
                 esValido = false;
             }
 
