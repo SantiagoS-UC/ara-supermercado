@@ -10,19 +10,24 @@ namespace AraSupermercado.presentacion
 {
     public partial class FormModificarProducto : Form
     {
+        private FormMenuAdmin formMenuAdmin;
+        private Action<Form> AbrirSubMenu;
         private Producto producto;
         private Administrador admin;
         private ConexionOracle conexion;
-        private string nuevaRutaImagen;  
+        private string nuevaRutaImagen;
 
-        public FormModificarProducto(Producto prod)
+        public FormModificarProducto(Producto prod, Administrador admin, FormMenuAdmin parent, Action<Form> abrirSubMenu)
         {
             InitializeComponent();
-            producto = prod;
-            admin = new Administrador();
+            this.producto = prod;
+            this.admin = admin;  // Asigna el admin pasado en lugar de crear uno nuevo
+            this.formMenuAdmin = parent;
+            this.AbrirSubMenu = abrirSubMenu;
             conexion = new ConexionOracle();
-            nuevaRutaImagen = prod.prodImagenRuta;  
+            nuevaRutaImagen = prod.prodImagenRuta;
         }
+
 
         private void FormModificarProducto_Load(object sender, EventArgs e)
         {
@@ -80,11 +85,11 @@ namespace AraSupermercado.presentacion
             }
         }
 
-        private void btnGuardarModificar_Click(object sender, EventArgs e)  
+        private void btnGuardarModificar_Click(object sender, EventArgs e)
         {
             if (!ValidarCamposRegistro())
             {
-                return; 
+                return;
             }
 
             // Asignar valores del formulario al objeto producto
@@ -94,8 +99,8 @@ namespace AraSupermercado.presentacion
             producto.prodEstado = cbxEstadoProductoMod.SelectedItem.ToString();
             producto.prodDescripcion = txtDescripcionProductoMod.Text.Trim();
             producto.prodCategoria = cbxCategoriaMod.SelectedItem.ToString();
-            producto.prodImagenRuta = nuevaRutaImagen;  
-            picProductoMod.Tag = nuevaRutaImagen;  
+            producto.prodImagenRuta = nuevaRutaImagen;
+            picProductoMod.Tag = nuevaRutaImagen;
 
             // Validar que la imagen no sea null
             if (string.IsNullOrWhiteSpace(producto.prodImagenRuta) || !File.Exists(producto.prodImagenRuta))
@@ -108,7 +113,11 @@ namespace AraSupermercado.presentacion
             if (admin.ActualizarProducto(producto, cbxCategoriaMod.SelectedItem?.ToString()))
             {
                 MessageBox.Show("Producto modificado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
+
+                // Reabre FormPanelAdminProducto en modo "Catalogo" dentro del pnlContenedor para recargar el catálogo
+                AbrirSubMenu(new FormPanelAdminProducto("Catalogo", admin, formMenuAdmin, AbrirSubMenu));
+
+                // Cierra este form
                 this.Close();
             }
             else
@@ -228,7 +237,10 @@ namespace AraSupermercado.presentacion
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            // Reabre FormPanelAdminProducto en modo "Catalogo" dentro del pnlContenedor
+            AbrirSubMenu(new FormPanelAdminProducto("Catalogo", admin, formMenuAdmin, AbrirSubMenu));
+
+            // Cierra este form
             this.Close();
         }
     }
