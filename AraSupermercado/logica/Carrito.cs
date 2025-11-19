@@ -112,71 +112,78 @@ namespace AraSupermercado.logica
         }
 
         // Confirmar pedido (copia CARRITO a DETALLE_PEDIDO, crea PEDIDO/VENTA)
-        public static bool ConfirmarPedido()
+        public static int ConfirmarPedido(string direccionEnvio, string metodoPago)
         {
-            if (items.Count == 0) return false;
+            if (items.Count == 0) return 0;
 
-            try
+            using (OracleConnection conn = conexion.ObtenerConexion())
             {
-                using (OracleConnection conn = conexion.ObtenerConexion())
+                conn.Open();
+                using (OracleTransaction trans = conn.BeginTransaction())  
                 {
-                    conn.Open();
-
-                    // Crear PEDIDO
-                    int pedCodigo;
-                    using (OracleCommand cmdPedido = new OracleCommand("pa_insertar_pedido", conn))
+                    try
                     {
-                        cmdPedido.CommandType = CommandType.StoredProcedure;
-                        cmdPedido.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
-                        cmdPedido.Parameters.Add("p_ped_estado", OracleDbType.Varchar2).Value = "CONFIRMADO";
-                        cmdPedido.Parameters.Add("p_ped_fecha_creacion", OracleDbType.Date).Value = DateTime.Now;
-                        cmdPedido.Parameters.Add("p_ped_codigo_out", OracleDbType.Int32).Direction = ParameterDirection.Output;
-
-                        cmdPedido.ExecuteNonQuery();
-                        pedCodigo = Convert.ToInt32(cmdPedido.Parameters["p_ped_codigo_out"].Value);
-                    }
-
-                    // Copiar CARRITO a DETALLE_PEDIDO
-                    foreach (var item in items)
-                    {
-                        using (OracleCommand cmdDetalle = new OracleCommand("pa_insertar_detalle_pedido", conn))
+                        // 1. Crear PEDIDO
+                        int pedCodigo;
+                        using (OracleCommand cmdPedido = new OracleCommand("pkg_pedido.pa_insertar_pedido", conn))
                         {
-                            cmdDetalle.CommandType = CommandType.StoredProcedure;
-                            cmdDetalle.Parameters.Add("p_ped_codigo", OracleDbType.Int32).Value = pedCodigo;
-                            cmdDetalle.Parameters.Add("p_prod_codigo", OracleDbType.Int32).Value = item.Producto.prodCodigo;
-                            cmdDetalle.Parameters.Add("p_dp_cant_prod", OracleDbType.Int32).Value = item.Cantidad;
-                            cmdDetalle.Parameters.Add("p_dp_precio_unitario", OracleDbType.Decimal).Value = item.Producto.prodPrecio;
-
-                            cmdDetalle.ExecuteNonQuery();
+                            cmdPedido.CommandType = CommandType.StoredProcedure;
+                            cmdPedido.Transaction = trans;
+                            cmdPedido.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
+                            cmdPedido.Parameters.Add("p_ped_estado", OracleDbType.Varchar2).Value = "Confirmado";
+                            cmdPedido.Parameters.Add("p_ped_fecha_creacion", OracleDbType.Date).Value = DateTime.Now;
+                            cmdPedido.Parameters.Add("p_ped_direccion_envio", OracleDbType.Varchar2).Value = direccionEnvio;
+                            cmdPedido.Parameters.Add("p_ped_metodo_pago", OracleDbType.Varchar2).Value = metodoPago;
+                            cmdPedido.Parameters.Add("p_ped_codigo_out", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                            cmdPedido.ExecuteNonQuery();
+                            var dec = (Oracle.ManagedDataAccess.Types.OracleDecimal)cmdPedido.Parameters["p_ped_codigo_out"].Value;
+                            pedCodigo = dec.ToInt32();
                         }
-                    }
 
-                    // Crear VENTA
-                    using (OracleCommand cmdVenta = new OracleCommand("pa_insertar_venta", conn))
+                        // 2. Copiar a DETALLE_PEDIDO
+                        foreach (var item in items)
+                        {
+                            using (OracleCommand cmdDetalle = new OracleCommand("pkg_pedido.pa_insertar_detalle_pedido", conn))
+                            {
+                                cmdDetalle.CommandType = CommandType.StoredProcedure;
+                                cmdDetalle.Transaction = trans;
+                                cmdDetalle.Parameters.Add("p_ped_codigo", OracleDbType.Int32).Value = pedCodigo;
+                                cmdDetalle.Parameters.Add("p_prod_codigo", OracleDbType.Int32).Value = item.Producto.prodCodigo;
+                                cmdDetalle.Parameters.Add("p_dp_cant_prod", OracleDbType.Int32).Value = item.Cantidad;
+                                cmdDetalle.Parameters.Add("p_dp_precio_unitario", OracleDbType.Decimal).Value = item.Producto.prodPrecio;
+                                cmdDetalle.ExecuteNonQuery();
+                            }
+                        }
+
+                        // 3. Crear VENTA
+                        using (OracleCommand cmdVenta = new OracleCommand("pkg_pedido.pa_insertar_venta", conn))
+                        {
+                            cmdVenta.CommandType = CommandType.StoredProcedure;
+                            cmdVenta.Transaction = trans;
+                            cmdVenta.Parameters.Add("p_ped_codigo", OracleDbType.Int32).Value = pedCodigo;
+                            cmdVenta.Parameters.Add("p_vent_fecha", OracleDbType.Date).Value = DateTime.Now;
+                            cmdVenta.ExecuteNonQuery();
+                        }
+
+                        // 4. Vaciar CARRITO
+                        using (OracleCommand cmdVaciar = new OracleCommand("pkg_carrito.pa_vaciar_carrito", conn))
+                        {
+                            cmdVaciar.CommandType = CommandType.StoredProcedure;
+                            cmdVaciar.Transaction = trans;
+                            cmdVaciar.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
+                            cmdVaciar.ExecuteNonQuery();
+                        }
+
+                        trans.Commit();  
+                        items.Clear();
+                        return pedCodigo;
+                    }
+                    catch (Exception ex)
                     {
-                        cmdVenta.CommandType = CommandType.StoredProcedure;
-                        cmdVenta.Parameters.Add("p_ped_codigo", OracleDbType.Int32).Value = pedCodigo;
-                        cmdVenta.Parameters.Add("p_vent_fecha", OracleDbType.Date).Value = DateTime.Now;
-                        cmdVenta.Parameters.Add("p_vent_valor_total", OracleDbType.Decimal).Value = ObtenerTotal();
-
-                        cmdVenta.ExecuteNonQuery();
+                        trans.Rollback(); 
+                        throw new Exception("Error al confirmar pedido: " + ex.Message);
                     }
-
-                    // Vaciar CARRITO
-                    using (OracleCommand cmdVaciar = new OracleCommand("pa_vaciar_carrito", conn))
-                    {
-                        cmdVaciar.CommandType = CommandType.StoredProcedure;
-                        cmdVaciar.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
-                        cmdVaciar.ExecuteNonQuery();
-                    }
-
-                    items.Clear();
-                    return true;
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al confirmar pedido: " + ex.Message);
             }
         }
 

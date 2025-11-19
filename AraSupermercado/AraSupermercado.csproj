@@ -96,6 +96,18 @@
     <Compile Include="presentacion\UcCarrito.Designer.cs">
       <DependentUpon>UcCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\UcDatosEnvioPago.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcDatosEnvioPago.Designer.cs">
+      <DependentUpon>UcDatosEnvioPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcFacturaPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcFacturaPedido.Designer.cs">
+      <DependentUpon>UcFacturaPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\UcPaginaPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="presentacion\FormPanelAdminProducto.Designer.cs">
       <DependentUpon>FormPanelAdminProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcVerPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcVerPedidos.Designer.cs">
+      <DependentUpon>UcVerPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\\FormLogin.cs">
       <SubType>Form</SubType>
