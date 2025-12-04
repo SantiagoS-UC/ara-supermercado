@@ -86,10 +86,36 @@
   <ItemGroup>
     <Compile Include="accesoDatos\\ConexionOracle.cs" />
     <Compile Include="logica\Carrito.cs" />
+    <Compile Include="logica\Factura.cs" />
+    <Compile Include="logica\Pedido.cs" />
     <Compile Include="logica\\Cliente.cs" />
     <Compile Include="logica\\Producto.cs" />
     <Compile Include="logica\\Administrador.cs" />
     <Compile Include="logica\\Login.cs" />
+    <Compile Include="presentacion\FormConsultarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarFacturas.Designer.cs">
+      <DependentUpon>FormConsultarFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarPedidos.Designer.cs">
+      <DependentUpon>FormConsultarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormDetalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormDetalleFactura.Designer.cs">
+      <DependentUpon>FormDetalleFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormDetallePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormDetallePedido.Designer.cs">
+      <DependentUpon>FormDetallePedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\UcCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +196,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentacion\FormConsultarPedidos.resx">
+      <DependentUpon>FormConsultarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\UcCarrito.resx">
       <DependentUpon>UcCarrito.cs</DependentUpon>
     </EmbeddedResource>

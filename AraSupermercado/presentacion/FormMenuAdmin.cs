@@ -59,6 +59,30 @@ namespace AraSupermercado.presentacion
             AbrirSubMenu(new FormPanelAdminProducto("Registro", admin, this, AbrirSubMenu));
         }
 
+        private void subMenuPedidos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirSubMenu(new FormConsultarPedidos(this, AbrirSubMenu));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir pedidos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void subMenuFacturas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirSubMenu(new FormConsultarFacturas(this, AbrirSubMenu));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir facturas: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void subMenuCerrarSesion_Click(object sender, EventArgs e)
         {
             // Oculta FormMenuAdmin

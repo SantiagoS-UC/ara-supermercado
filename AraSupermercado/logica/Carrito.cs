@@ -119,7 +119,7 @@ namespace AraSupermercado.logica
             using (OracleConnection conn = conexion.ObtenerConexion())
             {
                 conn.Open();
-                using (OracleTransaction trans = conn.BeginTransaction())  
+                using (OracleTransaction trans = conn.BeginTransaction())
                 {
                     try
                     {
@@ -129,13 +129,16 @@ namespace AraSupermercado.logica
                         {
                             cmdPedido.CommandType = CommandType.StoredProcedure;
                             cmdPedido.Transaction = trans;
+
                             cmdPedido.Parameters.Add("p_cli_id", OracleDbType.Int32).Value = cliIdActual;
                             cmdPedido.Parameters.Add("p_ped_estado", OracleDbType.Varchar2).Value = "Confirmado";
                             cmdPedido.Parameters.Add("p_ped_fecha_creacion", OracleDbType.Date).Value = DateTime.Now;
-                            cmdPedido.Parameters.Add("p_ped_direccion_envio", OracleDbType.Varchar2).Value = direccionEnvio;
-                            cmdPedido.Parameters.Add("p_ped_metodo_pago", OracleDbType.Varchar2).Value = metodoPago;
+                            cmdPedido.Parameters.Add("p_ped_direccion_envio", OracleDbType.Varchar2).Value = direccionEnvio;  // ✅ FALTABA
+                            cmdPedido.Parameters.Add("p_ped_metodo_pago", OracleDbType.Varchar2).Value = metodoPago;         // ✅ FALTABA
                             cmdPedido.Parameters.Add("p_ped_codigo_out", OracleDbType.Int32).Direction = ParameterDirection.Output;
+
                             cmdPedido.ExecuteNonQuery();
+
                             var dec = (Oracle.ManagedDataAccess.Types.OracleDecimal)cmdPedido.Parameters["p_ped_codigo_out"].Value;
                             pedCodigo = dec.ToInt32();
                         }
@@ -174,13 +177,13 @@ namespace AraSupermercado.logica
                             cmdVaciar.ExecuteNonQuery();
                         }
 
-                        trans.Commit();  
+                        trans.Commit();
                         items.Clear();
                         return pedCodigo;
                     }
                     catch (Exception ex)
                     {
-                        trans.Rollback(); 
+                        trans.Rollback();
                         throw new Exception("Error al confirmar pedido: " + ex.Message);
                     }
                 }
