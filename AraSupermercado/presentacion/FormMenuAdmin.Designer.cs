@@ -31,8 +31,10 @@
             this.menuStripAdmin = new System.Windows.Forms.MenuStrip();
             this.subMenuProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.subMenuRegistrarProducto = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.subMenuPedidos = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuFacturas = new System.Windows.Forms.ToolStripMenuItem();
             this.subMenuCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.menuStripAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +46,8 @@
             this.menuStripAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuProductos,
             this.subMenuRegistrarProducto,
+            this.subMenuPedidos,
+            this.subMenuFacturas,
             this.subMenuCerrarSesion});
             this.menuStripAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuStripAdmin.Name = "menuStripAdmin";
@@ -69,6 +73,25 @@
             this.subMenuRegistrarProducto.Size = new System.Drawing.Size(250, 57);
             this.subMenuRegistrarProducto.Text = "Resgistrar Producto";
             this.subMenuRegistrarProducto.Click += new System.EventHandler(this.subMenuRegistrarProducto_Click);
+            // 
+            // subMenuPedidos
+            // 
+            this.subMenuPedidos.AutoSize = false;
+            this.subMenuPedidos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subMenuPedidos.Name = "subMenuPedidos";
+            this.subMenuPedidos.Size = new System.Drawing.Size(250, 57);
+            this.subMenuPedidos.Text = "Pedidos";
+            this.subMenuPedidos.Click += new System.EventHandler(this.subMenuPedidos_Click);
+            //
+            //subMenuFacturas
+            //
+            this.subMenuFacturas.AutoSize = false;
+            this.subMenuFacturas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.subMenuFacturas.Name = "subMenuFacturas";
+            this.subMenuFacturas.Size = new System.Drawing.Size(250, 57);
+            this.subMenuFacturas.Text = "Facturas";
+            this.subMenuFacturas.Click += new System.EventHandler(this.subMenuFacturas_Click);
+
             // 
             // pnlContenedor
             // 
@@ -111,6 +134,8 @@
         private System.Windows.Forms.MenuStrip menuStripAdmin;
         private System.Windows.Forms.ToolStripMenuItem subMenuProductos;
         private System.Windows.Forms.ToolStripMenuItem subMenuRegistrarProducto;
+        private System.Windows.Forms.ToolStripMenuItem subMenuPedidos;
+        private System.Windows.Forms.ToolStripMenuItem subMenuFacturas;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.ToolStripMenuItem subMenuCerrarSesion;
     }
