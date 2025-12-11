@@ -47,7 +47,6 @@ namespace AraSupermercado.presentacion
 
         private void subMenuVerPedidos_Click(object sender, EventArgs e)
         {
-            //AbrirSubMenu(new FormPanelUsuario("VerPedidos", clienteActual));
             AbrirSubMenu(new UcVerPedidos(clienteActual, this));
         }
 

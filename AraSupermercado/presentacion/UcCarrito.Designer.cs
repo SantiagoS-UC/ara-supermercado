@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlUcCarrito = new System.Windows.Forms.Panel();
-            this.flpCarrito = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.flpCarrito = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlUcCarrito.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,13 +48,31 @@
             this.pnlUcCarrito.Size = new System.Drawing.Size(1180, 650);
             this.pnlUcCarrito.TabIndex = 0;
             // 
-            // flpCarrito
+            // btnVolver
             // 
-            this.flpCarrito.AutoScroll = true;
-            this.flpCarrito.Location = new System.Drawing.Point(3, 3);
-            this.flpCarrito.Name = "flpCarrito";
-            this.flpCarrito.Size = new System.Drawing.Size(1174, 597);
-            this.flpCarrito.TabIndex = 0;
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(869, 592);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(127, 39);
+            this.btnVolver.TabIndex = 2;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(1002, 592);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(175, 39);
+            this.btnConfirmar.TabIndex = 1;
+            this.btnConfirmar.Text = "Confirmar Pedido";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lblTotal
             // 
@@ -66,25 +84,14 @@
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Total: $0";
             // 
-            // btnConfirmar
+            // flpCarrito
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(1038, 606);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(139, 25);
-            this.btnConfirmar.TabIndex = 1;
-            this.btnConfirmar.Text = "Confirmar Pedido";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(944, 606);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 25);
-            this.btnVolver.TabIndex = 2;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.flpCarrito.AutoScroll = true;
+            this.flpCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpCarrito.Location = new System.Drawing.Point(0, 0);
+            this.flpCarrito.Name = "flpCarrito";
+            this.flpCarrito.Size = new System.Drawing.Size(1180, 650);
+            this.flpCarrito.TabIndex = 0;
             // 
             // UcCarrito
             // 

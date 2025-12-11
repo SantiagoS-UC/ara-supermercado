@@ -219,6 +219,9 @@
     <EmbeddedResource Include="presentacion\FormPanelAdminProducto.resx">
       <DependentUpon>FormPanelAdminProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\UcVerPedidos.resx">
+      <DependentUpon>UcVerPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
