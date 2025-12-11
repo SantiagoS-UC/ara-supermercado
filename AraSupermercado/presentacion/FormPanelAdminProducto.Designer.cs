@@ -543,8 +543,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1182, 653);
-            this.Controls.Add(this.pnlProductos);
             this.Controls.Add(this.pnlRegistrarProducto);
+            this.Controls.Add(this.pnlProductos);
             this.Name = "FormPanelAdminProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPanelAdminProducto";
