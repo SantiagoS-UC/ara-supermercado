@@ -8,7 +8,6 @@ namespace AraSupermercado.logica
 {
     public class Producto
     {
-        // Propiedades existentes (tu código)
         public int prodCodigo { get; set; }
         public int provNit { get; set; }
         public string prodNombre { get; set; }
@@ -21,16 +20,15 @@ namespace AraSupermercado.logica
 
         private ConexionOracle conexion = new ConexionOracle();
 
-        // Constructor vacío (tu código)
         public Producto() { }
 
-        // Constructor con parámetros (tu código)
-        public Producto(int codigo, int nit, string nombre, string descripcion, string estado, decimal precio, int stock, string imagenRuta)
+        public Producto(int codigo, int nit, string nombre, string descripcion, string categoria, string estado, decimal precio, int stock, string imagenRuta)
         {
             prodCodigo = codigo;
             provNit = nit;
             prodNombre = nombre;
             prodDescripcion = descripcion;
+            prodCategoria = categoria;
             prodEstado = estado;
             prodPrecio = precio;
             prodStock = stock;
@@ -46,11 +44,11 @@ namespace AraSupermercado.logica
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_obtener_productos", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_producto.pa_obtener_productos", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Parámetro de entrada (estado, ej. "ACTIVO")
+                        // Parámetro de entrada 
                         cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = "ACTIVO";
 
                         // Parámetro de salida (cursor)
@@ -93,7 +91,7 @@ namespace AraSupermercado.logica
                 using (OracleConnection conn = conexion.ObtenerConexion())
                 {
                     conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_obtener_productos_por_categoria", conn))
+                    using (OracleCommand cmd = new OracleCommand("pkg_producto.pa_obtener_productos_por_categoria", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("p_categoria", OracleDbType.Varchar2).Value = categoria;
@@ -127,61 +125,5 @@ namespace AraSupermercado.logica
             }
             return productos;
         }
-
-        // Método opcional: Consultar un producto específico por ID
-        public void ConsultarProducto(int prodCodigo)
-        {
-            try
-            {
-                using (OracleConnection conn = conexion.ObtenerConexion())
-                {
-                    conn.Open();
-                    using (OracleCommand cmd = new OracleCommand("pa_consultar_producto", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("p_prod_codigo", OracleDbType.Int32).Value = prodCodigo;
-
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                this.prodCodigo = reader.GetInt32(reader.GetOrdinal("PRO_CODIGO"));
-                                // Mapea el resto de propiedades
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al consultar producto: " + ex.Message);
-            }
-        }
-
-        // Método para actualizar el producto
-        public bool ActualizarProducto(ConexionOracle conexion, string categoria = null)
-        {
-            try
-            {
-                string consulta = "BEGIN pa_actualizar_producto(:codigo, :nombre, :descripcion, :precio, :estado, :imagen, :categoria); END;";
-                var parametros = new Dictionary<string, object>
-            {
-                { ":codigo", prodCodigo },
-                { ":nombre", prodNombre },
-                { ":descripcion", prodDescripcion },
-                { ":precio", prodPrecio },
-                { ":estado", prodEstado },
-                { ":imagen", prodImagenRuta },
-                { ":categoria", prodCategoria}
-            };
-                int filasAfectadas = conexion.EjecutarDML(consulta, parametros);
-                return filasAfectadas >= 0;  // True si se ejecutó sin error
-            }
-            catch
-            {
-                return false;  // False si hay error
-            }
-        }
-
     }
 }

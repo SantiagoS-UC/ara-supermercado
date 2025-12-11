@@ -86,15 +86,53 @@
   <ItemGroup>
     <Compile Include="accesoDatos\\ConexionOracle.cs" />
     <Compile Include="logica\Carrito.cs" />
+    <Compile Include="logica\Factura.cs" />
+    <Compile Include="logica\Pedido.cs" />
     <Compile Include="logica\\Cliente.cs" />
     <Compile Include="logica\\Producto.cs" />
     <Compile Include="logica\\Administrador.cs" />
     <Compile Include="logica\\Login.cs" />
+    <Compile Include="presentacion\FormConsultarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarFacturas.Designer.cs">
+      <DependentUpon>FormConsultarFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormConsultarPedidos.Designer.cs">
+      <DependentUpon>FormConsultarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormDetalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormDetalleFactura.Designer.cs">
+      <DependentUpon>FormDetalleFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FormDetallePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FormDetallePedido.Designer.cs">
+      <DependentUpon>FormDetallePedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\UcCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="presentacion\UcCarrito.Designer.cs">
       <DependentUpon>UcCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcDatosEnvioPago.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcDatosEnvioPago.Designer.cs">
+      <DependentUpon>UcDatosEnvioPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\UcFacturaPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcFacturaPedido.Designer.cs">
+      <DependentUpon>UcFacturaPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\UcPaginaPrincipal.cs">
       <SubType>UserControl</SubType>
@@ -108,12 +146,6 @@
     <Compile Include="presentacion\UcProductoDetalle.Designer.cs">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\FormMenuAdmin2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="presentacion\FormMenuAdmin2.Designer.cs">
-      <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
-    </Compile>
     <Compile Include="presentacion\FormModificarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,13 +158,21 @@
     <Compile Include="presentacion\FormPanelAdminProducto.Designer.cs">
       <DependentUpon>FormPanelAdminProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\UcVerPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentacion\UcVerPedidos.Designer.cs">
+      <DependentUpon>UcVerPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentacion\\FormMenuAdmin.cs" />
+    <Compile Include="presentacion\\FormMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="presentacion\\FormMenuAdmin.Designer.cs">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </Compile>
@@ -155,7 +195,15 @@
       <DependentUpon>FormPanelUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentacion\FormConsultarPedidos.resx">
+      <DependentUpon>FormConsultarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\UcCarrito.resx">
       <DependentUpon>UcCarrito.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,14 +213,14 @@
     <EmbeddedResource Include="presentacion\UcProductoDetalle.resx">
       <DependentUpon>UcProductoDetalle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presentacion\FormMenuAdmin2.resx">
-      <DependentUpon>FormMenuAdmin2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormModificarProducto.resx">
       <DependentUpon>FormModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FormPanelAdminProducto.resx">
       <DependentUpon>FormPanelAdminProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\UcVerPedidos.resx">
+      <DependentUpon>UcVerPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -191,14 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -218,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\\Microsoft.CSharp.targets" />
 </Project>

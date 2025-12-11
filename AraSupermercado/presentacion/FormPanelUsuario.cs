@@ -18,7 +18,6 @@ namespace AraSupermercado.presentacion
             this.opcionActual = opcion;
             this.cliente = cliente ?? throw new ArgumentNullException(nameof(cliente));
 
-            // Configurar enmascaramiento de contraseñas por defecto
             txtEditContrasena.UseSystemPasswordChar = true;
             txtEditConfirmarContrasena.UseSystemPasswordChar = true;
 
@@ -36,7 +35,7 @@ namespace AraSupermercado.presentacion
                 // Carga datos en los controles
                 cbxEditTipoDoc.Text = cliente.cliTipoId ?? string.Empty;
                 txtEditNumDoc.Text = cliente.cliId.ToString();
-                txtEditNumDoc.ReadOnly = true;  // ID no editable
+                txtEditNumDoc.ReadOnly = true;  
                 txtEditPrimerNombre.Text = cliente.cliPrimerNombre ?? string.Empty;
                 txtEditSegundoNombre.Text = (cliente.cliSegundoNombre == null || cliente.cliSegundoNombre == "null") ? string.Empty : cliente.cliSegundoNombre;
                 txtEditPrimerApellido.Text = cliente.cliPrimerApellido ?? string.Empty;
@@ -73,12 +72,6 @@ namespace AraSupermercado.presentacion
             }
         }
 
-        public void ActualizarVista(string nuevaOpcion)
-        {
-            this.opcionActual = nuevaOpcion;
-            CargarVista();
-        }
-
         // Método para validar todos los campos
         private bool ValidarCampos()
         {
@@ -108,7 +101,7 @@ namespace AraSupermercado.presentacion
                 esValido = false;
             }
 
-            // Fecha de nacimiento (obligatoria y con reglas, igual que registro)
+            // Fecha de nacimiento (obligatoria)
             string mensajeFecha;
             if (!Cliente.ValidarFechaNacimiento(dtpEditFechaNac.Value, out mensajeFecha))
             {
@@ -116,7 +109,7 @@ namespace AraSupermercado.presentacion
                 esValido = false;
             }
 
-            // Correo (obligatorio y formato básico, con mensaje intuitivo)
+            // Correo (obligatorio y formato básico)
             string correo = txtEditCorreo.Text.Trim();
             if (string.IsNullOrWhiteSpace(correo))
             {
@@ -143,7 +136,7 @@ namespace AraSupermercado.presentacion
                 esValido = false;
             }
 
-            // Contraseña (obligatoria, con longitud igual que registro)
+            // Contraseña (obligatoria)
             string contrasena = txtEditContrasena.Text.Trim();
             if (string.IsNullOrWhiteSpace(contrasena))
             {

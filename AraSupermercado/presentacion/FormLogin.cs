@@ -14,8 +14,6 @@ namespace AraSupermercado.presentacion
             InitializeComponent();
             login = new Login();
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-
-            // Configurar enmascaramiento de contraseñas por defecto
             txtContrasena.UseSystemPasswordChar = true;
         }
 
@@ -62,7 +60,7 @@ namespace AraSupermercado.presentacion
                 if (tipoUsuario == "ADMIN")
                 {
                     MessageBox.Show("Bienvenido Administrador", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormMenuAdmin2 frmAdmin = new FormMenuAdmin2();
+                    FormMenuAdmin frmAdmin = new FormMenuAdmin();
                     frmAdmin.Show();
                     this.Hide();
                 }

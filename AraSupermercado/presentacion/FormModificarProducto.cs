@@ -1,76 +1,45 @@
 ﻿using AraSupermercado.accesoDatos;
 using AraSupermercado.logica;
-using Oracle.ManagedDataAccess.Client;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace AraSupermercado.presentacion
 {
     public partial class FormModificarProducto : Form
     {
+        private FormMenuAdmin formMenuAdmin;
+        private Action<Form> AbrirSubMenu;
         private Producto producto;
         private Administrador admin;
         private ConexionOracle conexion;
-        private string nuevaRutaImagen;  // Para nueva imagen seleccionada
+        private string nuevaRutaImagen;
 
-        public FormModificarProducto(Producto prod)
+        public FormModificarProducto(Producto prod, Administrador admin, FormMenuAdmin parent, Action<Form> abrirSubMenu)
         {
             InitializeComponent();
-            producto = prod;
-            admin = new Administrador();
+            this.producto = prod;
+            this.admin = admin;  // Asigna el admin pasado en lugar de crear uno nuevo
+            this.formMenuAdmin = parent;
+            this.AbrirSubMenu = abrirSubMenu;
             conexion = new ConexionOracle();
-            nuevaRutaImagen = prod.prodImagenRuta;  // Inicial con actual
+            nuevaRutaImagen = prod.prodImagenRuta;
         }
 
-        // Evento Load: Carga items primero, luego datos
+
         private void FormModificarProducto_Load(object sender, EventArgs e)
         {
             CargarEstados();
             CargarCategorias();
-            CargarDatosProducto();  // Ahora sí carga datos después de items
+            CargarDatosProducto();  
         }
 
         private void CargarEstados()
         {
             cbxEstadoProductoMod.Items.Add("Activo");
             cbxEstadoProductoMod.Items.Add("Inactivo");
-        }
-
-        private string ObtenerCategoriaPorCodigo(int codigo)
-        {
-            try
-            {
-                Console.WriteLine($"Obteniendo categoría para código: {codigo}");  // Log
-                using (OracleConnection conn = new OracleConnection(conexion.ObtenerConexion().ConnectionString))
-                using (OracleCommand cmd = new OracleCommand("pa_obtener_categoria", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("p_codigo", OracleDbType.Int32).Value = codigo;
-                    cmd.Parameters.Add("p_categoria", OracleDbType.Varchar2, 50, null, ParameterDirection.Output);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    string result = cmd.Parameters["p_categoria"].Value?.ToString();
-                    Console.WriteLine($"Categoría obtenida: '{result}'");  // Log
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error en ObtenerCategoriaPorCodigo: {ex.Message}");  // Log
-                return null;
-            }
         }
 
         private void CargarCategorias()
@@ -88,27 +57,22 @@ namespace AraSupermercado.presentacion
             cbxEstadoProductoMod.SelectedItem = producto.prodEstado;
             txtDescripcionProductoMod.Text = producto.prodDescripcion;
             cbxCategoriaMod.SelectedItem = producto.prodCategoria;
-            //string categoria =
-
-            /*                ObtenerCategoriaPorCodigo(producto.prodCodigo);
-        cbxCategoriaMod.SelectedItem = categoria;*/
-
 
             // Cargar imagen
             try
             {
                 picProductoMod.Image = Image.FromFile(producto.prodImagenRuta);
-                picProductoMod.Tag = producto.prodImagenRuta;  // Asigna Tag para que no sea null
+                picProductoMod.Tag = producto.prodImagenRuta;  
             }
             catch
             {
                 //picProductoMod.Image = Image.FromFile("Resources/no-image.png");
-                picProductoMod.Tag = null;  // O asigna una ruta por defecto si es necesario
+                picProductoMod.Tag = null;  
             }
         }
 
         // Evento para seleccionar nueva imagen
-        private void picProductoMod_DoubleClick(object sender, EventArgs e)  // Asume DoubleClick en PictureBox
+        private void picProductoMod_DoubleClick(object sender, EventArgs e)  
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -121,20 +85,39 @@ namespace AraSupermercado.presentacion
             }
         }
 
-        // Evento Guardar (asume un botón btnGuardar, agrégalo si no)
-        private void btnGuardarModificar_Click(object sender, EventArgs e)  // Cambia al nombre de tu botón
+        private void btnGuardarModificar_Click(object sender, EventArgs e)
         {
-           
             if (!ValidarCamposRegistro())
             {
-                return; // Si no es válido, no continuar
+                return;
+            }
+
+            // Asignar valores del formulario al objeto producto
+            producto.prodCodigo = int.Parse(txtCodigoProductoMod.Text);
+            producto.prodNombre = txtNombreProductoMod.Text.Trim();
+            producto.prodPrecio = decimal.Parse(txtPrecioProductoMod.Text);
+            producto.prodEstado = cbxEstadoProductoMod.SelectedItem.ToString();
+            producto.prodDescripcion = txtDescripcionProductoMod.Text.Trim();
+            producto.prodCategoria = cbxCategoriaMod.SelectedItem.ToString();
+            producto.prodImagenRuta = nuevaRutaImagen;
+            picProductoMod.Tag = nuevaRutaImagen;
+
+            // Validar que la imagen no sea null
+            if (string.IsNullOrWhiteSpace(producto.prodImagenRuta) || !File.Exists(producto.prodImagenRuta))
+            {
+                MessageBox.Show("Debes seleccionar una imagen válida para el producto.", "Error de Imagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             // Llamar al método para actualizar el producto
             if (admin.ActualizarProducto(producto, cbxCategoriaMod.SelectedItem?.ToString()))
             {
-                MessageBox.Show("Producto modificado exitosamente.", "Éxito");
-                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Producto modificado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Reabre FormPanelAdminProducto en modo "Catalogo" dentro del pnlContenedor para recargar el catálogo
+                AbrirSubMenu(new FormPanelAdminProducto("Catalogo", admin, formMenuAdmin, AbrirSubMenu));
+
+                // Cierra este form
                 this.Close();
             }
             else
@@ -178,7 +161,7 @@ namespace AraSupermercado.presentacion
                 errorProvider1.SetError(txtNombreProductoMod, "El nombre es obligatorio.");
                 esValido = false;
             }
-            else if (!Regex.IsMatch(txtNombreProductoMod.Text, @"^[a-zA-Z\d\s]+$"))
+            else if (!Regex.IsMatch(txtNombreProductoMod.Text, @"^[a-zA-Z\d\sÀ-ÿ]+$"))
             {
                 errorProvider1.SetError(txtNombreProductoMod, "El nombre debe contener solo letras y espacios.");
                 esValido = false;
@@ -244,7 +227,6 @@ namespace AraSupermercado.presentacion
                 esValido = false;
             }
 
-            // Si hay errores, mostrar mensaje y no continuar
             if (!esValido)
             {
                 MessageBox.Show("Por favor corregir los campos señalados.", "Errores de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -253,11 +235,14 @@ namespace AraSupermercado.presentacion
             return esValido;
         }
 
-        // Evento Volver
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            // Reabre FormPanelAdminProducto en modo "Catalogo" dentro del pnlContenedor
+            AbrirSubMenu(new FormPanelAdminProducto("Catalogo", admin, formMenuAdmin, AbrirSubMenu));
+
+            // Cierra este form
             this.Close();
         }
+
     }
 }

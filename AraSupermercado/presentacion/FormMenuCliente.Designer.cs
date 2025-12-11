@@ -196,10 +196,10 @@
             // subMenuPaginaPrincipal
             // 
             this.subMenuPaginaPrincipal.AutoSize = false;
-            this.subMenuPaginaPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subMenuPaginaPrincipal.BackgroundImage")));
             this.subMenuPaginaPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.subMenuPaginaPrincipal.ForeColor = System.Drawing.Color.Black;
-            this.subMenuPaginaPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.subMenuPaginaPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("subMenuPaginaPrincipal.Image")));
+            this.subMenuPaginaPrincipal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.subMenuPaginaPrincipal.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.subMenuPaginaPrincipal.Name = "subMenuPaginaPrincipal";
             this.subMenuPaginaPrincipal.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
@@ -211,7 +211,6 @@
             // subMenuCategorias
             // 
             this.subMenuCategorias.AutoSize = false;
-            this.subMenuCategorias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subMenuCategorias.BackgroundImage")));
             this.subMenuCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.subMenuCategorias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuFrutasVerduras,
@@ -225,6 +224,8 @@
             this.subMenuSnacks,
             this.subMenuOtros});
             this.subMenuCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.subMenuCategorias.Image = ((System.Drawing.Image)(resources.GetObject("subMenuCategorias.Image")));
+            this.subMenuCategorias.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.subMenuCategorias.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.subMenuCategorias.Name = "subMenuCategorias";
             this.subMenuCategorias.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
@@ -304,13 +305,14 @@
             // 
             this.subMenuUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.subMenuUsuario.AutoSize = false;
-            this.subMenuUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subMenuUsuario.BackgroundImage")));
             this.subMenuUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.subMenuUsuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuAdminCuenta,
             this.subMenuVerPedidos,
             this.subMenuCerrarSesion});
             this.subMenuUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.subMenuUsuario.Image = ((System.Drawing.Image)(resources.GetObject("subMenuUsuario.Image")));
+            this.subMenuUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.subMenuUsuario.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.subMenuUsuario.Name = "subMenuUsuario";
             this.subMenuUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
@@ -319,21 +321,21 @@
             // subMenuAdminCuenta
             // 
             this.subMenuAdminCuenta.Name = "subMenuAdminCuenta";
-            this.subMenuAdminCuenta.Size = new System.Drawing.Size(219, 26);
+            this.subMenuAdminCuenta.Size = new System.Drawing.Size(180, 22);
             this.subMenuAdminCuenta.Text = "Administrar Cuenta";
             this.subMenuAdminCuenta.Click += new System.EventHandler(this.subMenuAdminCuenta_Click);
             // 
             // subMenuVerPedidos
             // 
             this.subMenuVerPedidos.Name = "subMenuVerPedidos";
-            this.subMenuVerPedidos.Size = new System.Drawing.Size(219, 26);
+            this.subMenuVerPedidos.Size = new System.Drawing.Size(180, 22);
             this.subMenuVerPedidos.Text = "Ver Pedidos";
             this.subMenuVerPedidos.Click += new System.EventHandler(this.subMenuVerPedidos_Click);
             // 
             // subMenuCerrarSesion
             // 
             this.subMenuCerrarSesion.Name = "subMenuCerrarSesion";
-            this.subMenuCerrarSesion.Size = new System.Drawing.Size(219, 26);
+            this.subMenuCerrarSesion.Size = new System.Drawing.Size(180, 22);
             this.subMenuCerrarSesion.Text = "Cerrar Sesión";
             this.subMenuCerrarSesion.Click += new System.EventHandler(this.subMenuCerrarSesion_Click);
             // 
@@ -341,9 +343,10 @@
             // 
             this.subMenuCarrito.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.subMenuCarrito.AutoSize = false;
-            this.subMenuCarrito.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subMenuCarrito.BackgroundImage")));
             this.subMenuCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.subMenuCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(119)))), ((int)(((byte)(26)))));
+            this.subMenuCarrito.Image = ((System.Drawing.Image)(resources.GetObject("subMenuCarrito.Image")));
+            this.subMenuCarrito.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.subMenuCarrito.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.subMenuCarrito.Name = "subMenuCarrito";
             this.subMenuCarrito.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
@@ -363,7 +366,7 @@
             this.pbxAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbxAra.Image = ((System.Drawing.Image)(resources.GetObject("pbxAra.Image")));
             this.pbxAra.Location = new System.Drawing.Point(516, 15);
-            this.pbxAra.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.pbxAra.Margin = new System.Windows.Forms.Padding(0);
             this.pbxAra.Name = "pbxAra";
             this.pbxAra.Size = new System.Drawing.Size(150, 98);
             this.pbxAra.TabIndex = 0;
@@ -449,7 +452,7 @@
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.menuCliente);
             this.MainMenuStrip = this.menuCliente;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuCliente";
