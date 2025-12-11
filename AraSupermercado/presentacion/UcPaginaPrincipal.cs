@@ -70,7 +70,7 @@ namespace AraSupermercado.presentacion
                     // Crear un "card" para cada producto (Panel con controles)
                     Panel card = new Panel
                     {
-                        Size = new Size(220, 280),
+                        Size = new Size(260, 280),
                         BackColor = Color.White,
                         BorderStyle = BorderStyle.None,
                         Margin = new Padding(15),
