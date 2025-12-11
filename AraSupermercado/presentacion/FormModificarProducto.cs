@@ -243,5 +243,6 @@ namespace AraSupermercado.presentacion
             // Cierra este form
             this.Close();
         }
+
     }
 }
